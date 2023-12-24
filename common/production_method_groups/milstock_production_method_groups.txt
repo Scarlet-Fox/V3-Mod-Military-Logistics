@@ -1,0 +1,17 @@
+﻿milstock_pmg_stockpile_type = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		milstock_stockpile_pm_small_arms_only
+	}
+}
+
+milstock_pmg_small_arms_warehouse = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}

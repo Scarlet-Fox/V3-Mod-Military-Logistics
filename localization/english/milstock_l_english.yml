@@ -1,0 +1,10 @@
+﻿l_english:
+  # Buildings
+  milstock_building_stockpiles: "Military Stockpile"
+  milstock_building_small_arms_warehouses: "Small Arms Warehouse"
+
+  # Production Method Groups
+  milstock_pmg_stockpile_type: "Stockpile Type"
+
+  # Production Methods
+  milstock_stockpile_pm_small_arms_only: "Small Arms Only"

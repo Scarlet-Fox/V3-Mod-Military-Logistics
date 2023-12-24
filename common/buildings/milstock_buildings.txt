@@ -1,0 +1,27 @@
+﻿milstock_building_stockpiles = {
+	building_group = milstock_bg_stockpiles
+	texture = "gfx/interface/icons/building_icons/building_barracks.dds"
+
+	has_max_level = no
+	buildable = yes
+
+	production_method_groups = {
+        milstock_pmg_stockpile_type
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+milstock_building_small_arms_warehouses = {
+	building_group = milstock_bg_warehouses
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+
+	production_method_groups = {
+        milstock_pmg_small_arms_warehouse
+    }
+
+	required_construction = construction_cost_very_high
+}
