@@ -1,0 +1,26 @@
+﻿
+# root: building
+on_building_built = {
+	on_actions = {
+		milstock_stockpile_constructed
+	}
+}
+
+milstock_stockpile_constructed = {
+	effect = {
+		if = {
+			limit = {
+				is_building_type = milstock_building_stockpiles
+			}
+			PREV = {
+				set_variable = {
+					name = milstock_state_small_arms_stockpile_var
+					value = 0
+				}
+			}
+			debug_log = "Stockpile building constructed."
+			debug_log = PREV.var:milstock_state_small_arms_stockpile_var
+			debug_log_scopes = yes
+		}
+	}
+}

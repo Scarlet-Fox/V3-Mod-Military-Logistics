@@ -5,6 +5,7 @@
 
   # Production Method Groups
   milstock_pmg_stockpile_type: "Stockpile Type"
+  milstock_pmg_small_arms_warehouse: "Default"
 
   # Production Methods
   milstock_stockpile_pm_small_arms_only: "Small Arms Only"

@@ -9,7 +9,7 @@
         milstock_pmg_stockpile_type
     }
 
-	required_construction = construction_cost_very_high
+	required_construction = construction_cost_very_low
 }
 
 milstock_building_small_arms_warehouses = {

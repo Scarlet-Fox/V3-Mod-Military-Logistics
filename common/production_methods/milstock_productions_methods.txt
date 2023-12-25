@@ -1,5 +1,5 @@
 ﻿milstock_stockpile_pm_small_arms_only = {
-    texture = "gfx/interface/icons/production_method_icons/V3_guns.dds"
+    texture = "gfx/interface/icons/production_method_icons/muskets.dds"
     is_default = yes
 
     building_modifiers = {
