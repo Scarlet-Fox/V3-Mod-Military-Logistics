@@ -1,0 +1,4 @@
+
+
+milstock_c_small_arms_per_level = 10
+milstock_c_ammunition_per_level = 10

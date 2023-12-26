@@ -9,3 +9,6 @@
 
   # Production Methods
   milstock_stockpile_pm_small_arms_only: "Small Arms Only"
+
+  # Debug helpers
+  milstock_small_arms_building_debug: "Small Arms Stockpile: [SCOPE.sBuilding('milstock_building').GetState.MakeScope.Var('milstock_state_small_arms_stockpile_var').GetValue]"
