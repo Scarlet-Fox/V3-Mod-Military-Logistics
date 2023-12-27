@@ -86,7 +86,7 @@ milstock_c_infantry_tank_pm_laborers = 400
 # Constants for Production Method :: Infantry Equipment Stockpile :: No Stockpiling
 ## Staff requirements - only a skeleton crew; got to keep contract work going after all
 milstock_c_infantry_inactive_pm_officers = 5
-milstock_c_infantry_inactive_pm_clerks = 25
+milstock_c_infantry_inactive_pm_clerks = 20
 
 
 # Artillery Equipment Stockpile Production Method Constants
@@ -170,7 +170,7 @@ milstock_c_artillery_tank_pm_laborers = 300
 # Constants for Production Method :: Artillery Equipment Stockpile :: No Stockpiling
 ## Staff requirements - only a skeleton crew; got to keep contract work going after all
 milstock_c_artillery_inactive_pm_officers = 5
-milstock_c_artillery_inactive_pm_clerks = 25
+milstock_c_artillery_inactive_pm_clerks = 20
 
 
 # Calvalry Equipment Stockpile Production Method Constants
@@ -249,11 +249,154 @@ milstock_c_calvary_tank_pm_laborers = 350
 # Constants for Production Method :: Calvary Equipment Stockpile :: No Stockpiling
 ## Staff requirements - only a skeleton crew; got to keep contract work going after all
 milstock_c_calvary_inactive_pm_officers = 5
-milstock_c_calvary_inactive_pm_clerks = 25
+milstock_c_calvary_inactive_pm_clerks = 20
 
 
+# Mobilization Equipment Stockpile Production Method Constants
+#-------------------------------------------------------------
+
+# Constants for Production Method :: Mobilization Equipment Stockpile :: Grain Only
+## Inputs for stockpile
+milstock_c_mobil_grain_pm_grain = 10
+## Inputs for administrative cost
+milstock_c_mobil_grain_pm_paper = 2
+## Outputs
+milstock_c_mobil_grain_pm_bureaucracy = 5
+## AI Value
+milstock_c_mobil_grain_pm_ai_value = 200
+## Staff requirements
+milstock_c_mobil_grain_pm_clerks = 25
+milstock_c_mobil_grain_pm_laborers = 100
+
+# Constants for Production Method :: Mobilization Equipment Stockpile :: Basic Goods
+## Inputs for stockpile
+milstock_c_mobil_basic_pm_grain = 10
+milstock_c_mobil_basic_pm_liquor = 10
+milstock_c_mobil_basic_pm_fabric = 10
+## Inputs for administrative cost
+milstock_c_mobil_basic_pm_paper = 9
+## Outputs
+milstock_c_mobil_basic_pm_bureaucracy = 5
+## AI Value
+milstock_c_mobil_basic_pm_ai_value = 1000
+## Staff requirements
+milstock_c_mobil_basic_pm_officers = 25
+milstock_c_mobil_basic_pm_clerks = 50
+milstock_c_mobil_basic_pm_laborers = 300
+
+# Constants for Production Method :: Mobilization Equipment Stockpile :: Groceries Included
+## Inputs for stockpile
+milstock_c_mobil_groceries_pm_grain = 10
+milstock_c_mobil_groceries_pm_liquor = 10
+milstock_c_mobil_groceries_pm_fabric = 10
+milstock_c_mobil_groceries_pm_groceries = 10
+## Inputs for administrative cost
+milstock_c_mobil_groceries_pm_paper = 12
+## Outputs
+milstock_c_mobil_groceries_pm_bureaucracy = 5
+## AI Value
+milstock_c_mobil_groceries_pm_ai_value = 1400
+## Staff requirements
+milstock_c_mobil_groceries_pm_officers = 25
+milstock_c_mobil_groceries_pm_clerks = 50
+milstock_c_mobil_groceries_pm_laborers = 400
+
+# Constants for Production Method :: Mobilization Equipment Stockpile :: Chocolate Included
+## Inputs for stockpile
+milstock_c_mobil_sugar_pm_grain = 10
+milstock_c_mobil_sugar_pm_liquor = 10
+milstock_c_mobil_sugar_pm_fabric = 10
+milstock_c_mobil_sugar_pm_groceries = 10
+milstock_c_mobil_sugar_pm_sugar = 10
+## Inputs for administrative cost
+milstock_c_mobil_sugar_pm_paper = 15
+## Outputs
+milstock_c_mobil_sugar_pm_bureaucracy = 5
+## AI Value
+milstock_c_mobil_sugar_pm_ai_value = 1800
+## Staff requirements
+milstock_c_mobil_sugar_pm_officers = 25
+milstock_c_mobil_sugar_pm_clerks = 75
+milstock_c_mobil_sugar_pm_laborers = 500
+
+# Constants for Production Method :: Mobilization Equipment Stockpile :: Tobacco Included
+## Inputs for stockpile
+milstock_c_mobil_tobacco_pm_grain = 10
+milstock_c_mobil_tobacco_pm_liquor = 10
+milstock_c_mobil_tobacco_pm_fabric = 10
+milstock_c_mobil_tobacco_pm_groceries = 10
+milstock_c_mobil_tobacco_pm_sugar = 10
+milstock_c_mobil_tobacco_pm_tobacco = 10
+## Inputs for administrative cost
+milstock_c_mobil_tobacco_pm_paper = 19
+## Outputs
+milstock_c_mobil_tobacco_pm_bureaucracy = 5
+## AI Value
+milstock_c_mobil_tobacco_pm_ai_value = 2400
+## Staff requirements
+milstock_c_mobil_tobacco_pm_officers = 25
+milstock_c_mobil_tobacco_pm_clerks = 75
+milstock_c_mobil_tobacco_pm_laborers = 600
+
+# Constants for Production Method :: Mobilization Equipment Stockpile :: Opium Included
+## Inputs for stockpile
+milstock_c_mobil_opium_pm_grain = 10
+milstock_c_mobil_opium_pm_liquor = 10
+milstock_c_mobil_opium_pm_fabric = 10
+milstock_c_mobil_opium_pm_groceries = 10
+milstock_c_mobil_opium_pm_sugar = 10
+milstock_c_mobil_opium_pm_tobacco = 10
+milstock_c_mobil_opium_pm_opium = 10
+## Inputs for administrative cost
+milstock_c_mobil_opium_pm_paper = 24
+## Outputs
+milstock_c_mobil_opium_pm_bureaucracy = 5
+## AI Value
+milstock_c_mobil_opium_pm_ai_value = 2400
+## Staff requirements
+milstock_c_mobil_opium_pm_officers = 25
+milstock_c_mobil_opium_pm_clerks = 100
+milstock_c_mobil_opium_pm_laborers = 700
+
+# Constants for Production Method :: Mobilization Equipment Stockpile :: No Stockpiling
+## Staff requirements - only a skeleton crew; got to keep contract work going after all
+milstock_c_mobil_inactive_pm_officers = 5
+milstock_c_mobil_inactive_pm_clerks = 20
 
 
+# Logistics Center Administration Production Method Constants
+#-------------------------------------------------------------
 
-# Small Arms	Grain	Liquor	Sugar	Opium	Tobacco	Fabric	Groceries	Ammunition	Artillery	Radios	Tanks	Oil	Iron
-# Officers 	Bureaucrats	Academics	Machinists	Clerks	Laborers
+# Constants for Production Method :: Logistics Center Administration :: Basic Logistics
+## Inputs for administrative cost
+milstock_c_admin_basic_pm_paper = 10
+## Outputs
+milstock_c_admin_basic_pm_bureaucracy = 10
+milstock_c_admin_basic_pm_qualifications = 0
+milstock_c_admin_basic_pm_innovation = 0
+## Staff requirements
+milstock_c_admin_basic_pm_officers = 50
+milstock_c_admin_basic_pm_bureaucrats = 500
+milstock_c_admin_basic_pm_clerks = 250
+milstock_c_admin_basic_pm_laborers = 250
+
+# Constants for Production Method :: Logistics Center Administration :: Academic Research
+## Inputs for administrative cost
+milstock_c_admin_basic_pm_paper = 20
+milstock_c_admin_basic_pm_tools = 20
+## Outputs
+milstock_c_admin_basic_pm_bureaucracy = 20
+milstock_c_admin_basic_pm_qualifications = 0.10
+milstock_c_admin_basic_pm_innovation = 1
+## Staff requirements
+milstock_c_admin_basic_pm_officers = 200
+milstock_c_admin_basic_pm_bureaucrats = 500
+milstock_c_admin_basic_pm_academics = 500
+milstock_c_admin_basic_pm_clerks = 1000
+
+# Constants for Production Method :: Logistics Center Administration :: Logistics Shutdown
+## Staff requirements - only a skeleton crew; got to keep contract work going after all
+milstock_c_admin_inactive_pm_officers = 10
+milstock_c_admin_inactive_pm_clerks = 40
+milstock_c_admin_inactive_pm_laborers = 50
+
