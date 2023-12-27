@@ -10,84 +10,167 @@
 
 # Constants for Production Method :: Infantry Equipment Stockpile :: Basic Equipment
 ## Inputs for stockpile
-milstock_c_infantry_basic_small_arms = 10
-milstock_c_infantry_basic_grain = 5
+milstock_c_infantry_basic_pm_small_arms = 10
+milstock_c_infantry_basic_pm_grain = 5
 ## Inputs for administrative cost
-milstock_c_infantry_basic_paper = 5
-milstock_c_infantry_basic_tools = 1
+milstock_c_infantry_basic_pm_paper = 5
+milstock_c_infantry_basic_pm_tools = 1
 ## Outputs
-milstock_c_infantry_basic_bureaucracy = 5
+milstock_c_infantry_basic_pm_bureaucracy = 5
 ## AI Value
-milstock_c_infantry_basic_ai_value = 800
+milstock_c_infantry_basic_pm_ai_value = 800
 ## Staff requirements
-milstock_c_infantry_basic_officers = 25
-milstock_c_infantry_basic_machinists = 25
-milstock_c_infantry_basic_clerks = 50
-milstock_c_infantry_basic_laborers = 150
+milstock_c_infantry_basic_pm_officers = 25
+milstock_c_infantry_basic_pm_machinists = 25
+milstock_c_infantry_basic_pm_clerks = 50
+milstock_c_infantry_basic_pm_laborers = 150
 
 # Constants for Production Method :: Infantry Equipment Stockpile :: Ammunition Included
 ## Inputs for stockpile
-milstock_c_infantry_ammo_small_arms = 10
-milstock_c_infantry_ammo_grain = 5
-milstock_c_infantry_ammo_ammunition = 5
+milstock_c_infantry_ammo_pm_small_arms = 10
+milstock_c_infantry_ammo_pm_grain = 5
+milstock_c_infantry_ammo_pm_ammunition = 5
 ## Inputs for administrative cost
-milstock_c_infantry_ammo_paper = 8
-milstock_c_infantry_ammo_tools = 1
+milstock_c_infantry_ammo_pm_paper = 8
+milstock_c_infantry_ammo_pm_tools = 1
 ## Outputs
-milstock_c_infantry_ammo_bureaucracy = 5
+milstock_c_infantry_ammo_pm_bureaucracy = 5
 ## AI Value
-milstock_c_infantry_ammo_ai_value = 1100
+milstock_c_infantry_ammo_pm_ai_value = 1100
 ## Staff requirements
-milstock_c_infantry_ammo_officers = 25
-milstock_c_infantry_ammo_machinists = 25
-milstock_c_infantry_ammo_clerks = 50
-milstock_c_infantry_ammo_laborers = 200
+milstock_c_infantry_ammo_pm_officers = 25
+milstock_c_infantry_ammo_pm_machinists = 25
+milstock_c_infantry_ammo_pm_clerks = 50
+milstock_c_infantry_ammo_pm_laborers = 200
 
 # Constants for Production Method :: Infantry Equipment Stockpile :: Radios Included
 ## Inputs for stockpile
-milstock_c_infantry_radio_small_arms = 10
-milstock_c_infantry_radio_grain = 5
-milstock_c_infantry_radio_ammunition = 5
-milstock_c_infantry_radio_radios = 3
+milstock_c_infantry_radio_pm_small_arms = 10
+milstock_c_infantry_radio_pm_grain = 5
+milstock_c_infantry_radio_pm_ammunition = 5
+milstock_c_infantry_radio_pm_radios = 3
 ## Inputs for administrative cost
-milstock_c_infantry_radio_paper = 8
-milstock_c_infantry_radio_tools = 2
+milstock_c_infantry_radio_pm_paper = 8
+milstock_c_infantry_radio_pm_tools = 2
 ## Outputs
-milstock_c_infantry_radio_bureaucracy = 5
+milstock_c_infantry_radio_pm_bureaucracy = 5
 ## AI Value
-milstock_c_infantry_radio_ai_value = 1400
+milstock_c_infantry_radio_pm_ai_value = 1400
 ## Staff requirements
-milstock_c_infantry_radio_officers = 25
-milstock_c_infantry_radio_machinists = 25
-milstock_c_infantry_radio_clerks = 50
-milstock_c_infantry_radio_laborers = 300
+milstock_c_infantry_radio_pm_officers = 25
+milstock_c_infantry_radio_pm_machinists = 25
+milstock_c_infantry_radio_pm_clerks = 50
+milstock_c_infantry_radio_pm_laborers = 300
 
 # Constants for Production Method :: Infantry Equipment Stockpile :: Tanks Included
 ## Inputs for stockpile
-milstock_c_infantry_tank_small_arms = 10
-milstock_c_infantry_tank_grain = 5
-milstock_c_infantry_tank_ammunition = 5
-milstock_c_infantry_tank_radios = 3
-milstock_c_infantry_tank_tanks = 3
-milstock_c_infantry_tank_oil = 3
+milstock_c_infantry_tank_pm_small_arms = 10
+milstock_c_infantry_tank_pm_grain = 5
+milstock_c_infantry_tank_pm_ammunition = 5
+milstock_c_infantry_tank_pm_radios = 3
+milstock_c_infantry_tank_pm_tanks = 3
+milstock_c_infantry_tank_pm_oil = 3
 ## Inputs for administrative cost
-milstock_c_infantry_tank_paper = 9
-milstock_c_infantry_tank_tools = 4
+milstock_c_infantry_tank_pm_paper = 9
+milstock_c_infantry_tank_pm_tools = 4
 ## Outputs
-milstock_c_infantry_tank_bureaucracy = 5
+milstock_c_infantry_tank_pm_bureaucracy = 5
 ## AI Value
-milstock_c_infantry_tank_ai_value = 1800
+milstock_c_infantry_tank_pm_ai_value = 1800
 ## Staff requirements
-milstock_c_infantry_tank_officers = 50
-milstock_c_infantry_tank_machinists = 50
-milstock_c_infantry_tank_clerks = 50
-milstock_c_infantry_tank_laborers = 400
+milstock_c_infantry_tank_pm_officers = 50
+milstock_c_infantry_tank_pm_machinists = 50
+milstock_c_infantry_tank_pm_clerks = 50
+milstock_c_infantry_tank_pm_laborers = 400
 
 # Constants for Production Method :: Infantry Equipment Stockpile :: No Stockpiling
 ## Staff requirements - only a skeleton crew; got to keep contract work going after all
-milstock_c_infantry_tank_officers = 5
-milstock_c_infantry_tank_clerks = 25
+milstock_c_infantry_inactive_pm_officers = 5
+milstock_c_infantry_inactive_pm_clerks = 25
 
+
+# Artillery Equipment Stockpile Production Method Constants
+#-------------------------------------------------------------
+
+# Constants for Production Method :: Artillery Equipment Stockpile :: Basic Equipment
+## Inputs for stockpile
+milstock_c_artillery_basic_pm_artillery = 10
+milstock_c_artillery_basic_pm_grain = 5
+## Inputs for administrative cost
+milstock_c_artillery_basic_pm_paper = 5
+milstock_c_artillery_basic_pm_tools = 2
+## Outputs
+milstock_c_artillery_basic_pm_bureaucracy = 5
+## AI Value
+milstock_c_artillery_basic_pm_ai_value = 900
+## Staff requirements
+milstock_c_artillery_basic_pm_officers = 25
+milstock_c_artillery_basic_pm_machinists = 100
+milstock_c_artillery_basic_pm_clerks = 50
+milstock_c_artillery_basic_pm_laborers = 100
+
+# Constants for Production Method :: Artillery Equipment Stockpile :: Ammunition Included
+## Inputs for stockpile
+milstock_c_artillery_ammo_pm_artillery = 10
+milstock_c_artillery_ammo_pm_grain = 5
+milstock_c_artillery_ammo_pm_ammo = 10
+## Inputs for administrative cost
+milstock_c_artillery_ammo_pm_paper = 10
+milstock_c_artillery_ammo_pm_tools = 2
+## Outputs
+milstock_c_artillery_ammo_pm_bureaucracy = 5
+## AI Value
+milstock_c_artillery_ammo_pm_ai_value = 1500
+## Staff requirements
+milstock_c_artillery_ammo_pm_officers = 50
+milstock_c_artillery_ammo_pm_machinists = 100
+milstock_c_artillery_ammo_pm_clerks = 100
+milstock_c_artillery_ammo_pm_laborers = 150
+
+# Constants for Production Method :: Artillery Equipment Stockpile :: Radios Included
+## Inputs for stockpile
+milstock_c_artillery_radio_pm_artillery = 10
+milstock_c_artillery_radio_pm_grain = 5
+milstock_c_artillery_radio_pm_ammo = 10
+milstock_c_artillery_radio_pm_radio = 3
+## Inputs for administrative cost
+milstock_c_artillery_radio_pm_paper = 10
+milstock_c_artillery_radio_pm_tools = 3
+## Outputs
+milstock_c_artillery_radio_pm_bureaucracy = 5
+## AI Value
+milstock_c_artillery_radio_pm_ai_value = 1900
+## Staff requirements
+milstock_c_artillery_radio_pm_officers = 50
+milstock_c_artillery_radio_pm_machinists = 100
+milstock_c_artillery_radio_pm_clerks = 100
+milstock_c_artillery_radio_pm_laborers = 150
+
+# Constants for Production Method :: Artillery Equipment Stockpile :: Tanks Included
+## Inputs for stockpile
+milstock_c_artillery_tank_pm_artillery = 10
+milstock_c_artillery_tank_pm_grain = 5
+milstock_c_artillery_tank_pm_ammo = 10
+milstock_c_artillery_tank_pm_radio = 5
+milstock_c_artillery_tank_pm_tanks = 7
+milstock_c_artillery_tank_pm_oil = 7
+## Inputs for administrative cost
+milstock_c_artillery_tank_pm_paper = 12
+milstock_c_artillery_tank_pm_tools = 7
+## Outputs
+milstock_c_artillery_tank_pm_bureaucracy = 5
+## AI Value
+milstock_c_artillery_tank_pm_ai_value = 3000
+## Staff requirements
+milstock_c_artillery_tank_pm_officers = 50
+milstock_c_artillery_tank_pm_machinists = 200
+milstock_c_artillery_tank_pm_clerks = 150
+milstock_c_artillery_tank_pm_laborers = 300
+
+# Constants for Production Method :: Artillery Equipment Stockpile :: No Stockpiling
+## Staff requirements - only a skeleton crew; got to keep contract work going after all
+milstock_c_artillery_inactive_pm_officers = 5
+milstock_c_artillery_inactive_pm_clerks = 25
 
 
 
