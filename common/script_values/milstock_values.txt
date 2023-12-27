@@ -372,8 +372,6 @@ milstock_c_mobil_inactive_pm_clerks = 20
 milstock_c_admin_basic_pm_paper = 10
 ## Outputs
 milstock_c_admin_basic_pm_bureaucracy = 10
-milstock_c_admin_basic_pm_qualifications = 0
-milstock_c_admin_basic_pm_innovation = 0
 ## Staff requirements
 milstock_c_admin_basic_pm_officers = 50
 milstock_c_admin_basic_pm_bureaucrats = 500
@@ -382,17 +380,17 @@ milstock_c_admin_basic_pm_laborers = 250
 
 # Constants for Production Method :: Logistics Center Administration :: Academic Research
 ## Inputs for administrative cost
-milstock_c_admin_basic_pm_paper = 20
-milstock_c_admin_basic_pm_tools = 20
+milstock_c_admin_academic_pm_paper = 20
+milstock_c_admin_academic_pm_tools = 20
 ## Outputs
-milstock_c_admin_basic_pm_bureaucracy = 20
-milstock_c_admin_basic_pm_qualifications = 0.10
-milstock_c_admin_basic_pm_innovation = 1
+milstock_c_admin_academic_pm_bureaucracy = 20
+milstock_c_admin_academic_pm_qualifications = 0.10
+milstock_c_admin_academic_pm_innovation = 1
 ## Staff requirements
-milstock_c_admin_basic_pm_officers = 200
-milstock_c_admin_basic_pm_bureaucrats = 500
-milstock_c_admin_basic_pm_academics = 500
-milstock_c_admin_basic_pm_clerks = 1000
+milstock_c_admin_academic_pm_officers = 200
+milstock_c_admin_academic_pm_bureaucrats = 500
+milstock_c_admin_academic_pm_academics = 500
+milstock_c_admin_academic_pm_clerks = 1000
 
 # Constants for Production Method :: Logistics Center Administration :: Logistics Shutdown
 ## Staff requirements - only a skeleton crew; got to keep contract work going after all
