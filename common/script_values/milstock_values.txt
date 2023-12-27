@@ -1,66 +1,98 @@
+﻿############################
+##### Global Constants #####
+############################
 
+# Values are cleaned up versions of the stuff in my google sheet
+# https://docs.google.com/spreadsheets/d/1h1R75M4w3WQJFIHJzqjl6K9ravAoGqAF3kubQ_FhTcY/edit?usp=sharing
 
-milstock_c_small_arms_per_level = 10
-milstock_c_ammunition_per_level = 10
-
-
-
-
-# Global Constants
-
-## Base Prices for Goods - these are used to feed into "ai_values" later in this file
-milstock_base_price_small_arms = 
-milstock_base_price_artillery = 
-milstock_base_price_ammunition = 
-milstock_base_price_tanks = 
-milstock_base_price_radios = 
-milstock_base_price_fabric = 
-milstock_base_price_groceries = 
-milstock_base_price_liquor = 
-milstock_base_price_sugar = 
-milstock_base_price_opium = 
-milstock_base_price_tobacco = 
-milstock_base_price_grain = 
-milstock_base_price_iron = 
-milstock_base_price_oil = 
-milstock_base_price_paper = 
-milstock_base_price_tools = 
-
-
+# Infantry Equipment Stockpile Production Method Constants
+#-------------------------------------------------------------
 
 # Constants for Production Method :: Infantry Equipment Stockpile :: Basic Equipment
-
-## Inputs
+## Inputs for stockpile
 milstock_c_infantry_basic_small_arms = 10
 milstock_c_infantry_basic_grain = 5
-
+## Inputs for administrative cost
+milstock_c_infantry_basic_paper = 5
+milstock_c_infantry_basic_tools = 1
 ## Outputs
 milstock_c_infantry_basic_bureaucracy = 5
-
-
-milstock_c_infantry_basic
-
+## AI Value
+milstock_c_infantry_basic_ai_value = 800
+## Staff requirements
+milstock_c_infantry_basic_officers = 25
+milstock_c_infantry_basic_machinists = 25
+milstock_c_infantry_basic_clerks = 50
+milstock_c_infantry_basic_laborers = 150
 
 # Constants for Production Method :: Infantry Equipment Stockpile :: Ammunition Included
+## Inputs for stockpile
+milstock_c_infantry_ammo_small_arms = 10
+milstock_c_infantry_ammo_grain = 5
+milstock_c_infantry_ammo_ammunition = 5
+## Inputs for administrative cost
+milstock_c_infantry_ammo_paper = 8
+milstock_c_infantry_ammo_tools = 1
+## Outputs
+milstock_c_infantry_ammo_bureaucracy = 5
+## AI Value
+milstock_c_infantry_ammo_ai_value = 1100
+## Staff requirements
+milstock_c_infantry_ammo_officers = 25
+milstock_c_infantry_ammo_machinists = 25
+milstock_c_infantry_ammo_clerks = 50
+milstock_c_infantry_ammo_laborers = 200
 
+# Constants for Production Method :: Infantry Equipment Stockpile :: Radios Included
+## Inputs for stockpile
+milstock_c_infantry_radio_small_arms = 10
+milstock_c_infantry_radio_grain = 5
+milstock_c_infantry_radio_ammunition = 5
+milstock_c_infantry_radio_radios = 3
+## Inputs for administrative cost
+milstock_c_infantry_radio_paper = 8
+milstock_c_infantry_radio_tools = 2
+## Outputs
+milstock_c_infantry_radio_bureaucracy = 5
+## AI Value
+milstock_c_infantry_radio_ai_value = 1400
+## Staff requirements
+milstock_c_infantry_radio_officers = 25
+milstock_c_infantry_radio_machinists = 25
+milstock_c_infantry_radio_clerks = 50
+milstock_c_infantry_radio_laborers = 300
 
-
-
-# Constants for Production Method :: Infantry Equipment Stockpile :: Radio Included
-
-
-
-
-# Constants for Production Method :: Infantry Equipment Stockpile :: Mechanized Included
-
-
+# Constants for Production Method :: Infantry Equipment Stockpile :: Tanks Included
+## Inputs for stockpile
+milstock_c_infantry_tank_small_arms = 10
+milstock_c_infantry_tank_grain = 5
+milstock_c_infantry_tank_ammunition = 5
+milstock_c_infantry_tank_radios = 3
+milstock_c_infantry_tank_tanks = 3
+milstock_c_infantry_tank_oil = 3
+## Inputs for administrative cost
+milstock_c_infantry_tank_paper = 9
+milstock_c_infantry_tank_tools = 4
+## Outputs
+milstock_c_infantry_tank_bureaucracy = 5
+## AI Value
+milstock_c_infantry_tank_ai_value = 1800
+## Staff requirements
+milstock_c_infantry_tank_officers = 50
+milstock_c_infantry_tank_machinists = 50
+milstock_c_infantry_tank_clerks = 50
+milstock_c_infantry_tank_laborers = 400
 
 # Constants for Production Method :: Infantry Equipment Stockpile :: No Stockpiling
+## Staff requirements - only a skeleton crew; got to keep contract work going after all
+milstock_c_infantry_tank_officers = 5
+milstock_c_infantry_tank_clerks = 25
 
 
 
 
-milstock_c_infantry_basic_
-milstock_c_infantry_basic_
-milstock_c_infantry_basic_
-milstock_c_infantry_basic_
+
+
+
+# Small Arms	Grain	Liquor	Sugar	Opium	Tobacco	Fabric	Groceries	Ammunition	Artillery	Radios	Tanks	Oil	Iron
+# Officers 	Bureaucrats	Academics	Machinists	Clerks	Laborers
