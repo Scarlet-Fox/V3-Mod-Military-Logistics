@@ -62,7 +62,7 @@ milstock_c_infantry_radio_pm_machinists = 25
 milstock_c_infantry_radio_pm_clerks = 50
 milstock_c_infantry_radio_pm_laborers = 300
 
-# Constants for Production Method :: Infantry Equipment Stockpile :: Tanks Included
+# Constants for Production Method :: Infantry Equipment Stockpile :: Mechanized Focus
 ## Inputs for stockpile
 milstock_c_infantry_tank_pm_small_arms = 10
 milstock_c_infantry_tank_pm_grain = 5
@@ -132,7 +132,7 @@ milstock_c_artillery_ammo_pm_laborers = 150
 milstock_c_artillery_radio_pm_artillery = 10
 milstock_c_artillery_radio_pm_grain = 5
 milstock_c_artillery_radio_pm_ammo = 10
-milstock_c_artillery_radio_pm_radio = 3
+milstock_c_artillery_radio_pm_radios = 3
 ## Inputs for administrative cost
 milstock_c_artillery_radio_pm_paper = 10
 milstock_c_artillery_radio_pm_tools = 3
@@ -146,12 +146,12 @@ milstock_c_artillery_radio_pm_machinists = 100
 milstock_c_artillery_radio_pm_clerks = 100
 milstock_c_artillery_radio_pm_laborers = 150
 
-# Constants for Production Method :: Artillery Equipment Stockpile :: Tanks Included
+# Constants for Production Method :: Artillery Equipment Stockpile :: Heavy Tank Focus
 ## Inputs for stockpile
 milstock_c_artillery_tank_pm_artillery = 10
 milstock_c_artillery_tank_pm_grain = 5
 milstock_c_artillery_tank_pm_ammo = 10
-milstock_c_artillery_tank_pm_radio = 5
+milstock_c_artillery_tank_pm_radios = 5
 milstock_c_artillery_tank_pm_tanks = 7
 milstock_c_artillery_tank_pm_oil = 7
 ## Inputs for administrative cost
@@ -172,6 +172,84 @@ milstock_c_artillery_tank_pm_laborers = 300
 milstock_c_artillery_inactive_pm_officers = 5
 milstock_c_artillery_inactive_pm_clerks = 25
 
+
+# Calvalry Equipment Stockpile Production Method Constants
+#-------------------------------------------------------------
+
+# Constants for Production Method :: Calvalry Equipment Stockpile :: Basic Equipment
+## Inputs for stockpile
+milstock_c_calvary_basic_pm_grain = 10
+## Inputs for administrative cost
+milstock_c_calvary_basic_pm_paper = 2
+## Outputs
+milstock_c_calvary_basic_pm_bureaucracy = 5
+## AI Value
+milstock_c_calvary_basic_pm_ai_value = 200
+## Staff requirements
+milstock_c_calvary_basic_pm_clerks = 25
+milstock_c_calvary_basic_pm_laborers = 100
+
+# Constants for Production Method :: Calvalry Equipment Stockpile :: Small Arms Included
+## Inputs for stockpile
+milstock_c_calvary_small_arm_pm_grain = 10
+milstock_c_calvary_small_arm_pm_small_arms = 10
+## Inputs for administrative cost
+milstock_c_calvary_small_arm_pm_paper = 6
+milstock_c_calvary_small_arm_pm_iron = 1
+## Outputs
+milstock_c_calvary_small_arm_pm_bureaucracy = 5
+## AI Value
+milstock_c_calvary_small_arm_pm_ai_value = 900
+## Staff requirements
+milstock_c_calvary_small_arm_pm_officers = 25
+milstock_c_calvary_small_arm_pm_clerks = 50
+milstock_c_calvary_small_arm_pm_machinists = 25
+milstock_c_calvary_small_arm_pm_laborers = 150
+
+# Constants for Production Method :: Calvalry Equipment Stockpile :: Armor Focus
+## Inputs for stockpile
+milstock_c_calvary_armored_pm_grain = 10
+milstock_c_calvary_armored_pm_small_arms = 10
+milstock_c_calvary_armored_pm_iron_stock = 10 # Seperate from the iron admin cost, but both need to be added together for total "cost"
+## Inputs for administrative cost
+milstock_c_calvary_armored_pm_paper = 10
+milstock_c_calvary_armored_pm_iron = 1
+## Outputs
+milstock_c_calvary_armored_pm_bureaucracy = 5
+## AI Value
+milstock_c_calvary_armored_pm_ai_value = 1400
+## Staff requirements
+milstock_c_calvary_armored_pm_officers = 25
+milstock_c_calvary_armored_pm_clerks = 50
+milstock_c_calvary_armored_pm_machinists = 25
+milstock_c_calvary_armored_pm_laborers = 250
+
+# Constants for Production Method :: Calvalry Equipment Stockpile :: Light Tank Focus
+## Inputs for stockpile
+milstock_c_calvary_tank_pm_grain = 5
+milstock_c_calvary_tank_pm_small_arms = 5
+milstock_c_calvary_tank_pm_artillery = 5
+milstock_c_calvary_tank_pm_ammunition = 5
+milstock_c_calvary_tank_pm_radios = 5
+milstock_c_calvary_tank_pm_tanks = 5
+milstock_c_calvary_tank_pm_oil = 5
+## Inputs for administrative cost
+milstock_c_calvary_tank_pm_paper = 10
+milstock_c_calvary_tank_pm_iron = 6
+## Outputs
+milstock_c_calvary_tank_pm_bureaucracy = 5
+## AI Value
+milstock_c_calvary_tank_pm_ai_value = 2500
+## Staff requirements
+milstock_c_calvary_tank_pm_officers = 50
+milstock_c_calvary_tank_pm_clerks = 100
+milstock_c_calvary_tank_pm_machinists = 100
+milstock_c_calvary_tank_pm_laborers = 350
+
+# Constants for Production Method :: Calvary Equipment Stockpile :: No Stockpiling
+## Staff requirements - only a skeleton crew; got to keep contract work going after all
+milstock_c_calvary_inactive_pm_officers = 5
+milstock_c_calvary_inactive_pm_clerks = 25
 
 
 
