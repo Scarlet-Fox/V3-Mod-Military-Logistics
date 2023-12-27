@@ -2,3 +2,65 @@
 
 milstock_c_small_arms_per_level = 10
 milstock_c_ammunition_per_level = 10
+
+
+
+
+# Global Constants
+
+## Base Prices for Goods - these are used to feed into "ai_values" later in this file
+milstock_base_price_small_arms = 
+milstock_base_price_artillery = 
+milstock_base_price_ammunition = 
+milstock_base_price_tanks = 
+milstock_base_price_radios = 
+milstock_base_price_fabric = 
+milstock_base_price_groceries = 
+milstock_base_price_liquor = 
+milstock_base_price_sugar = 
+milstock_base_price_opium = 
+milstock_base_price_tobacco = 
+milstock_base_price_grain = 
+milstock_base_price_iron = 
+milstock_base_price_oil = 
+milstock_base_price_paper = 
+milstock_base_price_tools = 
+
+
+
+# Constants for Production Method :: Infantry Equipment Stockpile :: Basic Equipment
+
+## Inputs
+milstock_c_infantry_basic_small_arms = 10
+milstock_c_infantry_basic_grain = 5
+
+## Outputs
+milstock_c_infantry_basic_bureaucracy = 5
+
+
+milstock_c_infantry_basic
+
+
+# Constants for Production Method :: Infantry Equipment Stockpile :: Ammunition Included
+
+
+
+
+# Constants for Production Method :: Infantry Equipment Stockpile :: Radio Included
+
+
+
+
+# Constants for Production Method :: Infantry Equipment Stockpile :: Mechanized Included
+
+
+
+# Constants for Production Method :: Infantry Equipment Stockpile :: No Stockpiling
+
+
+
+
+milstock_c_infantry_basic_
+milstock_c_infantry_basic_
+milstock_c_infantry_basic_
+milstock_c_infantry_basic_
