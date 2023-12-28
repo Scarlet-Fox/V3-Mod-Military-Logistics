@@ -8,7 +8,7 @@
 	downsizeable = yes
 
 	unlocking_technologies = {
-		logistics
+		napoleonic_warfare
 	}
 
 	production_method_groups = {
