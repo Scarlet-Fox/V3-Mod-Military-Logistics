@@ -1,21 +1,21 @@
 ﻿milstock_bg_logistics_centers = {
-	category = development
-	always_possible = yes
-	is_government_funded = yes
-	inheritable_construction = yes
+    category = development
+    always_possible = yes
+    is_government_funded = yes
+    inheritable_construction = yes
 
-	lens = government
-	urbanization = 20
-	infrastructure_usage_per_level = 2
+    lens = government
+    urbanization = 20
+    infrastructure_usage_per_level = 2
 }
 
 milstock_bg_distribution_centers = {
-	category = development
-	always_possible = no
-	is_government_funded = yes
-	inheritable_construction = no
+    category = development
+    always_possible = no
+    is_government_funded = yes
+    inheritable_construction = no
 
-	infrastructure_usage_per_level = 0.01
-	lens = government
-	urbanization = 0
+    infrastructure_usage_per_level = 0.01
+    lens = government
+    urbanization = 0
 }

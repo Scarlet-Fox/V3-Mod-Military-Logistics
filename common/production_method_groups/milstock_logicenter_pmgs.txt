@@ -1,64 +1,64 @@
 ﻿milstock_pmg_logicenter_infantry_stock = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-	ai_selection = most_productive
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+    ai_selection = most_productive
 
-	production_methods = {
-		milstock_logicenter_infantry_pm_basic
-		milstock_logicenter_infantry_pm_ammo
-		milstock_logicenter_infantry_pm_radios
-		milstock_logicenter_infantry_pm_mech
-		milstock_logicenter_infantry_pm_inactive
-	}
+    production_methods = {
+        milstock_logicenter_infantry_pm_basic
+        milstock_logicenter_infantry_pm_ammo
+        milstock_logicenter_infantry_pm_radios
+        milstock_logicenter_infantry_pm_mech
+        milstock_logicenter_infantry_pm_inactive
+    }
 }
 
 milstock_pmg_logicenter_artillery_stock = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-	ai_selection = most_productive
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+    ai_selection = most_productive
 
-	production_methods = {
-		milstock_logicenter_artillery_pm_basic
-		milstock_logicenter_artillery_pm_ammo
-		milstock_logicenter_artillery_pm_radios
-		milstock_logicenter_artillery_pm_tank
-		milstock_logicenter_artillery_pm_inactive
-	}
+    production_methods = {
+        milstock_logicenter_artillery_pm_basic
+        milstock_logicenter_artillery_pm_ammo
+        milstock_logicenter_artillery_pm_radios
+        milstock_logicenter_artillery_pm_tank
+        milstock_logicenter_artillery_pm_inactive
+    }
 }
 
 milstock_pmg_logicenter_calvary_stock = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-	ai_selection = most_productive
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+    ai_selection = most_productive
 
-	production_methods = {
-		milstock_logicenter_calvary_pm_basic
-		milstock_logicenter_calvary_pm_small_arms
-		milstock_logicenter_calvary_pm_armored
-		milstock_logicenter_calvary_pm_tank
-		milstock_logicenter_calvary_pm_inactive
-	}
+    production_methods = {
+        milstock_logicenter_calvary_pm_basic
+        milstock_logicenter_calvary_pm_small_arms
+        milstock_logicenter_calvary_pm_armored
+        milstock_logicenter_calvary_pm_tank
+        milstock_logicenter_calvary_pm_inactive
+    }
 }
 
 milstock_pmg_logicenter_mobil_stock = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-	ai_selection = most_productive
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+    ai_selection = most_productive
 
-	production_methods = {
-		milstock_logicenter_mobil_pm_grain
-		milstock_logicenter_mobil_pm_basic
-		milstock_logicenter_mobil_pm_groceries
-		milstock_logicenter_mobil_pm_sugar
-		milstock_logicenter_mobil_pm_tobacco
-		milstock_logicenter_mobil_pm_opium
-		milstock_logicenter_mobil_pm_inactive
-	}
+    production_methods = {
+        milstock_logicenter_mobil_pm_grain
+        milstock_logicenter_mobil_pm_basic
+        milstock_logicenter_mobil_pm_groceries
+        milstock_logicenter_mobil_pm_sugar
+        milstock_logicenter_mobil_pm_tobacco
+        milstock_logicenter_mobil_pm_opium
+        milstock_logicenter_mobil_pm_inactive
+    }
 }
 
 milstock_pmg_logicenter_administration_style = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-	ai_selection = most_productive
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+    ai_selection = most_productive
 
-	production_methods = {
-		milstock_logicenter_admin_pm_basic
-		milstock_logicenter_admin_pm_academic
-		milstock_logicenter_admin_pm_inactive
-	}
+    production_methods = {
+        milstock_logicenter_admin_pm_basic
+        milstock_logicenter_admin_pm_academic
+        milstock_logicenter_admin_pm_inactive
+    }
 }
