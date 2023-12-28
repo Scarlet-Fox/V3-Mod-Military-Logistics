@@ -5,6 +5,27 @@
 milstock_logicenter_infantry_pm_basic = {
     texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
 
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_small_arms_add = milstock_c_infantry_basic_pm_small_arms
+			goods_input_grain_add = milstock_c_infantry_basic_pm_grain
+			goods_input_paper_add = milstock_c_infantry_basic_pm_paper
+			goods_input_tools_add = milstock_c_infantry_basic_pm_tools
+ 
+			# output
+			country_bureaucracy_add = milstock_c_infantry_basic_pm_bureaucracy
+		}
+
+		level_scaled = {
+			building_employment_officers_add = milstock_c_infantry_basic_pm_officers
+			building_employment_machinists_add = milstock_c_infantry_basic_pm_machinists
+			building_employment_clerks_add = milstock_c_infantry_basic_pm_clerks
+			building_employment_laborers_add = milstock_c_infantry_basic_pm_laborers
+		}
+	}
+
+	ai_value = milstock_c_infantry_basic_pm_ai_value
 }
 milstock_logicenter_infantry_pm_ammo = {
     texture = "gfx/interface/icons/production_method_icons/line_infantry.dds"
@@ -13,6 +34,29 @@ milstock_logicenter_infantry_pm_ammo = {
     unlocking_technologies = {
     	percussion_cap
     }
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_small_arms_add = milstock_c_infantry_ammo_pm_small_arms
+			goods_input_grain_add = milstock_c_infantry_ammo_pm_grain
+			goods_input_ammunition_add = milstock_c_infantry_ammo_pm_ammunition
+			goods_input_paper_add = milstock_c_infantry_ammo_pm_paper
+			goods_input_tools_add = milstock_c_infantry_ammo_pm_tools
+ 
+			# output
+			country_bureaucracy_add = milstock_c_infantry_ammo_pm_bureaucracy
+		}
+
+		level_scaled = {
+			building_employment_officers_add = milstock_c_infantry_ammo_pm_officers
+			building_employment_machinists_add = milstock_c_infantry_ammo_pm_machinists
+			building_employment_clerks_add = milstock_c_infantry_ammo_pm_clerks
+			building_employment_laborers_add = milstock_c_infantry_ammo_pm_laborers
+		}
+	}
+
+	ai_value = milstock_c_infantry_ammo_pm_ai_value
 }
 milstock_logicenter_infantry_pm_radios = {
     texture = "gfx/interface/icons/production_method_icons/nco_incorporation.dds"
@@ -20,6 +64,30 @@ milstock_logicenter_infantry_pm_radios = {
     unlocking_technologies = {
     	radio
     }
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_small_arms_add = milstock_c_infantry_radio_pm_small_arms
+			goods_input_grain_add = milstock_c_infantry_radio_pm_grain
+			goods_input_ammunition_add = milstock_c_infantry_radio_pm_ammunition
+			goods_input_radios_add = milstock_c_infantry_radio_pm_radios
+			goods_input_paper_add = milstock_c_infantry_radio_pm_paper
+			goods_input_tools_add = milstock_c_infantry_radio_pm_tools
+ 
+			# output
+			country_bureaucracy_add = milstock_c_infantry_radio_pm_bureaucracy
+		}
+
+		level_scaled = {
+			building_employment_officers_add = milstock_c_infantry_radio_pm_officers
+			building_employment_machinists_add = milstock_c_infantry_radio_pm_machinists
+			building_employment_clerks_add = milstock_c_infantry_radio_pm_clerks
+			building_employment_laborers_add = milstock_c_infantry_radio_pm_laborers
+		}
+	}
+
+	ai_value = milstock_c_infantry_radio_pm_ai_value
 }
 milstock_logicenter_infantry_pm_mech = {
     texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
@@ -28,11 +96,42 @@ milstock_logicenter_infantry_pm_mech = {
     	mobile_armor
     	radio
     }
-	
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_small_arms_add = milstock_c_infantry_tank_pm_small_arms
+			goods_input_grain_add = milstock_c_infantry_tank_pm_grain
+			goods_input_ammunition_add = milstock_c_infantry_tank_pm_ammunition
+			goods_input_radios_add = milstock_c_infantry_tank_pm_radios
+			goods_input_tanks_add = milstock_c_infantry_tank_pm_tanks
+			goods_input_oil_add = milstock_c_infantry_tank_pm_oil
+			goods_input_paper_add = milstock_c_infantry_tank_pm_paper
+			goods_input_tools_add = milstock_c_infantry_tank_pm_tools
+ 
+			# output
+			country_bureaucracy_add = milstock_c_infantry_tank_pm_bureaucracy
+		}
+
+		level_scaled = {
+			building_employment_officers_add = milstock_c_infantry_tank_pm_officers
+			building_employment_machinists_add = milstock_c_infantry_tank_pm_machinists
+			building_employment_clerks_add = milstock_c_infantry_tank_pm_clerks
+			building_employment_laborers_add = milstock_c_infantry_tank_pm_laborers
+		}
+	}
+
+	ai_value = milstock_c_infantry_tank_pm_ai_value
 }
 milstock_logicenter_infantry_pm_inactive = {
     texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
 	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_officers_add = milstock_c_infantry_inactive_pm_officers
+			building_employment_clerks_add = milstock_c_infantry_inactive_pm_clerks
+		}
+	}
 }
 
 ###################################################################
@@ -163,7 +262,7 @@ milstock_logicenter_admin_pm_academic = {
 }
 milstock_logicenter_admin_pm_inactive = {
     texture = "gfx/interface/icons/production_method_icons/base_1.dds"
-    
+
 }
 
 
