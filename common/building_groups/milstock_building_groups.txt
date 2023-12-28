@@ -1,4 +1,4 @@
-﻿milstock_bg_logistics_center = {
+﻿milstock_bg_logistics_centres = {
 	category = development
 	always_possible = yes
 	is_government_funded = yes
@@ -9,7 +9,7 @@
 	infrastructure_usage_per_level = 2
 }
 
-milstock_bg_distribution_center = {
+milstock_bg_distribution_centers = {
 	category = development
 	always_possible = no
 	is_government_funded = yes

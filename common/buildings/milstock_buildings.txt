@@ -1,27 +1,344 @@
-﻿milstock_building_stockpiles = {
-	building_group = milstock_bg_stockpiles
+﻿milstock_building_logistics_centre = {
+	building_group = milstock_bg_logistics_centres
 	texture = "gfx/interface/icons/building_icons/building_barracks.dds"
 
 	has_max_level = no
 	buildable = yes
+	expandable = yes
+	downsizeable = yes
+
+	unlocking_technologies = {
+		logistics
+	}
 
 	production_method_groups = {
         milstock_pmg_stockpile_type
     }
 
-	required_construction = construction_cost_very_low
+	required_construction = construction_cost_very_low # TODO - CHANGE THIS, IT IS FOR TESTING ONLY
 }
 
-milstock_building_small_arms_warehouses = {
-	building_group = milstock_bg_warehouses
+
+# Each production method has it's own spawnable distribution center
+# -----------------------------------------------------------------
+
+# These facilities are literally "spawned" at the outbreak of a war, and
+# the idea behind this forced creation is that they will be usable by the
+# AI without being abusable by players.
+#
+# When the stockpile associated with the building type is emptied, then
+# that stockpile building is deleted.
+#
+# These buildings do not persist if a territory is captured or a civil war
+# breaks out, as the management of these facilities is done dynamically
+# by the Logistics Centre for the state.
+# 
+# Or... At least, this is the plan. Got to see how this works out in
+# practice.
+
+# Infantry :: Basic Equipment Distribution Center
+milstock_building_dist_infantry_basic = {
+	building_group = milstock_bg_distribution_centers
 	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
 
 	has_max_level = no
 	buildable = no
+	expandable = no
+	downsizeable = no
 
 	production_method_groups = {
-        milstock_pmg_small_arms_warehouse
+        milstock_pmg_dist_infantry_basic
     }
 
 	required_construction = construction_cost_very_high
 }
+
+# Infantry :: Ammunition Included Distribution Center
+milstock_building_dist_infantry_ammo = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_infantry_ammo
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Infantry :: Radios Included Distribution Center
+milstock_building_dist_infantry_radio = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_infantry_radio
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Infantry :: Mechanized Distribution Center
+milstock_building_dist_infantry_mech = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_infantry_mech
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Artillery :: Basic Equipment Distribution Center
+milstock_building_dist_artillery_basic = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_artillery_basic
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Artillery :: Ammunition Included Distribution Center
+milstock_building_dist_artillery_ammo = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_artillery_ammo
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Artillery :: Radio Included Distribution Center
+milstock_building_dist_artillery_radio = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_artillery_radio
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Artillery :: Heavy Tank Distribution Center
+milstock_building_dist_artillery_tank = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_artillery_tank
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Calvary :: Basic Equipment Distribution Center
+milstock_building_dist_calvary_basic = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_calvary_basic
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Calvary :: Small Arms Distribution Center
+milstock_building_dist_calvary_small_arms = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_calvary_small_arms
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Calvary :: Armor Distribution Center
+milstock_building_dist_calvary_armor = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_calvary_armor
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Calvary :: Tank Distribution Center
+milstock_building_dist_calvary_tank = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_calvary_tank
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Mobilization :: Grain Distribution Center
+milstock_building_dist_mobil_grain = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_mobil_grain
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Mobilization :: Basic Goods Distribution Center
+milstock_building_dist_mobil_basic = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_mobil_basic
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Mobilization :: Groceries Included Distribution Center
+milstock_building_dist_mobil_groceries = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_mobil_groceries
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Mobilization :: Chocolate Included Distribution Center
+milstock_building_dist_mobil_chocolate = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_mobil_chocolate
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Mobilization :: Tobacco Included Distribution Center
+milstock_building_dist_mobil_tobacco = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_mobil_tobacco
+    }
+
+	required_construction = construction_cost_very_high
+}
+
+# Mobilization :: Opium Included Distribution Center
+milstock_building_dist_mobil_opium = {
+	building_group = milstock_bg_distribution_centers
+	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
+
+	has_max_level = no
+	buildable = no
+	expandable = no
+	downsizeable = no
+
+	production_method_groups = {
+        milstock_pmg_dist_mobil_opium
+    }
+
+	required_construction = construction_cost_very_high
+}
+
