@@ -9,14 +9,25 @@ milstock_logicenter_infantry_pm_basic = {
 milstock_logicenter_infantry_pm_ammo = {
     texture = "gfx/interface/icons/production_method_icons/line_infantry.dds"
     is_default = yes
-	
+
+    unlocking_technologies = {
+    	percussion_cap
+    }
 }
 milstock_logicenter_infantry_pm_radios = {
     texture = "gfx/interface/icons/production_method_icons/nco_incorporation.dds"
 	
+    unlocking_technologies = {
+    	radio
+    }
 }
 milstock_logicenter_infantry_pm_mech = {
     texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
+	
+    unlocking_technologies = {
+    	mobile_armor
+    	radio
+    }
 	
 }
 milstock_logicenter_infantry_pm_inactive = {
@@ -30,20 +41,29 @@ milstock_logicenter_infantry_pm_inactive = {
 
 milstock_logicenter_artillery_pm_basic = {
     texture = "gfx/interface/icons/production_method_icons/mobile_artillery.dds"
-	
 }
 milstock_logicenter_artillery_pm_ammo = {
     texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
     is_default = yes
-	
+
+    unlocking_technologies = {
+    	percussion_cap
+    }
 }
 milstock_logicenter_artillery_pm_radios = {
     texture = "gfx/interface/icons/production_method_icons/siege_artillery.dds"
 	
+    unlocking_technologies = {
+    	radio
+    }
 }
 milstock_logicenter_artillery_pm_tank = {
     texture = "gfx/interface/icons/production_method_icons/armored_division.dds"
 	
+    unlocking_technologies = {
+    	mobile_armor
+    	radio
+    }
 }
 milstock_logicenter_artillery_pm_inactive = {
     texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
@@ -70,6 +90,10 @@ milstock_logicenter_calvary_pm_armored = {
 milstock_logicenter_calvary_pm_tank = {
     texture = "gfx/interface/icons/production_method_icons/armored_division.dds"
 	
+    unlocking_technologies = {
+    	mobile_armor
+    	radio
+    }
 }
 milstock_logicenter_calvary_pm_inactive = {
     texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
@@ -92,22 +116,33 @@ milstock_logicenter_mobil_pm_basic = {
 milstock_logicenter_mobil_pm_groceries = {
     texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	
+    unlocking_technologies = {
+    	canneries
+    }
 }
 milstock_logicenter_mobil_pm_sugar = {
     texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	
+    unlocking_technologies = {
+    	canneries
+    }
 }
 milstock_logicenter_mobil_pm_tobacco = {
     texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	
+    unlocking_technologies = {
+    	canneries
+    }
 }
 milstock_logicenter_mobil_pm_opium = {
     texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	
+    unlocking_technologies = {
+    	canneries
+    }
 }
 milstock_logicenter_mobil_pm_inactive = {
     texture = "gfx/interface/icons/production_method_icons/no_canning.dds"
-	
 }
 
 ##############################################################
@@ -122,10 +157,13 @@ milstock_logicenter_admin_pm_basic = {
 milstock_logicenter_admin_pm_academic = {
     texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
 	
+    unlocking_technologies = {
+    	logistics
+    }
 }
 milstock_logicenter_admin_pm_inactive = {
     texture = "gfx/interface/icons/production_method_icons/base_1.dds"
-	
+    
 }
 
 
