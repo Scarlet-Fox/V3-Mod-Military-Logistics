@@ -410,42 +410,186 @@ milstock_logicenter_calvary_pm_inactive = {
 milstock_logicenter_mobil_pm_grain = {
     texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
 	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = milstock_c_mobil_grain_pm_grain
+			goods_input_paper_add = milstock_c_mobil_grain_pm_paper
+ 
+			# output
+			country_bureaucracy_add = milstock_c_mobil_grain_pm_bureaucracy
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = milstock_c_mobil_grain_pm_clerks
+			building_employment_laborers_add = milstock_c_mobil_grain_pm_laborers
+		}
+	}
+
+	ai_value = milstock_c_mobil_grain_pm_ai_value
 }
+
 milstock_logicenter_mobil_pm_basic = {
     texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
     is_default = yes
 	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = milstock_c_mobil_basic_pm_grain
+			goods_input_liquor_add = milstock_c_mobil_basic_pm_liquor
+			goods_input_fabric_add = milstock_c_mobil_basic_pm_fabric
+			goods_input_paper_add = milstock_c_mobil_basic_pm_paper
+ 
+			# output
+			country_bureaucracy_add = milstock_c_mobil_basic_pm_bureaucracy
+		}
+
+		level_scaled = {
+			building_employment_officers_add = milstock_c_mobil_basic_pm_officers
+			building_employment_clerks_add = milstock_c_mobil_basic_pm_clerks
+			building_employment_laborers_add = milstock_c_mobil_basic_pm_laborers
+		}
+	}
+
+	ai_value = milstock_c_mobil_basic_pm_ai_value
 }
+
 milstock_logicenter_mobil_pm_groceries = {
     texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	
     unlocking_technologies = {
     	canneries
     }
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = milstock_c_mobil_groceries_pm_grain
+			goods_input_liquor_add = milstock_c_mobil_groceries_pm_liquor
+			goods_input_fabric_add = milstock_c_mobil_groceries_pm_fabric
+			goods_input_groceries_add = milstock_c_mobil_groceries_pm_groceries
+			goods_input_paper_add = milstock_c_mobil_groceries_pm_paper
+ 
+			# output
+			country_bureaucracy_add = milstock_c_mobil_groceries_pm_bureaucracy
+		}
+
+		level_scaled = {
+			building_employment_officers_add = milstock_c_mobil_groceries_pm_officers
+			building_employment_clerks_add = milstock_c_mobil_groceries_pm_clerks
+			building_employment_laborers_add = milstock_c_mobil_groceries_pm_laborers
+		}
+	}
+
+	ai_value = milstock_c_mobil_basic_pm_ai_value
 }
+
 milstock_logicenter_mobil_pm_sugar = {
     texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	
     unlocking_technologies = {
     	canneries
     }
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = milstock_c_mobil_sugar_pm_grain
+			goods_input_liquor_add = milstock_c_mobil_sugar_pm_liquor
+			goods_input_fabric_add = milstock_c_mobil_sugar_pm_fabric
+			goods_input_groceries_add = milstock_c_mobil_sugar_pm_groceries
+			goods_input_sugar_add = milstock_c_mobil_sugar_pm_sugar
+			goods_input_paper_add = milstock_c_mobil_sugar_pm_paper
+ 
+			# output
+			country_bureaucracy_add = milstock_c_mobil_sugar_pm_bureaucracy
+		}
+
+		level_scaled = {
+			building_employment_officers_add = milstock_c_mobil_sugar_pm_officers
+			building_employment_clerks_add = milstock_c_mobil_sugar_pm_clerks
+			building_employment_laborers_add = milstock_c_mobil_sugar_pm_laborers
+		}
+	}
+
+	ai_value = milstock_c_mobil_sugar_pm_ai_value
 }
+
 milstock_logicenter_mobil_pm_tobacco = {
     texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	
     unlocking_technologies = {
     	canneries
     }
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = milstock_c_mobil_tobacco_pm_grain
+			goods_input_liquor_add = milstock_c_mobil_tobacco_pm_liquor
+			goods_input_fabric_add = milstock_c_mobil_tobacco_pm_fabric
+			goods_input_groceries_add = milstock_c_mobil_tobacco_pm_groceries
+			goods_input_sugar_add = milstock_c_mobil_tobacco_pm_sugar
+			goods_input_tobacco_add = milstock_c_mobil_tobacco_pm_tobacco
+			goods_input_paper_add = milstock_c_mobil_tobacco_pm_paper
+ 
+			# output
+			country_bureaucracy_add = milstock_c_mobil_tobacco_pm_bureaucracy
+		}
+
+		level_scaled = {
+			building_employment_officers_add = milstock_c_mobil_tobacco_pm_officers
+			building_employment_clerks_add = milstock_c_mobil_tobacco_pm_clerks
+			building_employment_laborers_add = milstock_c_mobil_tobacco_pm_laborers
+		}
+	}
+
+	ai_value = milstock_c_mobil_tobacco_pm_ai_value
 }
+
 milstock_logicenter_mobil_pm_opium = {
     texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	
     unlocking_technologies = {
     	canneries
     }
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = milstock_c_mobil_opium_pm_grain
+			goods_input_liquor_add = milstock_c_mobil_opium_pm_liquor
+			goods_input_fabric_add = milstock_c_mobil_opium_pm_fabric
+			goods_input_groceries_add = milstock_c_mobil_opium_pm_groceries
+			goods_input_sugar_add = milstock_c_mobil_opium_pm_sugar
+			goods_input_tobacco_add = milstock_c_mobil_opium_pm_tobacco
+			goods_input_opium_add = milstock_c_mobil_opium_pm_opium
+			goods_input_paper_add = milstock_c_mobil_opium_pm_paper
+ 
+			# output
+			country_bureaucracy_add = milstock_c_mobil_opium_pm_bureaucracy
+		}
+
+		level_scaled = {
+			building_employment_officers_add = milstock_c_mobil_opium_pm_officers
+			building_employment_clerks_add = milstock_c_mobil_opium_pm_clerks
+			building_employment_laborers_add = milstock_c_mobil_opium_pm_laborers
+		}
+	}
+
+	ai_value = milstock_c_mobil_opium_pm_ai_value
 }
+
 milstock_logicenter_mobil_pm_inactive = {
     texture = "gfx/interface/icons/production_method_icons/no_canning.dds"
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_officers_add = milstock_c_mobil_inactive_pm_officers
+			building_employment_clerks_add = milstock_c_mobil_inactive_pm_clerks
+		}
+	}
 }
 
 ##############################################################
@@ -457,6 +601,7 @@ milstock_logicenter_admin_pm_basic = {
     is_default = yes
 	
 }
+
 milstock_logicenter_admin_pm_academic = {
     texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
 	
@@ -464,23 +609,8 @@ milstock_logicenter_admin_pm_academic = {
     	logistics
     }
 }
+
 milstock_logicenter_admin_pm_inactive = {
     texture = "gfx/interface/icons/production_method_icons/base_1.dds"
 
-}
-
-
-
-
-milstock_stockpile_pm_small_arms_only = {
-    texture = "gfx/interface/icons/production_method_icons/muskets.dds"
-    
-
-    building_modifiers = {
-		level_scaled = {
-			building_employment_officers_add = 50
-			building_employment_clerks_add = 950
-			goods_input_small_arms_add = 10
-		}
-	}
 }
