@@ -12,7 +12,11 @@
 	}
 
 	production_method_groups = {
-        milstock_pmg_stockpile_type
+        milstock_pmg_logicentre_infantry_stock
+        milstock_pmg_logicentre_artillery_stock
+        milstock_pmg_logicentre_calvary_stock
+        milstock_pmg_logicentre_mobil_stock
+        milstock_pmg_logicentre_administration_style
     }
 
 	required_construction = construction_cost_very_low # TODO - CHANGE THIS, IT IS FOR TESTING ONLY
