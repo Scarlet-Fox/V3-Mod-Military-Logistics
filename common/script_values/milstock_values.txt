@@ -1,4 +1,90 @@
-﻿############################
-##### Global Constants #####
-############################
+﻿######################################################################
+# Terrifying and Obtuse Scripted Values
+######################################################################
 
+# Get the approximate percentage of clerks hired for the purpose of 
+# estimating their ability to buy stuff. It's fuzzy but it works.
+milstock_sv_clerk_purchasing_ratio = {
+	value = 0
+	if = {
+		limit = {
+			has_employee_slots_filled = {
+				pop_type = clerks
+				percent = 0.10
+			}
+			add = 0.20
+		}
+	}
+	if = {
+		limit = {
+			has_employee_slots_filled = {
+				pop_type = clerks
+				percent = 0.20
+			}
+			add = 0.10
+		}
+	}
+	if = {
+		limit = {
+			has_employee_slots_filled = {
+				pop_type = clerks
+				percent = 0.30
+			}
+			add = 0.10
+		}
+	}
+	if = {
+		limit = {
+			has_employee_slots_filled = {
+				pop_type = clerks
+				percent = 0.40
+			}
+			add = 0.10
+		}
+	}
+	if = {
+		limit = {
+			has_employee_slots_filled = {
+				pop_type = clerks
+				percent = 0.50
+			}
+			add = 0.10
+		}
+	}
+	if = {
+		limit = {
+			has_employee_slots_filled = {
+				pop_type = clerks
+				percent = 0.60
+			}
+			add = 0.10
+		}
+	}
+	if = {
+		limit = {
+			has_employee_slots_filled = {
+				pop_type = clerks
+				percent = 0.70
+			}
+			add = 0.10
+		}
+	}
+	if = {
+		limit = {
+			has_employee_slots_filled = {
+				pop_type = clerks
+				percent = 0.80
+			}
+			add = 0.10
+		}
+	}
+	if = {
+		limit = {
+			has_employee_slots_filled = {
+				pop_type = clerks
+				percent = 0.90
+			}
+			add = 0.10
+		}
+	}
+}
