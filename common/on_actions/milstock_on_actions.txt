@@ -76,31 +76,32 @@ milstock_logicenter_constructed = {
 	}
 }
 
-#on_monthly_pulse_state = {
-#	on_actions = {
-#		milstock_increase_stockpiles
-#	}
-#}
+on_monthly_pulse_state = {
+	on_actions = {
+		milstock_increase_stockpiles
+	}
+}
 
-#milstock_increase_stockpiles = {
-#	effect = {
-#		every_scope_building = {
-#			limit = {
-#				is_building_type = milstock_building_logistics_center
-#			}
-#			set_variable = {
-#
-#			}
-#		}
-#	}
-#}
-
-## has_employee_slots_filled
-#Checks whether the amount of employees of a certain poptype are above or below a given percentage of the total amount the building can currently hire. I.e. if a building is at 80% (given as 0.8) of its current hiring capacity for Shopkeepers, for example.  
-#has_employee_slots_filled = { pop_type = X percent = Y }  
-#Where X is a pop type and Y is a fixed point  
-#**Supported Scopes**: building  
-
+milstock_increase_stockpiles = {
+	effect = {
+		every_scope_building = {
+			limit = {
+				is_building_type = milstock_building_logistics_center
+			}
+			save_scope_as = logistics_center
+			ROOT = {
+				set_variable = {
+					name = milstock_clerk_purchasing_ratio_var
+					value = milstock_sv_clerk_purchasing_ratio
+				}
+				set_variable = {
+					name = milstock_officer_employment_penalty_var
+					value = milstock_sv_officer_employment_penalty
+				}
+			}
+		}
+	}
+}
 
 
 # If the state has a logistics center

@@ -1,90 +1,152 @@
-######################################################################
+﻿######################################################################
 # Terrifying and Obtuse Scripted Values
 ######################################################################
 
+# Clerk Purchasing Ratio - used to scale goods stockpile additions.
+# --------------------------------------------------------------------
+
 # Get the approximate percentage of clerks hired for the purpose of 
 # estimating their ability to buy stuff. It's fuzzy but it works.
+# We will multiply this by the number of goods to scale the stockpile
+# additions by the percentage of clerks hired.
 milstock_sv_clerk_purchasing_ratio = {
 	value = 0
 	if = {
 		limit = {
-			has_employee_slots_filled = {
-				pop_type = clerks
-				percent = 0.10
+			scope:logistics_center = {
+				has_employee_slots_filled = {
+					pop_type = clerks
+					percent = 0.10
+				}
 			}
-			add = 0.20
 		}
+		add = 0.20
 	}
 	if = {
 		limit = {
-			has_employee_slots_filled = {
-				pop_type = clerks
-				percent = 0.20
+			scope:logistics_center = {
+				has_employee_slots_filled = {
+					pop_type = clerks
+					percent = 0.20
+				}
 			}
-			add = 0.10
 		}
+		add = 0.10
 	}
 	if = {
 		limit = {
-			has_employee_slots_filled = {
-				pop_type = clerks
-				percent = 0.30
+			scope:logistics_center = {
+				has_employee_slots_filled = {
+					pop_type = clerks
+					percent = 0.30
+				}
 			}
-			add = 0.10
 		}
+		add = 0.10
 	}
 	if = {
 		limit = {
-			has_employee_slots_filled = {
-				pop_type = clerks
-				percent = 0.40
+			scope:logistics_center = {
+				has_employee_slots_filled = {
+					pop_type = clerks
+					percent = 0.40
+				}
 			}
-			add = 0.10
 		}
+		add = 0.10
 	}
 	if = {
 		limit = {
-			has_employee_slots_filled = {
-				pop_type = clerks
-				percent = 0.50
+			scope:logistics_center = {
+				has_employee_slots_filled = {
+					pop_type = clerks
+					percent = 0.50
+				}
 			}
-			add = 0.10
 		}
+		add = 0.10
 	}
 	if = {
 		limit = {
-			has_employee_slots_filled = {
-				pop_type = clerks
-				percent = 0.60
+			scope:logistics_center = {
+				has_employee_slots_filled = {
+					pop_type = clerks
+					percent = 0.60
+				}
 			}
-			add = 0.10
 		}
+		add = 0.10
 	}
 	if = {
 		limit = {
-			has_employee_slots_filled = {
-				pop_type = clerks
-				percent = 0.70
+			scope:logistics_center = {
+				has_employee_slots_filled = {
+					pop_type = clerks
+					percent = 0.70
+				}
 			}
-			add = 0.10
 		}
+		add = 0.10
 	}
 	if = {
 		limit = {
-			has_employee_slots_filled = {
-				pop_type = clerks
-				percent = 0.80
+			scope:logistics_center = {
+				has_employee_slots_filled = {
+					pop_type = clerks
+					percent = 0.80
+				}
 			}
-			add = 0.10
 		}
+		add = 0.10
 	}
 	if = {
 		limit = {
-			has_employee_slots_filled = {
-				pop_type = clerks
-				percent = 0.90
+			scope:logistics_center = {
+				has_employee_slots_filled = {
+					pop_type = clerks
+					percent = 0.90
+				}
 			}
-			add = 0.10
 		}
+		add = 0.10
 	}
+	min = 0 # Never buy a negative amount of goods
+	max = 1 # Never buy more than 100% of the possible goods
+}
+
+# Insufficient Officer Penalty
+# --------------------------------------------------------------------
+
+# If too many officer positions are vacant, then we apply a 
+# penalty to the stockpile stores multiplicatively.
+milstock_sv_officer_employment_penalty = {
+	value = 1 # No penalty - start at 100%
+	if = {
+		limit = {
+			scope:logistics_center = {
+				NOT = {
+					has_employee_slots_filled = {
+						pop_type = officers
+						percent = 0.50
+					}
+				}
+			}
+		}
+		subtract = 0.10 # 10% penalty if we are below 50% officers
+	}
+	if = {
+		limit = {
+			scope:logistics_center = {
+				NOT = {
+					has_employee_slots_filled = {
+						pop_type = officers
+						percent = 0.20
+					}
+				}
+			}
+		}
+		subtract = 0.40 # Additional 40% penalty if we are below 20% officers - the clerks are running away with your guns!!!!!!
+	}
+	min = 0.50 # Let's never go below this just from officers
+	max = 1 # Never increase the amount of goods purchased
 }
