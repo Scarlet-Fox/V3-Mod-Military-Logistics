@@ -1,59 +1,59 @@
 ﻿# When a stockpile is built, let's create the variables to track the stockpile amounts.
 # I have no idea if we're suppose to pre-create them, but this soothes my neurosis, and
 # it's important for my neurosis to be abated.
-on_building_built = {
-	on_actions = {
-		milstock_stockpile_constructed
-	}
-}
+#on_building_built = {
+#	on_actions = {
+#		milstock_stockpile_constructed
+#	}
+#}
 
-milstock_stockpile_constructed = {
-	effect = {
-		if = {
-			limit = {
-				is_building_type = milstock_building_stockpiles
-			}
-			ROOT.state = {
-				set_variable = {
-					name = milstock_state_small_arms_stockpile_var
-					value = 0
-				}
-			}
-			#save_scope_as = milstock_building
-			#debug_log = "milstock_small_arms_state_debug"
-			#debug_log = "Stockpile building constructed."
-		}
-	}
-}
+#milstock_stockpile_constructed = {
+#	effect = {
+#		if = {
+#			limit = {
+#				is_building_type = milstock_building_stockpiles
+#			}
+#			ROOT.state = {
+#				set_variable = {
+#					name = milstock_state_small_arms_stockpile_var
+#					value = 0
+#				}
+#			}
+#			#save_scope_as = milstock_building
+#			#debug_log = "milstock_small_arms_state_debug"
+#			#debug_log = "Stockpile building constructed."
+#		}
+#	}
+#}
 
 # Each month, we'll add a scaled representation of the month's stockpiled amount to the
 # stockpile in any state with a building.
-on_monthly_pulse_state = {
-	effect = {
-		if = {
-			limit = {
-				has_building = milstock_building_stockpiles
-			}
-			every_scope_building = {
-				limit = {
-					is_building_type = milstock_building_stockpiles
-				}
-				ROOT.state = {
-					set_variable = {
-						name = milstock_state_small_arms_stockpile_increase_var
-						value = {
-							
-						}
-					}
-				}
-			}
-
-			change_variable = {
-				name = milstock_state_small_arms_stockpile_var
-				add = {
-
-				}
-			}
-		}
-	}
-}
+#on_monthly_pulse_state = {
+#	effect = {
+#		if = {
+#			limit = {
+#				has_building = milstock_building_stockpiles
+#			}
+#			every_scope_building = {
+#				limit = {
+#					is_building_type = milstock_building_stockpiles
+#				}
+#				ROOT.state = {
+#					set_variable = {
+#						name = milstock_state_small_arms_stockpile_increase_var
+#						value = {
+#							
+#						}
+#					}
+#				}
+#			}
+#
+#			change_variable = {
+#				name = milstock_state_small_arms_stockpile_var
+#				add = {
+#
+#				}
+#			}
+#		}
+#	}
+#}
