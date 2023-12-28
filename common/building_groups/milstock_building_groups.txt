@@ -1,4 +1,4 @@
-﻿milstock_bg_logistics_centres = {
+﻿milstock_bg_logistics_centers = {
 	category = development
 	always_possible = yes
 	is_government_funded = yes
