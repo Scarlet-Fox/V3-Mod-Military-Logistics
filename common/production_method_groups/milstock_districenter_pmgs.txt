@@ -1,1 +1,161 @@
-﻿
+﻿milstock_pmg_dist_infantry_basic = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_infantry_ammo = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_infantry_radio = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_infantry_mech = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_artillery_basic = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_artillery_ammo = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_artillery_radio = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_artillery_tank = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_calvary_basic = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_calvary_small_arms = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_calvary_armored = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_calvary_tank = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_mobil_grain = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_mobil_basic = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_mobil_groceries = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_mobil_chocolate = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_mobil_tobacco = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}
+
+milstock_pmg_dist_mobil_opium = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_dummy
+	}
+}

@@ -211,7 +211,7 @@ milstock_building_dist_calvary_small_arms = {
 }
 
 # Calvary :: Armor Distribution Center
-milstock_building_dist_calvary_armor = {
+milstock_building_dist_calvary_armored = {
 	building_group = milstock_bg_distribution_centers
 	texture = "gfx/interface/icons/building_icons/building_conscription_center.dds"
 
@@ -221,7 +221,7 @@ milstock_building_dist_calvary_armor = {
 	downsizeable = no
 
 	production_method_groups = {
-        milstock_pmg_dist_calvary_armor
+        milstock_pmg_dist_calvary_armored
     }
 
 	required_construction = construction_cost_very_high
