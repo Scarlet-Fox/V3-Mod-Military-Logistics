@@ -1,14 +1,48 @@
 ﻿l_english:
-  # Buildings
-  milstock_building_stockpiles: "Military Stockpile"
-  milstock_building_small_arms_warehouses: "Small Arms Warehouse"
+  # Logistics Center
+  milstock_building_logistics_center: "Logistics Center"
 
-  # Production Method Groups
-  milstock_pmg_stockpile_type: "Stockpile Type"
-  milstock_pmg_small_arms_warehouse: "Default"
+  # Logistics Center :: Production Method Groups
+  milstock_pmg_logicenter_infantry_stock: "Infantry Equipment Stockpile"
+  milstock_pmg_logicenter_artillery_stock: "Artillery Equipment Stockpile"
+  milstock_pmg_logicenter_calvary_stock: "Calvary Equipment Stockpile"
+  milstock_pmg_logicenter_mobil_stock: "Mobilization Supplies Stockpile"
+  milstock_pmg_logicenter_administration_style: "Logistics Center Administration"
 
-  # Production Methods
-  milstock_stockpile_pm_small_arms_only: "Small Arms Only"
+  # Logistics Center :: Production Methods :: Infantry Equipment Stockpile
+  milstock_logicenter_infantry_pm_basic: "Basic Equipment"
+  milstock_logicenter_infantry_pm_ammo: "Ammunition Included"
+  milstock_logicenter_infantry_pm_radios: "Radios Included"
+  milstock_logicenter_infantry_pm_mech: "Mechanized Focus"
+  milstock_logicenter_infantry_pm_inactive: "Disable Stockpile"
+
+  # Logistics Center :: Production Methods :: Artillery Equipment Stockpile
+  milstock_logicenter_artillery_pm_basic: "Basic Equipment"
+  milstock_logicenter_artillery_pm_ammo: "Ammunition Included"
+  milstock_logicenter_artillery_pm_radios: "Radios Included"
+  milstock_logicenter_artillery_pm_tank: "Tank Focus"
+  milstock_logicenter_artillery_pm_inactive: "Disable Stockpile"
+
+  # Logistics Center :: Production Methods :: Calvary Equipment Stockpile
+  milstock_logicenter_calvary_pm_basic: "Basic Equipment"
+  milstock_logicenter_calvary_pm_small_arms: "Small Arms Included"
+  milstock_logicenter_calvary_pm_armored: "Armor Included"
+  milstock_logicenter_calvary_pm_tank: "Tank Focus"
+  milstock_logicenter_calvary_pm_inactive: "Disable Stockpile"
+
+  # Logistics Center :: Production Methods :: Mobilization Supplies Stockpile
+  milstock_logicenter_mobil_pm_grain: "Grain Only"
+  milstock_logicenter_mobil_pm_basic: "Basic Supplies"
+  milstock_logicenter_mobil_pm_groceries: "Groceries Included"
+  milstock_logicenter_mobil_pm_sugar: "Sugar Included"
+  milstock_logicenter_mobil_pm_tobacco: "Tobacco Included"
+  milstock_logicenter_mobil_pm_opium: "Opium Included"
+  milstock_logicenter_mobil_pm_inactive: "Disable Stockpile"
+
+  # Logistics Center :: Production Methods :: Administration Method
+  milstock_logicenter_admin_pm_basic: "Basic Logistics"
+  milstock_logicenter_admin_pm_academic: "Academic Research"
+  milstock_logicenter_admin_pm_inactive: "Disable Operation"
 
   # Debug helpers
-  milstock_small_arms_building_debug: "Small Arms Stockpile: [SCOPE.sBuilding('milstock_building').GetState.MakeScope.Var('milstock_state_small_arms_stockpile_var').GetValue]"
+  # milstock_small_arms_building_debug: "Small Arms Stockpile: [SCOPE.sBuilding('milstock_building').GetState.MakeScope.Var('milstock_state_small_arms_stockpile_var').GetValue]"
