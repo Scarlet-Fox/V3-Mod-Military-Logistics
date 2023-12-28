@@ -3,11 +3,11 @@
 	ai_selection = most_productive
 
 	production_methods = {
-		milstock_infantry_pm_basic
-		milstock_infantry_pm_ammo
-		milstock_infantry_pm_radios
-		milstock_infantry_pm_mech
-		milstock_infantry_pm_inactive
+		milstock_logicenter_infantry_pm_basic
+		milstock_logicenter_infantry_pm_ammo
+		milstock_logicenter_infantry_pm_radios
+		milstock_logicenter_infantry_pm_mech
+		milstock_logicenter_infantry_pm_inactive
 	}
 }
 
@@ -16,11 +16,11 @@ milstock_pmg_logicenter_artillery_stock = {
 	ai_selection = most_productive
 
 	production_methods = {
-		milstock_artillery_pm_basic
-		milstock_artillery_pm_ammo
-		milstock_artillery_pm_radios
-		milstock_artillery_pm_tank
-		milstock_artillery_pm_inactive
+		milstock_logicenter_artillery_pm_basic
+		milstock_logicenter_artillery_pm_ammo
+		milstock_logicenter_artillery_pm_radios
+		milstock_logicenter_artillery_pm_tank
+		milstock_logicenter_artillery_pm_inactive
 	}
 }
 
@@ -29,11 +29,11 @@ milstock_pmg_logicenter_calvary_stock = {
 	ai_selection = most_productive
 
 	production_methods = {
-		milstock_calvary_pm_basic
-		milstock_calvary_pm_small_arms
-		milstock_calvary_pm_armored
-		milstock_calvary_pm_tank
-		milstock_calvary_pm_inactive
+		milstock_logicenter_calvary_pm_basic
+		milstock_logicenter_calvary_pm_small_arms
+		milstock_logicenter_calvary_pm_armored
+		milstock_logicenter_calvary_pm_tank
+		milstock_logicenter_calvary_pm_inactive
 	}
 }
 
@@ -42,13 +42,13 @@ milstock_pmg_logicenter_mobil_stock = {
 	ai_selection = most_productive
 
 	production_methods = {
-		milstock_mobil_pm_grain
-		milstock_mobil_pm_basic
-		milstock_mobil_pm_groceries
-		milstock_mobil_pm_sugar
-		milstock_mobil_pm_tobacco
-		milstock_mobil_pm_opium
-		milstock_mobil_pm_inactive
+		milstock_logicenter_mobil_pm_grain
+		milstock_logicenter_mobil_pm_basic
+		milstock_logicenter_mobil_pm_groceries
+		milstock_logicenter_mobil_pm_sugar
+		milstock_logicenter_mobil_pm_tobacco
+		milstock_logicenter_mobil_pm_opium
+		milstock_logicenter_mobil_pm_inactive
 	}
 }
 
@@ -57,8 +57,8 @@ milstock_pmg_logicenter_administration_style = {
 	ai_selection = most_productive
 
 	production_methods = {
-		milstock_admin_pm_basic
-		milstock_admin_pm_academic
-		milstock_admin_pm_inactive
+		milstock_logicenter_admin_pm_basic
+		milstock_logicenter_admin_pm_academic
+		milstock_logicenter_admin_pm_inactive
 	}
 }

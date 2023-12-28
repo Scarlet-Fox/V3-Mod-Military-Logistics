@@ -1,0 +1,145 @@
+﻿##################################################################
+##### Logistics Center Infantry Stockpile Production Methods #####
+##################################################################
+
+milstock_logicenter_infantry_pm_basic = {
+    texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
+
+}
+milstock_logicenter_infantry_pm_ammo = {
+    texture = "gfx/interface/icons/production_method_icons/line_infantry.dds"
+    is_default = yes
+	
+}
+milstock_logicenter_infantry_pm_radios = {
+    texture = "gfx/interface/icons/production_method_icons/nco_incorporation.dds"
+	
+}
+milstock_logicenter_infantry_pm_mech = {
+    texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
+	
+}
+milstock_logicenter_infantry_pm_inactive = {
+    texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
+	
+}
+
+###################################################################
+##### Logistics Center Artillery Stockpile Production Methods #####
+###################################################################
+
+milstock_logicenter_artillery_pm_basic = {
+    texture = "gfx/interface/icons/production_method_icons/mobile_artillery.dds"
+	
+}
+milstock_logicenter_artillery_pm_ammo = {
+    texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"
+    is_default = yes
+	
+}
+milstock_logicenter_artillery_pm_radios = {
+    texture = "gfx/interface/icons/production_method_icons/siege_artillery.dds"
+	
+}
+milstock_logicenter_artillery_pm_tank = {
+    texture = "gfx/interface/icons/production_method_icons/armored_division.dds"
+	
+}
+milstock_logicenter_artillery_pm_inactive = {
+    texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
+	
+}
+
+#################################################################
+##### Logistics Center Calvary Stockpile Production Methods #####
+#################################################################
+
+milstock_logicenter_calvary_pm_basic = {
+    texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+	
+}
+milstock_logicenter_calvary_pm_small_arms = {
+    texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+    is_default = yes
+	
+}
+milstock_logicenter_calvary_pm_armored = {
+    texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+	
+}
+milstock_logicenter_calvary_pm_tank = {
+    texture = "gfx/interface/icons/production_method_icons/armored_division.dds"
+	
+}
+milstock_logicenter_calvary_pm_inactive = {
+    texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
+	
+}
+
+######################################################################
+##### Logistics Center Mobilization Stockpile Production Methods #####
+######################################################################
+
+milstock_logicenter_mobil_pm_grain = {
+    texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
+	
+}
+milstock_logicenter_mobil_pm_basic = {
+    texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
+    is_default = yes
+	
+}
+milstock_logicenter_mobil_pm_groceries = {
+    texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	
+}
+milstock_logicenter_mobil_pm_sugar = {
+    texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	
+}
+milstock_logicenter_mobil_pm_tobacco = {
+    texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	
+}
+milstock_logicenter_mobil_pm_opium = {
+    texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	
+}
+milstock_logicenter_mobil_pm_inactive = {
+    texture = "gfx/interface/icons/production_method_icons/no_canning.dds"
+	
+}
+
+##############################################################
+##### Logistics Center Administration Production Methods #####
+##############################################################
+
+milstock_logicenter_admin_pm_basic = {
+    texture = "gfx/interface/icons/production_method_icons/horizontal_drawer_cabinets.dds"
+    is_default = yes
+	
+}
+milstock_logicenter_admin_pm_academic = {
+    texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
+	
+}
+milstock_logicenter_admin_pm_inactive = {
+    texture = "gfx/interface/icons/production_method_icons/base_1.dds"
+	
+}
+
+
+
+
+milstock_stockpile_pm_small_arms_only = {
+    texture = "gfx/interface/icons/production_method_icons/muskets.dds"
+    
+
+    building_modifiers = {
+		level_scaled = {
+			building_employment_officers_add = 50
+			building_employment_clerks_add = 950
+			goods_input_small_arms_add = 10
+		}
+	}
+}
