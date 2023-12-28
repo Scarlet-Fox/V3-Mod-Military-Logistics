@@ -195,7 +195,7 @@ milstock_c_calvary_small_arm_pm_grain = 10
 milstock_c_calvary_small_arm_pm_small_arms = 10
 ## Inputs for administrative cost
 milstock_c_calvary_small_arm_pm_paper = 6
-milstock_c_calvary_small_arm_pm_iron = 1
+milstock_c_calvary_small_arm_pm_tools = 1
 ## Outputs
 milstock_c_calvary_small_arm_pm_bureaucracy = 5
 ## AI Value
@@ -210,10 +210,10 @@ milstock_c_calvary_small_arm_pm_laborers = 150
 ## Inputs for stockpile
 milstock_c_calvary_armored_pm_grain = 10
 milstock_c_calvary_armored_pm_small_arms = 10
-milstock_c_calvary_armored_pm_iron_stock = 10 # Seperate from the iron admin cost, but both need to be added together for total "cost"
+milstock_c_calvary_armored_pm_iron = 10
 ## Inputs for administrative cost
 milstock_c_calvary_armored_pm_paper = 10
-milstock_c_calvary_armored_pm_iron = 1
+milstock_c_calvary_armored_pm_tools = 1
 ## Outputs
 milstock_c_calvary_armored_pm_bureaucracy = 5
 ## AI Value
@@ -235,7 +235,7 @@ milstock_c_calvary_tank_pm_tanks = 5
 milstock_c_calvary_tank_pm_oil = 5
 ## Inputs for administrative cost
 milstock_c_calvary_tank_pm_paper = 10
-milstock_c_calvary_tank_pm_iron = 6
+milstock_c_calvary_tank_pm_tools = 6
 ## Outputs
 milstock_c_calvary_tank_pm_bureaucracy = 5
 ## AI Value
