@@ -13,21 +13,21 @@
   milstock_logicenter_infantry_pm_basic: "Basic Equipment"
   milstock_logicenter_infantry_pm_ammo: "Ammunition Included"
   milstock_logicenter_infantry_pm_radios: "Radios Included"
-  milstock_logicenter_infantry_pm_mech: "Mechanized Focus"
+  milstock_logicenter_infantry_pm_mech: "Mechanization Focus"
   milstock_logicenter_infantry_pm_inactive: "Disable Stockpile"
 
   # Logistics Center :: Production Methods :: Artillery Equipment Stockpile
   milstock_logicenter_artillery_pm_basic: "Basic Equipment"
   milstock_logicenter_artillery_pm_ammo: "Ammunition Included"
   milstock_logicenter_artillery_pm_radios: "Radios Included"
-  milstock_logicenter_artillery_pm_tank: "Tank Focus"
+  milstock_logicenter_artillery_pm_tank: "Heavy Tank Focus"
   milstock_logicenter_artillery_pm_inactive: "Disable Stockpile"
 
   # Logistics Center :: Production Methods :: Calvary Equipment Stockpile
   milstock_logicenter_calvary_pm_basic: "Basic Equipment"
   milstock_logicenter_calvary_pm_small_arms: "Small Arms Included"
   milstock_logicenter_calvary_pm_armored: "Armor Included"
-  milstock_logicenter_calvary_pm_tank: "Tank Focus"
+  milstock_logicenter_calvary_pm_tank: "Light Tank Focus"
   milstock_logicenter_calvary_pm_inactive: "Disable Stockpile"
 
   # Logistics Center :: Production Methods :: Mobilization Supplies Stockpile
