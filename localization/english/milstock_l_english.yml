@@ -42,7 +42,6 @@
   # Logistics Center :: Production Methods :: Administration Method
   milstock_logicenter_admin_pm_basic: "Basic Logistics"
   milstock_logicenter_admin_pm_academic: "Academic Research"
-  milstock_logicenter_admin_pm_inactive: "Disable Operation"
 
   # Debug helpers
   # milstock_small_arms_building_debug: "Small Arms Stockpile: [SCOPE.sBuilding('milstock_building').GetState.MakeScope.Var('milstock_state_small_arms_stockpile_var').GetValue]"

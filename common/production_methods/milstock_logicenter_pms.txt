@@ -716,15 +716,3 @@ milstock_logicenter_admin_pm_academic = {
         }
     }
 }
-
-milstock_logicenter_admin_pm_inactive = {
-    texture = "gfx/interface/icons/production_method_icons/base_1.dds"
-    
-    building_modifiers = {
-        level_scaled = {
-            building_employment_officers_add = 10
-            building_employment_clerks_add = 40
-            building_employment_laborers_add = 50
-        }
-    }
-}

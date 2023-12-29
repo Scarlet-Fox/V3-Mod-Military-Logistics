@@ -59,6 +59,5 @@ milstock_pmg_logicenter_administration_style = {
     production_methods = {
         milstock_logicenter_admin_pm_basic
         milstock_logicenter_admin_pm_academic
-        milstock_logicenter_admin_pm_inactive
     }
 }
