@@ -9,15 +9,13 @@
 # estimating their ability to buy stuff. It's fuzzy but it works.
 # We will multiply this by the number of goods to scale the stockpile
 # additions by the percentage of clerks hired.
-milstock_sv_clerk_purchasing_ratio = {
+milstock_sv_staff_purchasing_ratio = {
+	# NOTE!!! I tried using has_employee_slots_filled but that was not implemented. THANKS PARADOX!!! <3 <3 <3
 	value = 0
 	if = {
 		limit = {
 			scope:logistics_center = {
-				has_employee_slots_filled = {
-					pop_type = clerks
-					percent = 0.10
-				}
+				occupancy >= 0.1
 			}
 		}
 		add = 0.20
@@ -25,10 +23,7 @@ milstock_sv_clerk_purchasing_ratio = {
 	if = {
 		limit = {
 			scope:logistics_center = {
-				has_employee_slots_filled = {
-					pop_type = clerks
-					percent = 0.20
-				}
+				occupancy >= 0.2
 			}
 		}
 		add = 0.10
@@ -36,10 +31,7 @@ milstock_sv_clerk_purchasing_ratio = {
 	if = {
 		limit = {
 			scope:logistics_center = {
-				has_employee_slots_filled = {
-					pop_type = clerks
-					percent = 0.30
-				}
+				occupancy >= 0.3
 			}
 		}
 		add = 0.10
@@ -47,10 +39,7 @@ milstock_sv_clerk_purchasing_ratio = {
 	if = {
 		limit = {
 			scope:logistics_center = {
-				has_employee_slots_filled = {
-					pop_type = clerks
-					percent = 0.40
-				}
+				occupancy >= 0.4
 			}
 		}
 		add = 0.10
@@ -58,10 +47,7 @@ milstock_sv_clerk_purchasing_ratio = {
 	if = {
 		limit = {
 			scope:logistics_center = {
-				has_employee_slots_filled = {
-					pop_type = clerks
-					percent = 0.50
-				}
+				occupancy >= 0.5
 			}
 		}
 		add = 0.10
@@ -69,10 +55,7 @@ milstock_sv_clerk_purchasing_ratio = {
 	if = {
 		limit = {
 			scope:logistics_center = {
-				has_employee_slots_filled = {
-					pop_type = clerks
-					percent = 0.60
-				}
+				occupancy >= 0.6
 			}
 		}
 		add = 0.10
@@ -80,10 +63,7 @@ milstock_sv_clerk_purchasing_ratio = {
 	if = {
 		limit = {
 			scope:logistics_center = {
-				has_employee_slots_filled = {
-					pop_type = clerks
-					percent = 0.70
-				}
+				occupancy >= 0.7
 			}
 		}
 		add = 0.10
@@ -91,10 +71,7 @@ milstock_sv_clerk_purchasing_ratio = {
 	if = {
 		limit = {
 			scope:logistics_center = {
-				has_employee_slots_filled = {
-					pop_type = clerks
-					percent = 0.80
-				}
+				occupancy >= 0.8
 			}
 		}
 		add = 0.10
@@ -102,51 +79,11 @@ milstock_sv_clerk_purchasing_ratio = {
 	if = {
 		limit = {
 			scope:logistics_center = {
-				has_employee_slots_filled = {
-					pop_type = clerks
-					percent = 0.90
-				}
+				occupancy >= 0.9
 			}
 		}
 		add = 0.10
 	}
 	min = 0 # Never buy a negative amount of goods
 	max = 1 # Never buy more than 100% of the possible goods
-}
-
-# Insufficient Officer Penalty
-# --------------------------------------------------------------------
-
-# If too many officer positions are vacant, then we apply a 
-# penalty to the stockpile stores multiplicatively.
-milstock_sv_officer_employment_penalty = {
-	value = 1 # No penalty - start at 100%
-	if = {
-		limit = {
-			scope:logistics_center = {
-				NOT = {
-					has_employee_slots_filled = {
-						pop_type = officers
-						percent = 0.50
-					}
-				}
-			}
-		}
-		subtract = 0.10 # 10% penalty if we are below 50% officers
-	}
-	if = {
-		limit = {
-			scope:logistics_center = {
-				NOT = {
-					has_employee_slots_filled = {
-						pop_type = officers
-						percent = 0.20
-					}
-				}
-			}
-		}
-		subtract = 0.40 # Additional 40% penalty if we are below 20% officers - the clerks are running away with your guns!!!!!!
-	}
-	min = 0.50 # Let's never go below this just from officers
-	max = 1 # Never increase the amount of goods purchased
 }
