@@ -2,7 +2,7 @@
   "name" : "Military Logistics and Stockpiles",
   "id" : "",
   "version" : "",
-  "supported_game_version" : "",
+  "supported_game_version" : "1.5.12",
   "short_description" : "",
   "tags" : [],
   "relationships" : [],
