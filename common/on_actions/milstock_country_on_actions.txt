@@ -1,15 +1,15 @@
-#########################################
+﻿#########################################
 ##### On Montly Pulse for a Country #####
 #########################################
 
 on_monthly_pulse_country = {
 	on_actions = {
-		open_or_close_distribution_centers
+		open_distribution_centers
 	}
 }
 
 
-open_or_close_distribution_centers = {
+open_distribution_centers = {
 	effect = {
 		# If the country is at war, then we want to get the distribution centers open.
 		if = {
