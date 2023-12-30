@@ -2,7 +2,7 @@
     category = development
     always_possible = yes
     is_government_funded = yes
-    inheritable_construction = yes
+    inheritable_construction = no # Logistics centers are scuttled if the territory is captured
 
     lens = government
     urbanization = 20
@@ -15,7 +15,7 @@ milstock_bg_distribution_centers = {
     is_government_funded = yes
     inheritable_construction = no
 
-    infrastructure_usage_per_level = 0.01
+    infrastructure_usage_per_level = 0 # Leaving this at zero for now
     lens = government
     urbanization = 0
 }
