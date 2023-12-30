@@ -1,161 +1,127 @@
-﻿milstock_pmg_dist_infantry_basic = {
+﻿milstock_pmg_dist_small_arms = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_small_arms
     }
 }
 
-milstock_pmg_dist_infantry_ammo = {
+milstock_pmg_dist_grain = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_grain
     }
 }
 
-milstock_pmg_dist_infantry_radio = {
+milstock_pmg_dist_liquor = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_liquor
     }
 }
 
-milstock_pmg_dist_infantry_mech = {
+milstock_pmg_dist_sugar = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_sugar
     }
 }
 
-milstock_pmg_dist_artillery_basic = {
+milstock_pmg_dist_opium = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_opium
     }
 }
 
-milstock_pmg_dist_artillery_ammo = {
+milstock_pmg_dist_tobacco = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_tobacco
     }
 }
 
-milstock_pmg_dist_artillery_radio = {
+milstock_pmg_dist_fabric = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_fabric
     }
 }
 
-milstock_pmg_dist_artillery_tank = {
+milstock_pmg_dist_groceries = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_groceries
     }
 }
 
-milstock_pmg_dist_calvary_basic = {
+milstock_pmg_dist_ammunition = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_ammunition
     }
 }
 
-milstock_pmg_dist_calvary_small_arms = {
+milstock_pmg_dist_artillery = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_artillery
     }
 }
 
-milstock_pmg_dist_calvary_armored = {
+milstock_pmg_dist_radios = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_radios
     }
 }
 
-milstock_pmg_dist_calvary_tank = {
+milstock_pmg_dist_tanks = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_tanks
     }
 }
 
-milstock_pmg_dist_mobil_grain = {
+milstock_pmg_dist_oil = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_oil
     }
 }
 
-milstock_pmg_dist_mobil_basic = {
+milstock_pmg_dist_iron = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
-        pm_dummy
+        milstock_pm_dist_iron
     }
 }
 
-milstock_pmg_dist_mobil_groceries = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-    ai_selection = most_productive
 
-    production_methods = {
-        pm_dummy
-    }
-}
-
-milstock_pmg_dist_mobil_chocolate = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-    ai_selection = most_productive
-
-    production_methods = {
-        pm_dummy
-    }
-}
-
-milstock_pmg_dist_mobil_tobacco = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-    ai_selection = most_productive
-
-    production_methods = {
-        pm_dummy
-    }
-}
-
-milstock_pmg_dist_mobil_opium = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
-    ai_selection = most_productive
-
-    production_methods = {
-        pm_dummy
-    }
-}

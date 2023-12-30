@@ -277,8 +277,3 @@ milstock_building_distribution_iron = {
 
     required_construction = construction_cost_very_low
 }
-
-
-
-
-
