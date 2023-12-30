@@ -43,5 +43,55 @@
   milstock_logicenter_admin_pm_basic: "Basic Logistics"
   milstock_logicenter_admin_pm_academic: "Academic Research"
 
+  # Distribution Centers
+  milstock_building_distribution_small_arms: "Distribution Center: Small Arms"
+  milstock_building_distribution_grain: "Distribution Center: Grain"
+  milstock_building_distribution_liquor: "Distribution Center: Liquor"
+  milstock_building_distribution_sugar: "Distribution Center: Sugar"
+  milstock_building_distribution_opium: "Distribution Center: Opium"
+  milstock_building_distribution_tobacco: "Distribution Center: Tobacco"
+  milstock_building_distribution_fabric: "Distribution Center: Fabric"
+  milstock_building_distribution_groceries: "Distribution Center: Groceries"
+  milstock_building_distribution_ammunition: "Distribution Center: Ammunition"
+  milstock_building_distribution_artillery: "Distribution Center: Artillery"
+  milstock_building_distribution_radios: "Distribution Center: Radios"
+  milstock_building_distribution_tanks: "Distribution Center: Tanks"
+  milstock_building_distribution_oil: "Distribution Center: Oil"
+  milstock_building_distribution_iron: "Distribution Center: Iron"
+
+  # Distribution Center Production Method Groups
+  milstock_pmg_dist_small_arms: "Small Arms Distribution"
+  milstock_pmg_dist_grain: "Grain Distribution"
+  milstock_pmg_dist_liquor: "Liquor Distribution"
+  milstock_pmg_dist_sugar: "Sugar Distribution"
+  milstock_pmg_dist_opium: "Opium Distribution"
+  milstock_pmg_dist_tobacco: "Tobacco Distribution"
+  milstock_pmg_dist_fabric: "Fabric Distribution"
+  milstock_pmg_dist_groceries: "Groceries Distribution"
+  milstock_pmg_dist_ammunition: "Ammunition Distribution"
+  milstock_pmg_dist_artillery: "Artillery Distribution"
+  milstock_pmg_dist_radios: "Radio Distribution"
+  milstock_pmg_dist_tanks: "Tank Distribution"
+  milstock_pmg_dist_oil: "Oil Distribution"
+  milstock_pmg_dist_iron: "Iron Distribution"
+
+  # Distribution Center Production Methods
+  milstock_pm_dist_small_arms: "Standard"
+  milstock_pm_dist_grain: "Standard"
+  milstock_pm_dist_liquor: "Standard"
+  milstock_pm_dist_sugar: "Standard"
+  milstock_pm_dist_opium: "Standard"
+  milstock_pm_dist_tobacco: "Standard"
+  milstock_pm_dist_fabric: "Standard"
+  milstock_pm_dist_groceries: "Standard"
+  milstock_pm_dist_ammunition: "Standard"
+  milstock_pm_dist_artillery: "Standard"
+  milstock_pm_dist_radios: "Standard"
+  milstock_pm_dist_tanks: "Standard"
+  milstock_pm_dist_oil: "Standard"
+  milstock_pm_dist_iron: "Standard"
+
+
+
   # Debug helpers
   # milstock_small_arms_building_debug: "Small Arms Stockpile: [SCOPE.sBuilding('milstock_building').GetState.MakeScope.Var('milstock_state_small_arms_stockpile_var').GetValue]"

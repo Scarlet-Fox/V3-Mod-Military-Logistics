@@ -17,13 +17,13 @@ open_distribution_centers = {
 				is_at_war = yes
 				has_building = milstock_building_logistics_center
 			}
+			debug_log = "Country at war and has a military logistics center."
 
 			# Create distribution centers if the state has a logistics center
 			# and does not currently have a distribution center of this type
 			# open.
 			# ---------------------------------------------------------------
 			every_scope_state = {
-
 				# Create grain distribution center if eligible
 				if = {
 					limit = {
@@ -34,10 +34,19 @@ open_distribution_centers = {
 							has_building = milstock_building_distribution_grain
 						}
 					}
+					debug_log = "Conditions have been met to open a distribution center."
+
+
+					every_scope_building = {
+						limit = {
+							is_building_type = milstock_building_logistics_center
+						}
+						this.state = { set_variable = { name = logistics_center_level value = PREV.level } }
+					}
 
 					create_building = {
 						building = milstock_building_distribution_grain
-						level = scope:milstock_building_logistics_center.level
+						level = var:logistics_center_level
 						activate_production_methods = { milstock_pm_dist_grain }
 					}
 				}
