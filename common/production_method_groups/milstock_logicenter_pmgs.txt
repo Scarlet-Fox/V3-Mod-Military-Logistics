@@ -1,5 +1,4 @@
 ﻿milstock_pmg_logicenter_infantry_stock = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
@@ -12,7 +11,6 @@
 }
 
 milstock_pmg_logicenter_artillery_stock = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
@@ -25,7 +23,6 @@ milstock_pmg_logicenter_artillery_stock = {
 }
 
 milstock_pmg_logicenter_calvary_stock = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
@@ -38,7 +35,6 @@ milstock_pmg_logicenter_calvary_stock = {
 }
 
 milstock_pmg_logicenter_mobil_stock = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
@@ -53,7 +49,6 @@ milstock_pmg_logicenter_mobil_stock = {
 }
 
 milstock_pmg_logicenter_administration_style = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {

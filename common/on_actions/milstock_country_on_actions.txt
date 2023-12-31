@@ -247,9 +247,6 @@ open_distribution_centers = {
                         METHOD = milstock_pm_dist_iron
                     }
                 }
-
-
-                }
             }
         }
     }

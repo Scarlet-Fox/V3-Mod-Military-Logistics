@@ -1,139 +1,140 @@
 ﻿milstock_pmg_dist_small_arms = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_small_arms
+        milstock_pm_dist_small_arms_double
+        milstock_pm_dist_small_arms_disable
     }
 }
 
 milstock_pmg_dist_grain = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_grain
         milstock_pm_dist_grain_double
+        milstock_pm_dist_grain_disable
     }
 }
 
 milstock_pmg_dist_liquor = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_liquor
         milstock_pm_dist_liquor_double
+        milstock_pm_dist_liquor_disable
     }
 }
 
 milstock_pmg_dist_sugar = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_sugar
         milstock_pm_dist_sugar_double
+        milstock_pm_dist_sugar_disable
     }
 }
 
 milstock_pmg_dist_opium = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_opium
         milstock_pm_dist_opium_double
+        milstock_pm_dist_opium_disable
     }
 }
 
 milstock_pmg_dist_tobacco = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_tobacco
         milstock_pm_dist_tobacco_double
+        milstock_pm_dist_tobacco_disable
     }
 }
 
 milstock_pmg_dist_fabric = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_fabric
         milstock_pm_dist_fabric_double
+        milstock_pm_dist_fabric_disable
     }
 }
 
 milstock_pmg_dist_groceries = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_groceries
         milstock_pm_dist_groceries_double
+        milstock_pm_dist_groceries_disable
     }
 }
 
 milstock_pmg_dist_ammunition = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_ammunition
         milstock_pm_dist_ammunition_double
+        milstock_pm_dist_ammunition_disable
     }
 }
 
 milstock_pmg_dist_artillery = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_artillery
         milstock_pm_dist_artillery_double
+        milstock_pm_dist_artillery_disable
     }
 }
 
 milstock_pmg_dist_radios = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_radios
         milstock_pm_dist_radios_double
+        milstock_pm_dist_radios_disable
     }
 }
 
 milstock_pmg_dist_tanks = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_tanks
         milstock_pm_dist_tanks_double
+        milstock_pm_dist_tanks_disable
     }
 }
 
 milstock_pmg_dist_oil = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_oil
         milstock_pm_dist_oil_double
+        milstock_pm_dist_oil_disable
     }
 }
 
 milstock_pmg_dist_iron = {
-    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
     ai_selection = most_productive
 
     production_methods = {
         milstock_pm_dist_iron
         milstock_pm_dist_iron_double
+        milstock_pm_dist_iron_disable
     }
 }
 

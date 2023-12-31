@@ -442,3 +442,147 @@ milstock_pm_dist_iron_double = {
         }
     }
 }
+
+# Inactive Distribution Center Production Methods
+# --------------------------------------------------------------------------
+
+
+milstock_pm_dist_small_arms_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
+
+milstock_pm_dist_grain_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
+
+milstock_pm_dist_liquor_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
+
+milstock_pm_dist_sugar_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
+
+milstock_pm_dist_opium_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
+
+milstock_pm_dist_tobacco_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
+
+milstock_pm_dist_fabric_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
+
+milstock_pm_dist_groceries_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
+
+milstock_pm_dist_ammunition_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
+
+milstock_pm_dist_artillery_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
+
+milstock_pm_dist_radios_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
+
+milstock_pm_dist_tanks_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
+
+milstock_pm_dist_oil_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
+
+milstock_pm_dist_iron_disable = {
+    texture = "gfx/interface/icons/production_method_icons/unused/disabled.dds"
+
+    building_modifiers = {
+        level_scaled = {
+            building_employment_laborers_add = 10 # Skeleton crew
+        }
+    }
+}
