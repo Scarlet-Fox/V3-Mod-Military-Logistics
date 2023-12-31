@@ -4,6 +4,8 @@
 
 # Values are cleaned up versions of the stuff in my google sheet
 # https://docs.google.com/spreadsheets/d/1h1R75M4w3WQJFIHJzqjl6K9ravAoGqAF3kubQ_FhTcY/edit?usp=sharing
+# Note - Paper and tool costs are NOT necessary as the distribution centers didn't actually make any
+# money from "selling" the goods that they had been storing.
 
 milstock_logicenter_infantry_pm_basic = {
     texture = "gfx/interface/icons/production_method_icons/irregular_infantry.dds"
@@ -19,8 +21,6 @@ milstock_logicenter_infantry_pm_basic = {
             # input goods
             goods_input_small_arms_add = 10
             goods_input_grain_add = 5
-            goods_input_paper_add = 5
-            goods_input_tools_add = 1
         }
 
         level_scaled = {
@@ -54,8 +54,6 @@ milstock_logicenter_infantry_pm_ammo = {
             goods_input_small_arms_add = 10
             goods_input_grain_add = 5
             goods_input_ammunition_add = 5
-            goods_input_paper_add = 8
-            goods_input_tools_add = 1
         }
 
         level_scaled = {
@@ -89,8 +87,6 @@ milstock_logicenter_infantry_pm_radios = {
             goods_input_grain_add = 5
             goods_input_ammunition_add = 5
             goods_input_radios_add = 3
-            goods_input_paper_add = 8
-            goods_input_tools_add = 2
         }
 
         level_scaled = {
@@ -127,8 +123,6 @@ milstock_logicenter_infantry_pm_mech = {
             goods_input_radios_add = 3
             goods_input_tanks_add = 3
             goods_input_oil_add = 3
-            goods_input_paper_add = 9
-            goods_input_tools_add = 4
         }
 
         level_scaled = {
@@ -171,8 +165,6 @@ milstock_logicenter_artillery_pm_basic = {
             # input goods
             goods_input_artillery_add = 10
             goods_input_grain_add = 5
-            goods_input_paper_add = 5
-            goods_input_tools_add = 2
         }
 
         level_scaled = {
@@ -206,8 +198,6 @@ milstock_logicenter_artillery_pm_ammo = {
             goods_input_artillery_add = 10
             goods_input_grain_add = 5
             goods_input_ammunition_add = 10
-            goods_input_paper_add = 10
-            goods_input_tools_add = 2
         }
 
         level_scaled = {
@@ -241,8 +231,6 @@ milstock_logicenter_artillery_pm_radios = {
             goods_input_grain_add = 5
             goods_input_ammunition_add = 10
             goods_input_radios_add = 3
-            goods_input_paper_add = 10
-            goods_input_tools_add = 3
         }
 
         level_scaled = {
@@ -279,8 +267,6 @@ milstock_logicenter_artillery_pm_tank = {
             goods_input_radios_add = 5
             goods_input_tanks_add = 7
             goods_input_oil_add = 7
-            goods_input_paper_add = 12
-            goods_input_tools_add = 7
         }
 
         level_scaled = {
@@ -322,7 +308,6 @@ milstock_logicenter_calvary_pm_basic = {
         workforce_scaled = {
             # input goods
             goods_input_grain_add = 10
-            goods_input_paper_add = 2
         }
 
         level_scaled = {
@@ -349,8 +334,6 @@ milstock_logicenter_calvary_pm_small_arms = {
             # input goods
             goods_input_grain_add = 10
             goods_input_small_arms_add = 10
-            goods_input_paper_add = 6
-            goods_input_tools_add = 1
         }
 
         level_scaled = {
@@ -379,8 +362,6 @@ milstock_logicenter_calvary_pm_armored = {
             goods_input_grain_add = 10
             goods_input_small_arms_add = 10
             goods_input_iron_add = 10
-            goods_input_paper_add = 10
-            goods_input_tools_add = 1
         }
 
         level_scaled = {
@@ -418,8 +399,6 @@ milstock_logicenter_calvary_pm_tank = {
             goods_input_radios_add = 5
             goods_input_tanks_add = 5
             goods_input_oil_add = 5
-            goods_input_paper_add = 10
-            goods_input_tools_add = 6
         }
 
         level_scaled = {
@@ -461,7 +440,6 @@ milstock_logicenter_mobil_pm_grain = {
         workforce_scaled = {
             # input goods
             goods_input_grain_add = 10
-            goods_input_paper_add = 2
         }
 
         level_scaled = {
@@ -489,7 +467,6 @@ milstock_logicenter_mobil_pm_basic = {
             goods_input_grain_add = 10
             goods_input_liquor_add = 10
             goods_input_fabric_add = 10
-            goods_input_paper_add = 9
         }
 
         level_scaled = {
@@ -522,7 +499,6 @@ milstock_logicenter_mobil_pm_groceries = {
             goods_input_liquor_add = 10
             goods_input_fabric_add = 10
             goods_input_groceries_add = 10
-            goods_input_paper_add = 12
         }
 
         level_scaled = {
@@ -556,7 +532,6 @@ milstock_logicenter_mobil_pm_sugar = {
             goods_input_fabric_add = 10
             goods_input_groceries_add = 10
             goods_input_sugar_add = 10
-            goods_input_paper_add = 19
         }
 
         level_scaled = {
@@ -591,7 +566,6 @@ milstock_logicenter_mobil_pm_tobacco = {
             goods_input_groceries_add = 10
             goods_input_sugar_add = 10
             goods_input_tobacco_add = 10
-            goods_input_paper_add = 19
         }
 
         level_scaled = {
@@ -627,7 +601,6 @@ milstock_logicenter_mobil_pm_opium = {
             goods_input_sugar_add = 10
             goods_input_tobacco_add = 10
             goods_input_opium_add = 10
-            goods_input_paper_add = 24
         }
 
         level_scaled = {
@@ -704,7 +677,6 @@ milstock_logicenter_admin_pm_academic = {
         workforce_scaled = {
             # input goods
             goods_input_paper_add = 20
-            goods_input_tools_add = 10
         }
 
         level_scaled = {
