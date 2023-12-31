@@ -87,3 +87,8 @@ milstock_sv_staff_purchasing_ratio = {
     min = 0 # Never buy a negative amount of goods
     max = 1 # Never buy more than 100% of the possible goods
 }
+
+
+# TODO - Use this file to clean up the state on_actions - they look horrific - "there has to be a batter way!!!"
+# Sadly, not a lot of stuff is documented about modding, so sometimes just blobbing stuff is easier than having to go
+# into and out of a debugger a million times to figure out why the "smart" approach didn't work.

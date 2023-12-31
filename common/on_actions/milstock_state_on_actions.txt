@@ -5,6 +5,7 @@
 on_monthly_pulse_state = {
     on_actions = {
         milstock_increase_stockpiles
+        milstock_drain_stockpiles
     }
 }
 
@@ -829,6 +830,601 @@ milstock_increase_stockpiles = {
                     name = milstock_state_opium_stockpile_var
                     add = {
                         add = 10
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+        }
+    }
+}
+
+# Drain Military Stockpiles
+# ---------------------------------------------------------
+milstock_drain_stockpiles = {
+    effect = {
+        if = {
+            # Only triggers if distribution center exists AND a logistics center exists
+            limit = {
+                has_building = milstock_building_logistics_center
+                OR = {
+                    has_building = milstock_building_distribution_small_arms
+                    has_building = milstock_building_distribution_grain
+                    has_building = milstock_building_distribution_liquor
+                    has_building = milstock_building_distribution_sugar
+                    has_building = milstock_building_distribution_opium
+                    has_building = milstock_building_distribution_tobacco
+                    has_building = milstock_building_distribution_fabric
+                    has_building = milstock_building_distribution_groceries
+                    has_building = milstock_building_distribution_ammunition
+                    has_building = milstock_building_distribution_artillery
+                    has_building = milstock_building_distribution_radios
+                    has_building = milstock_building_distribution_tanks
+                    has_building = milstock_building_distribution_oil
+                    has_building = milstock_building_distribution_iron
+                }
+            }
+
+            # We'll use logistics center level since that should
+            # be the same as the stockpile levels.
+            #
+            # We don't care about distribution center staffing, since
+            # quite honestly, that would be a PITA to implement while
+            # not adding anything fun.
+            every_scope_building = {
+                limit = {
+                    is_building_type = milstock_building_logistics_center
+                }
+
+                save_scope_as = logistics_center
+                ROOT = {
+                    set_variable = {
+                        name = milstock_staff_purchasing_ratio_var
+                        value = milstock_sv_staff_purchasing_ratio
+                    }
+                }
+            }
+
+            # Drain grain stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_grain
+                        production_method = milstock_pm_dist_grain
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_grain_stockpile_var
+                    add = {
+                        subtract = 60
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_grain
+                        production_method = milstock_pm_dist_grain_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_grain_stockpile_var
+                    add = {
+                        subtract = 120
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+
+            # Drain small arms stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_small_arms
+                        production_method = milstock_pm_dist_small_arms
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_small_arms_stockpile_var
+                    add = {
+                        subtract = 40
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_small_arms
+                        production_method = milstock_pm_dist_small_arms_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_small_arms_stockpile_var
+                    add = {
+                        subtract = 80
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+
+            # Drain liquor stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_liquor
+                        production_method = milstock_pm_dist_liquor
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_liquor_stockpile_var
+                    add = {
+                        subtract = 20
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_liquor
+                        production_method = milstock_pm_dist_liquor_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_liquor_stockpile_var
+                    add = {
+                        subtract = 40
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+
+            # Drain sugar stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_sugar
+                        production_method = milstock_pm_dist_sugar
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_sugar_stockpile_var
+                    add = {
+                        subtract = 20
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_sugar
+                        production_method = milstock_pm_dist_sugar_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_sugar_stockpile_var
+                    add = {
+                        subtract = 40
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+
+            # Drain opium stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_opium
+                        production_method = milstock_pm_dist_opium
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_opium_stockpile_var
+                    add = {
+                        subtract = 20
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_opium
+                        production_method = milstock_pm_dist_opium_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_opium_stockpile_var
+                    add = {
+                        subtract = 40
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+
+            # Drain tobacco stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_tobacco
+                        production_method = milstock_pm_dist_tobacco
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_tobacco_stockpile_var
+                    add = {
+                        subtract = 20
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_tobacco
+                        production_method = milstock_pm_dist_tobacco_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_tobacco_stockpile_var
+                    add = {
+                        subtract = 40
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+
+            # Drain fabric stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_fabric
+                        production_method = milstock_pm_dist_fabric
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_fabric_stockpile_var
+                    add = {
+                        subtract = 20
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_fabric
+                        production_method = milstock_pm_dist_fabric_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_fabric_stockpile_var
+                    add = {
+                        subtract = 40
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+
+            # Drain groceries stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_groceries
+                        production_method = milstock_pm_dist_groceries
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_groceries_stockpile_var
+                    add = {
+                        subtract = 20
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_groceries
+                        production_method = milstock_pm_dist_groceries_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_groceries_stockpile_var
+                    add = {
+                        subtract = 40
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+
+            # Drain ammunition stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_ammunition
+                        production_method = milstock_pm_dist_ammunition
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_ammunition_stockpile_var
+                    add = {
+                        subtract = 40
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_ammunition
+                        production_method = milstock_pm_dist_ammunition_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_ammunition_stockpile_var
+                    add = {
+                        subtract = 80
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+
+            # Drain tanks stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_tanks
+                        production_method = milstock_pm_dist_tanks
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_tanks_stockpile_var
+                    add = {
+                        subtract = 30
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_tanks
+                        production_method = milstock_pm_dist_tanks_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_tanks_stockpile_var
+                    add = {
+                        subtract = 60
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+
+            # Drain radios stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_radios
+                        production_method = milstock_pm_dist_radios
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_radios_stockpile_var
+                    add = {
+                        subtract = 20
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_radios
+                        production_method = milstock_pm_dist_radios_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_radios_stockpile_var
+                    add = {
+                        subtract = 40
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+
+            # Drain artillery stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_artillery
+                        production_method = milstock_pm_dist_artillery
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_artillery_stockpile_var
+                    add = {
+                        subtract = 30
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_artillery
+                        production_method = milstock_pm_dist_artillery_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_artillery_stockpile_var
+                    add = {
+                        subtract = 60
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+
+            # Drain oil stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_oil
+                        production_method = milstock_pm_dist_oil
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_oil_stockpile_var
+                    add = {
+                        subtract = 30
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_oil
+                        production_method = milstock_pm_dist_oil_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_oil_stockpile_var
+                    add = {
+                        subtract = 60
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+
+            # Drain iron stockpile if the building exists
+            # ------------------------------------------------------
+            ## Standard production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_iron
+                        production_method = milstock_pm_dist_iron
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_iron_stockpile_var
+                    add = {
+                        subtract = 20
+                        multiply = var:milstock_staff_purchasing_ratio_var
+                        multiply = scope:logistics_center.level
+                        multiply = 4.33 # Weeks per month
+                    }
+                }
+            }
+            ## Double production method
+            if = {
+                limit = {
+                    is_production_method_active = {
+                        building_type = milstock_building_distribution_iron
+                        production_method = milstock_pm_dist_iron_double
+                    }
+                }
+                change_variable = { 
+                    name = milstock_state_iron_stockpile_var
+                    add = {
+                        subtract = 40
                         multiply = var:milstock_staff_purchasing_ratio_var
                         multiply = scope:logistics_center.level
                         multiply = 4.33 # Weeks per month
