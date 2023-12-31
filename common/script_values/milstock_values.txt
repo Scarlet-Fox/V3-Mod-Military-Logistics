@@ -10,80 +10,80 @@
 # We will multiply this by the number of goods to scale the stockpile
 # additions by the percentage of clerks hired.
 milstock_sv_staff_purchasing_ratio = {
-	# NOTE!!! I tried using has_employee_slots_filled but that was not implemented. THANKS PARADOX!!! <3 <3 <3
-	value = 0
-	if = {
-		limit = {
-			scope:logistics_center = {
-				occupancy >= 0.1
-			}
-		}
-		add = 0.20
-	}
-	if = {
-		limit = {
-			scope:logistics_center = {
-				occupancy >= 0.2
-			}
-		}
-		add = 0.10
-	}
-	if = {
-		limit = {
-			scope:logistics_center = {
-				occupancy >= 0.3
-			}
-		}
-		add = 0.10
-	}
-	if = {
-		limit = {
-			scope:logistics_center = {
-				occupancy >= 0.4
-			}
-		}
-		add = 0.10
-	}
-	if = {
-		limit = {
-			scope:logistics_center = {
-				occupancy >= 0.5
-			}
-		}
-		add = 0.10
-	}
-	if = {
-		limit = {
-			scope:logistics_center = {
-				occupancy >= 0.6
-			}
-		}
-		add = 0.10
-	}
-	if = {
-		limit = {
-			scope:logistics_center = {
-				occupancy >= 0.7
-			}
-		}
-		add = 0.10
-	}
-	if = {
-		limit = {
-			scope:logistics_center = {
-				occupancy >= 0.8
-			}
-		}
-		add = 0.10
-	}
-	if = {
-		limit = {
-			scope:logistics_center = {
-				occupancy >= 0.9
-			}
-		}
-		add = 0.10
-	}
-	min = 0 # Never buy a negative amount of goods
-	max = 1 # Never buy more than 100% of the possible goods
+    # NOTE!!! I tried using has_employee_slots_filled but that was not implemented. THANKS PARADOX!!! <3 <3 <3
+    value = 0
+    if = {
+        limit = {
+            scope:logistics_center = {
+                occupancy >= 0.1
+            }
+        }
+        add = 0.20
+    }
+    if = {
+        limit = {
+            scope:logistics_center = {
+                occupancy >= 0.2
+            }
+        }
+        add = 0.10
+    }
+    if = {
+        limit = {
+            scope:logistics_center = {
+                occupancy >= 0.3
+            }
+        }
+        add = 0.10
+    }
+    if = {
+        limit = {
+            scope:logistics_center = {
+                occupancy >= 0.4
+            }
+        }
+        add = 0.10
+    }
+    if = {
+        limit = {
+            scope:logistics_center = {
+                occupancy >= 0.5
+            }
+        }
+        add = 0.10
+    }
+    if = {
+        limit = {
+            scope:logistics_center = {
+                occupancy >= 0.6
+            }
+        }
+        add = 0.10
+    }
+    if = {
+        limit = {
+            scope:logistics_center = {
+                occupancy >= 0.7
+            }
+        }
+        add = 0.10
+    }
+    if = {
+        limit = {
+            scope:logistics_center = {
+                occupancy >= 0.8
+            }
+        }
+        add = 0.10
+    }
+    if = {
+        limit = {
+            scope:logistics_center = {
+                occupancy >= 0.9
+            }
+        }
+        add = 0.10
+    }
+    min = 0 # Never buy a negative amount of goods
+    max = 1 # Never buy more than 100% of the possible goods
 }

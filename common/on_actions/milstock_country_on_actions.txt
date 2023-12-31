@@ -3,54 +3,53 @@
 #########################################
 
 on_monthly_pulse_country = {
-	on_actions = {
-		open_distribution_centers
-	}
+    on_actions = {
+        open_distribution_centers
+    }
 }
 
 
 open_distribution_centers = {
-	effect = {
-		# If the country is at war, then we want to get the distribution centers open.
-		if = {
-			limit = {
-				is_at_war = yes
-				has_building = milstock_building_logistics_center
-			}
-			debug_log = "Country at war and has a military logistics center."
+    effect = {
+        # If the country is at war, then we want to get the distribution centers open.
+        if = {
+            limit = {
+                is_at_war = yes
+                has_building = milstock_building_logistics_center
+            }
+            debug_log = "Country at war and has a military logistics center."
 
-			# Create distribution centers if the state has a logistics center
-			# and does not currently have a distribution center of this type
-			# open.
-			# ---------------------------------------------------------------
-			every_scope_state = {
-				# Create grain distribution center if eligible
-				if = {
-					limit = {
-						has_building = milstock_building_logistics_center
-						var:milstock_state_grain_stockpile_var > 100
-						NOT = {
-							has_variable = grain_stockpile_exhausted_recently
-							has_building = milstock_building_distribution_grain
-						}
-					}
-					debug_log = "Conditions have been met to open a distribution center."
+            # Create distribution centers if the state has a logistics center
+            # and does not currently have a distribution center of this type
+            # open.
+            # ---------------------------------------------------------------
+            every_scope_state = {
+                # Create grain distribution center if eligible
+                if = {
+                    limit = {
+                        has_building = milstock_building_logistics_center
+                        var:milstock_state_grain_stockpile_var > 100
+                        NOT = {
+                            has_variable = grain_stockpile_exhausted_recently
+                            has_building = milstock_building_distribution_grain
+                        }
+                    }
+                    debug_log = "Conditions have been met to open a distribution center."
 
 
-					every_scope_building = {
-						limit = {
-							is_building_type = milstock_building_logistics_center
-						}
-						this.state = { set_variable = { name = logistics_center_level value = PREV.level } }
-					}
+                    every_scope_building = {
+                        limit = {
+                            is_building_type = milstock_building_logistics_center
+                        }
+                        this.state = { set_variable = { name = logistics_center_level value = PREV.level } }
+                    }
 
-					create_building = {
-						building = milstock_building_distribution_grain
-						level = var:logistics_center_level
-						activate_production_methods = { milstock_pm_dist_grain }
-					}
-				}
-			}
-		}
-	}
+                    create_distribution_center = {
+                        BUILDING = milstock_building_distribution_grain
+                        METHOD = milstock_pm_dist_grain
+                    }
+                }
+            }
+        }
+    }
 }
