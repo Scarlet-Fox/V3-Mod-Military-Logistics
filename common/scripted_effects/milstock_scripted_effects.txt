@@ -1,0 +1,104 @@
+﻿###################################################################
+##### Scripted Effects - also known as terrifying workarounds #####
+###################################################################
+
+
+# Create Distribution Center of level = logistics_center_level
+# ------------------------------------------------------------
+# This is necessary because, inexplicably, the level parameter
+# requires an INTEGER and "value" scopes do not automatically
+# translate. Most likely, Paradox did this for performance
+# reasons, but I don't necessarily have to love it.
+
+
+
+create_distribution_center = {
+    if = {
+        limit = {
+            has_variable = logistics_center_level # If there's no logistics_center_level, bail
+        }
+
+        # For each possible logistics center level, make a corresponding distribution center...
+        # This is ugly but I couldn't figure out another way of doing this.
+        if = {
+            limit = { var:logistics_center_level = 1 }
+            create_building = { building = $BUILDING$ level = 1 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 2 }
+            create_building = { building = $BUILDING$ level = 2 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 3 }
+            create_building = { building = $BUILDING$ level = 3 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 4 }
+            create_building = { building = $BUILDING$ level = 4 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 5 }
+            create_building = { building = $BUILDING$ level = 5 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 6 }
+            create_building = { building = $BUILDING$ level = 6 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 7 }
+            create_building = { building = $BUILDING$ level = 7 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 8 }
+            create_building = { building = $BUILDING$ level = 8 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 9 }
+            create_building = { building = $BUILDING$ level = 9 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 10 }
+            create_building = { building = $BUILDING$ level = 10 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 11 }
+            create_building = { building = $BUILDING$ level = 11 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 12 }
+            create_building = { building = $BUILDING$ level = 12 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 13 }
+            create_building = { building = $BUILDING$ level = 13 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 14 }
+            create_building = { building = $BUILDING$ level = 14 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 15 }
+            create_building = { building = $BUILDING$ level = 15 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 16 }
+            create_building = { building = $BUILDING$ level = 16 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 17 }
+            create_building = { building = $BUILDING$ level = 17 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 18 }
+            create_building = { building = $BUILDING$ level = 18 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level = 19 }
+            create_building = { building = $BUILDING$ level = 19 activate_production_methods = { $METHOD$ } }
+        }
+        if = {
+            limit = { var:logistics_center_level > 19 }
+            create_building = { building = $BUILDING$ level = 20 activate_production_methods = { $METHOD$ } }
+        }
+    }
+}
