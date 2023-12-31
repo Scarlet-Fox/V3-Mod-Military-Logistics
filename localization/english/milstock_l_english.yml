@@ -91,7 +91,18 @@
   milstock_pm_dist_oil: "Standard"
   milstock_pm_dist_iron: "Standard"
 
-
-
-  # Debug helpers
-  # milstock_small_arms_building_debug: "Small Arms Stockpile: [SCOPE.sBuilding('milstock_building').GetState.MakeScope.Var('milstock_state_small_arms_stockpile_var').GetValue]"
+  # Distribution Center Production Methods
+  milstock_pm_dist_small_arms_double: "Standard"
+  milstock_pm_dist_grain_double: "Standard"
+  milstock_pm_dist_liquor_double: "Standard"
+  milstock_pm_dist_sugar_double: "Standard"
+  milstock_pm_dist_opium_double: "Standard"
+  milstock_pm_dist_tobacco_double: "Standard"
+  milstock_pm_dist_fabric_double: "Standard"
+  milstock_pm_dist_groceries_double: "Standard"
+  milstock_pm_dist_ammunition_double: "Standard"
+  milstock_pm_dist_artillery_double: "Standard"
+  milstock_pm_dist_radios_double: "Standard"
+  milstock_pm_dist_tanks_double: "Standard"
+  milstock_pm_dist_oil_double: "Standard"
+  milstock_pm_dist_iron_double: "Standard"

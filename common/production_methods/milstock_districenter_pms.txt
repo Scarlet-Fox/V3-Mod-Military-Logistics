@@ -3,9 +3,12 @@
 # So, having this output so much ensures that it will always have an impact, even if the AI is 
 # doing something braindead.
 
+# Standard Distribution Center Production Methods
+# --------------------------------------------------------------------------
 
 milstock_pm_dist_small_arms = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
@@ -20,7 +23,8 @@ milstock_pm_dist_small_arms = {
 }
 
 milstock_pm_dist_grain = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
@@ -35,7 +39,8 @@ milstock_pm_dist_grain = {
 }
 
 milstock_pm_dist_liquor = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
@@ -50,7 +55,8 @@ milstock_pm_dist_liquor = {
 }
 
 milstock_pm_dist_sugar = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
@@ -65,7 +71,8 @@ milstock_pm_dist_sugar = {
 }
 
 milstock_pm_dist_opium = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
@@ -80,7 +87,8 @@ milstock_pm_dist_opium = {
 }
 
 milstock_pm_dist_tobacco = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
@@ -95,7 +103,8 @@ milstock_pm_dist_tobacco = {
 }
 
 milstock_pm_dist_fabric = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
@@ -110,7 +119,8 @@ milstock_pm_dist_fabric = {
 }
 
 milstock_pm_dist_groceries = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
@@ -125,7 +135,8 @@ milstock_pm_dist_groceries = {
 }
 
 milstock_pm_dist_ammunition = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
@@ -140,7 +151,8 @@ milstock_pm_dist_ammunition = {
 }
 
 milstock_pm_dist_artillery = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
@@ -155,7 +167,8 @@ milstock_pm_dist_artillery = {
 }
 
 milstock_pm_dist_radios = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
@@ -170,7 +183,8 @@ milstock_pm_dist_radios = {
 }
 
 milstock_pm_dist_tanks = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
@@ -185,7 +199,8 @@ milstock_pm_dist_tanks = {
 }
 
 milstock_pm_dist_oil = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
@@ -200,12 +215,226 @@ milstock_pm_dist_oil = {
 }
 
 milstock_pm_dist_iron = {
-    texture = "gfx/interface/icons/production_method_icons/mixed_icon_military.dds"
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    is_default = yes
 
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_iron_add = 20
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+# Doubled Distribution Center Production Methods
+# --------------------------------------------------------------------------
+
+milstock_pm_dist_small_arms_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_small_arms_add = 80
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+milstock_pm_dist_grain_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_grain_add = 120
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+milstock_pm_dist_liquor_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_liquor_add = 40
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+milstock_pm_dist_sugar_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_sugar_add = 40
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+milstock_pm_dist_opium_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_opium_add = 40
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+milstock_pm_dist_tobacco_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_tobacco_add = 40
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+milstock_pm_dist_fabric_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_fabric_add = 40
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+milstock_pm_dist_groceries_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_groceries_add = 40
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+milstock_pm_dist_ammunition_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_ammunition_add = 80
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+milstock_pm_dist_artillery_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_artillery_add = 60
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+milstock_pm_dist_radios_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_radios_add = 44
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+milstock_pm_dist_tanks_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_tanks_add = 60
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+milstock_pm_dist_oil_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_oil_add = 60
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 100
+        }
+    }
+}
+
+milstock_pm_dist_iron_double = {
+    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            # Output goods only - this is a distribution center
+            goods_output_iron_add = 40
         }
 
         level_scaled = {
