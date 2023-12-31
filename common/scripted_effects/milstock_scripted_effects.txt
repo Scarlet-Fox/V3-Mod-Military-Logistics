@@ -97,7 +97,7 @@ create_distribution_center = {
             create_building = { building = $BUILDING$ level = 19 activate_production_methods = { $METHOD$ } }
         }
         if = {
-            limit = { var:logistics_center_level > 19 }
+            limit = { var:logistics_center_level > 19 } # You're on your own past this level. I can only bring myself to copy-paste so many times.
             create_building = { building = $BUILDING$ level = 20 activate_production_methods = { $METHOD$ } }
         }
     }

@@ -79,10 +79,7 @@ milstock_logicenter_constructed = {
                     name = milstock_state_iron_stockpile_var
                     value = 0
                 }
-                debug_log_scopes = yes
             }
-            debug_log = "Logistics center building constructed."
-            debug_log_scopes = yes
         }
     }
 }
