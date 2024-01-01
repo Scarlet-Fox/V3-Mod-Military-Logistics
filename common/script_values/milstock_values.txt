@@ -2,7 +2,7 @@
 # Terrifying and Obtuse Scripted Values
 ######################################################################
 
-# Clerk Purchasing Ratio - used to scale goods stockpile additions.
+# Clerk Purchasing Ratio - used to scale goods stockpile changes.
 # --------------------------------------------------------------------
 
 # Get the approximate percentage of clerks hired for the purpose of 
@@ -87,6 +87,22 @@ milstock_sv_staff_purchasing_ratio = {
     min = 0 # Never buy a negative amount of goods
     max = 1 # Never buy more than 100% of the possible goods
 }
+
+# Clerk Purchasing Ratio - used to scale goods stockpile additions.
+# --------------------------------------------------------------------
+
+milstock_sv_max = {
+    value = 10000
+    multiply = scope:logistics_center.level
+}
+
+milstock_sv_min = {
+    value = 0
+}
+
+
+
+
 
 
 # TODO - Use this file to clean up the state on_actions - they look horrific - "there has to be a batter way!!!"
