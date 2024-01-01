@@ -79,6 +79,14 @@ milstock_logicenter_constructed = {
                     name = milstock_state_iron_stockpile_var
                     value = 0
                 }
+                set_variable = {
+                    name = logistics_center_max_stockpile
+                    value = 10000
+                }
+                set_variable = {
+                    name = logistics_center_current_stockpile
+                    value = 0
+                }
             }
         }
     }

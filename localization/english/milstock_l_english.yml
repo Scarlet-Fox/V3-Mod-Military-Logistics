@@ -122,3 +122,7 @@
   milstock_pm_dist_tanks_disable: "Disable Distribution"
   milstock_pm_dist_oil_disable: "Disable Distribution"
   milstock_pm_dist_iron_disable: "Disable Distribution"
+
+  # GUI Override Localizations
+  STOCKPILE: "Military Stockpiles"
+  STOCKPILE_EMPTY: "Empty Stockpile"
