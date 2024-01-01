@@ -12,7 +12,7 @@ milstock_pm_dist_small_arms = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 1400
+            country_minting_add = 1900
         }
     }
 
@@ -34,7 +34,7 @@ milstock_pm_dist_grain = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 700
+            country_minting_add = 1000
         }
     }
 
@@ -56,7 +56,7 @@ milstock_pm_dist_liquor = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 600
+            country_minting_add = 800
         }
     }
 
@@ -78,7 +78,7 @@ milstock_pm_dist_sugar = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 400
+            country_minting_add = 500
         }
     }
 
@@ -100,7 +100,7 @@ milstock_pm_dist_opium = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 600
+            country_minting_add = 800
         }
     }
 
@@ -122,7 +122,7 @@ milstock_pm_dist_tobacco = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 500
+            country_minting_add = 600
         }
     }
 
@@ -144,7 +144,7 @@ milstock_pm_dist_fabric = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 200
+            country_minting_add = 300
         }
     }
 
@@ -166,7 +166,7 @@ milstock_pm_dist_groceries = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 400
+            country_minting_add = 500
         }
     }
 
@@ -188,7 +188,7 @@ milstock_pm_dist_ammunition = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 1200
+            country_minting_add = 1600
         }
     }
 
@@ -210,7 +210,7 @@ milstock_pm_dist_artillery = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 1300
+            country_minting_add = 1700
         }
     }
 
@@ -232,7 +232,7 @@ milstock_pm_dist_radios = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 1000
+            country_minting_add = 1300
         }
     }
 
@@ -254,7 +254,7 @@ milstock_pm_dist_tanks = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 1400
+            country_minting_add = 1900
         }
     }
 
@@ -276,7 +276,7 @@ milstock_pm_dist_oil = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 700
+            country_minting_add = 1000
         }
     }
 
@@ -298,7 +298,7 @@ milstock_pm_dist_iron = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 500
+            country_minting_add = 600
         }
     }
 
@@ -322,7 +322,7 @@ milstock_pm_dist_small_arms_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 2900
+            country_minting_add = 3800
         }
     }
 
@@ -343,7 +343,7 @@ milstock_pm_dist_grain_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 1400
+            country_minting_add = 1900
         }
     }
 
@@ -364,7 +364,7 @@ milstock_pm_dist_liquor_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 1200
+            country_minting_add = 1600
         }
     }
 
@@ -385,7 +385,7 @@ milstock_pm_dist_sugar_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 700
+            country_minting_add = 1000
         }
     }
 
@@ -406,7 +406,7 @@ milstock_pm_dist_opium_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 1200
+            country_minting_add = 1600
         }
     }
 
@@ -427,7 +427,7 @@ milstock_pm_dist_tobacco_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 1000
+            country_minting_add = 1300
         }
     }
 
@@ -448,7 +448,7 @@ milstock_pm_dist_fabric_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 500
+            country_minting_add = 600
         }
     }
 
@@ -469,7 +469,7 @@ milstock_pm_dist_groceries_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 700
+            country_minting_add = 1000
         }
     }
 
@@ -490,7 +490,7 @@ milstock_pm_dist_ammunition_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 2400
+            country_minting_add = 3200
         }
     }
 
@@ -511,7 +511,7 @@ milstock_pm_dist_artillery_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 2500
+            country_minting_add = 3400
         }
     }
 
@@ -532,7 +532,7 @@ milstock_pm_dist_radios_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 1900
+            country_minting_add = 2600
         }
     }
 
@@ -553,7 +553,7 @@ milstock_pm_dist_tanks_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 2900
+            country_minting_add = 3800
         }
     }
 
@@ -574,7 +574,7 @@ milstock_pm_dist_oil_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 1400
+            country_minting_add = 1900
         }
     }
 
@@ -595,7 +595,7 @@ milstock_pm_dist_iron_double = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_minting_add = 1000
+            country_minting_add = 1300
         }
     }
 
