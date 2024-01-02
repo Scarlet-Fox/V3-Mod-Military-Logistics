@@ -1524,7 +1524,7 @@ types building_panels
 
 		empty_state = {
 			blockoverride "visible" {
-				visible = "[EqualTo_CFixedPoint(Building.GetState.MakeScope.Var('logistics_center_current_stockpile').GetValue, '(CFixedPoint)0' )]"
+				visible = "[And(EqualTo_CFixedPoint(Building.GetState.MakeScope.Var('logistics_center_current_stockpile').GetValue, '(CFixedPoint)0' ), Building.IsBuildingType('milstock_building_logistics_center'))]"
 			}
 			blockoverride "text" {
 				text = "STOCKPILE_EMPTY"
