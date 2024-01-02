@@ -1,10 +1,14 @@
 {
   "name" : "Military Logistics and Stockpiles",
   "id" : "",
-  "version" : "",
-  "supported_game_version" : "1.5.12",
-  "short_description" : "",
-  "tags" : [],
+  "version" : "1.0.0",
+  "supported_game_version" : "1.5.*",
+  "short_description" : "Adds military logistics building and resource stockpiles that player and AI can use.",
+  "tags" : [
+        "Warfare",
+        "Economy And Buildings",
+        "Gameplay"
+      ],
   "relationships" : [],
   "game_custom_data" : {
     "multiplayer_synchronized" : true
