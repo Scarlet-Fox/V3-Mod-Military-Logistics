@@ -94,6 +94,7 @@ milstock_sv_staff_purchasing_ratio = {
 milstock_sv_max = {
     value = 3000
     multiply = scope:logistics_center.level
+    min = 5000
 }
 
 milstock_sv_min = {

@@ -81,7 +81,7 @@ milstock_logicenter_constructed = {
                 }
                 set_variable = {
                     name = logistics_center_max_stockpile
-                    value = 3000
+                    value = 5000
                 }
                 set_variable = {
                     name = logistics_center_current_stockpile
