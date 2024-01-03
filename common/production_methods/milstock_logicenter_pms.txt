@@ -638,6 +638,12 @@ milstock_logicenter_admin_pm_basic = {
         }
     }
     
+    state_modifiers = {
+        workforce_scaled = { 
+            state_pop_qualifications_mult = 0.05
+        }   
+    }
+    
     building_modifiers = {
         workforce_scaled = {
             # input goods
