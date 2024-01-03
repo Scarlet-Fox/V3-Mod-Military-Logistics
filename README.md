@@ -8,7 +8,7 @@ Build a **military logistics center** in a state to start gathering goods for yo
 
 In addition to stockpiling goods, logistics centers will provide your country with additional bureaucracy points and, when they're setup as military academies, they provide some amount of innovation and improved qualifications (training) for your pops.
 
-AI players will build logistics centers, and the centers improve the AI effectiveness. Great powers build logistics centers most frequently, but I've seen smaller nations build time sometimes as well.
+AI players will build logistics centers, and the centers improve the AI effectiveness. Great powers build logistics centers most frequently, but I've seen smaller nations build them sometimes as well.
 
 This is a lightweight mod that does not dramatically change game performance. It should also be compatible with any mods that don't make dramatic changes to the type of goods used by military units. (Yes, it works with VTM!)
 
@@ -72,7 +72,7 @@ I wanted as many players to be able to use this mod as possible, so this mod has
 
 ### Compatibility Details
 
-The only file from the base game that is modified is the "building_details_panel.gui" file, which is where the stockpile display has been added to the logistics center. If that file is overridden by another mod, then you can't see stockpile levels, which is not that big of a deal, to be honest so even if there is a conflict, load other mods over this one and the conflict should be resolved.
+The only file from the base game that is modified is the "building_details_panel.gui" file, which is where the stockpile display has been added to the logistics center. If that file is overridden by another mod, then you can't see stockpile levels, which is not that big of a deal to be honest. So, even if there is a conflict, load other mods over this one and the conflict will be resolved.
 
 ## Other Mods I Use
 
