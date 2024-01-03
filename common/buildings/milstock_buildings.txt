@@ -43,7 +43,7 @@
 # Distribution Center :: Small Arms
 milstock_building_distribution_small_arms = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_small_arms.dds"
 
     has_max_level = no
     buildable = no
@@ -60,7 +60,7 @@ milstock_building_distribution_small_arms = {
 # Distribution Center :: Grain
 milstock_building_distribution_grain = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_grain.dds"
 
     has_max_level = no
     buildable = no
@@ -77,7 +77,7 @@ milstock_building_distribution_grain = {
 # Distribution Center :: Liquor
 milstock_building_distribution_liquor = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_liquor.dds"
 
     has_max_level = no
     buildable = no
@@ -94,7 +94,7 @@ milstock_building_distribution_liquor = {
 # Distribution Center :: Sugar
 milstock_building_distribution_sugar = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_sugar.dds"
 
     has_max_level = no
     buildable = no
@@ -111,7 +111,7 @@ milstock_building_distribution_sugar = {
 # Distribution Center :: Opium
 milstock_building_distribution_opium = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_opium.dds"
 
     has_max_level = no
     buildable = no
@@ -128,7 +128,7 @@ milstock_building_distribution_opium = {
 # Distribution Center :: Tobacco
 milstock_building_distribution_tobacco = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_tobacco.dds"
 
     has_max_level = no
     buildable = no
@@ -145,7 +145,7 @@ milstock_building_distribution_tobacco = {
 # Distribution Center :: Fabric
 milstock_building_distribution_fabric = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_fabric.dds"
 
     has_max_level = no
     buildable = no
@@ -162,7 +162,7 @@ milstock_building_distribution_fabric = {
 # Distribution Center :: Groceries
 milstock_building_distribution_groceries = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_groceries.dds"
 
     has_max_level = no
     buildable = no
@@ -179,7 +179,7 @@ milstock_building_distribution_groceries = {
 # Distribution Center :: Ammunition
 milstock_building_distribution_ammunition = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_ammunition.dds"
 
     has_max_level = no
     buildable = no
@@ -196,7 +196,7 @@ milstock_building_distribution_ammunition = {
 # Distribution Center :: Artillery
 milstock_building_distribution_artillery = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_artillery.dds"
 
     has_max_level = no
     buildable = no
@@ -213,7 +213,7 @@ milstock_building_distribution_artillery = {
 # Distribution Center :: Radios
 milstock_building_distribution_radios = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_radios.dds"
 
     has_max_level = no
     buildable = no
@@ -230,7 +230,7 @@ milstock_building_distribution_radios = {
 # Distribution Center :: Tanks
 milstock_building_distribution_tanks = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_tanks.dds"
 
     has_max_level = no
     buildable = no
@@ -247,7 +247,7 @@ milstock_building_distribution_tanks = {
 # Distribution Center :: Oil
 milstock_building_distribution_oil = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_oil.dds"
 
     has_max_level = no
     buildable = no
@@ -264,7 +264,7 @@ milstock_building_distribution_oil = {
 # Distribution Center :: Iron
 milstock_building_distribution_iron = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/military_warehouse.dds"
+    texture = "gfx/interface/icons/milstock/warehouse_iron.dds"
 
     has_max_level = no
     buildable = no
