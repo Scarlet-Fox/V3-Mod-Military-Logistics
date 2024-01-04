@@ -1,7 +1,7 @@
 {
   "name" : "Military Logistics and Stockpiles",
   "id" : "",
-  "version" : "1.0.0",
+  "version" : "1.0.1",
   "supported_game_version" : "1.5.*",
   "short_description" : "Adds military logistics building and resource stockpiles that player and AI can use.",
   "tags" : [

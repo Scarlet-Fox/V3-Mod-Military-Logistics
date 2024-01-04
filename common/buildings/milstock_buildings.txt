@@ -19,6 +19,19 @@
         milstock_pmg_logicenter_administration_style
     }
 
+    # We don't want player private investment pools to build this building
+    # However, it should be fine for AI to build this building
+    can_build_private = {
+        error_check = {
+            severity = fail
+            this = {
+                owner = {
+                    is_ai = yes
+                }
+            }
+        }
+    }
+
     required_construction = construction_cost_very_low # TODO - CHANGE THIS, IT IS FOR TESTING ONLY
 }
 
