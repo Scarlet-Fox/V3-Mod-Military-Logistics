@@ -28,13 +28,13 @@ I made this mod because the lack of stockpiles really bothered me, and it's both
 
 [h2]Is It Balanced?[/h2]
 
-I welcome feedback on this, but I'd say it's pretty balanced. Stockpiles are capped in size. Stockpiling military goods isn't free (and isn't too expensive). I used a spreadsheet to figure everything out so that it all made sense. It seems to work quite nicely when I played the game with it. Give it a try, let me know your thoughts.
+Stockpiles are capped in size. Stockpiling military goods isn't free (and isn't too expensive). It seems to work quite nicely when I played the game with it. Give it a try, let me know your thoughts.
 
-Please note, stockpiles make the game more pleasant to play, they don't necessarily make the game easier or more difficult. 
+[h2]Why is there minting?[/h2]
 
-Great powers and other AI countries with large amounts of wealth end up with stronger military industries, which means their armies can be more dangerous to engage with. This is working as intended, and it makes the game flow much better in my opinion.
+Well, I'm working on this. I understand now that I can use government shares. However, the shares didn't always balance out with the purchase cost - resulting in excessive revenue generation through government dividends. I tried adding a paper and tools cost to balance this out but this nuked the AI players ability to use the mod.
 
-Players can leverage stockpiles to plan their wars more effectively. 
+The minting is strange, and I'm unhappy with it, but it will take me some more work to find another method. In the meantime, it does a decent enough job at balancing the AI reality and the player experience while imposing a cost for stockpiling (you gain less in minting than you would by selling the goods at full price).
 
 [h2]Lore[/h2]
 
