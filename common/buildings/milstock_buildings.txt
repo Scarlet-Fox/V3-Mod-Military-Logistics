@@ -32,7 +32,7 @@
         }
     }
 
-    required_construction = construction_cost_very_low # TODO - CHANGE THIS, IT IS FOR TESTING ONLY
+    required_construction = construction_cost_medium
 }
 
 

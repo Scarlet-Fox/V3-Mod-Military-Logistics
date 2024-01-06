@@ -10,308 +10,289 @@ milstock_pm_dist_small_arms = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 700
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_small_arms_add = 40
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    # Value = 2x Base, which should mean that the AI
+    # only switches to this when the base price is high
+    # this will prevent the AI from destroying their
+    # production and their stockpiles by dumping goods
+    # without considering the impact on the market.
+    ai_value = 600
+
+    # This ai value will be plugged in below, but
+    # only for the single-speed distributions. We are
+    # theoretically biasing the AI away from doubles.
 }
 
 milstock_pm_dist_grain = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 400
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_grain_add = 60
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    ai_value = 200
 }
 
 milstock_pm_dist_liquor = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 300
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_liquor_add = 20
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    ai_value = 500
 }
 
 milstock_pm_dist_sugar = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 200
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_sugar_add = 20
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    ai_value = 300
 }
 
 milstock_pm_dist_opium = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 300
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_opium_add = 20
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    ai_value = 500
 }
 
 milstock_pm_dist_tobacco = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 200
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_tobacco_add = 20
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    ai_value = 400
 }
 
 milstock_pm_dist_fabric = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 100
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_fabric_add = 20
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    ai_value = 200
 }
 
 milstock_pm_dist_groceries = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 200
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_groceries_add = 20
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    ai_value = 300
 }
 
 milstock_pm_dist_ammunition = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 600
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_ammunition_add = 40
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    ai_value = 500
 }
 
 milstock_pm_dist_artillery = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 600
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_artillery_add = 30
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    ai_value = 700
 }
 
 milstock_pm_dist_radios = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 500
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_radios_add = 20
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    ai_value = 800
 }
 
 milstock_pm_dist_tanks = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 700
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_tanks_add = 30
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    ai_value = 800
 }
 
 milstock_pm_dist_oil = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 400
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_oil_add = 30
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    ai_value = 400
 }
 
 milstock_pm_dist_iron = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
     is_default = yes
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 200
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_iron_add = 20
         }
-
         level_scaled = {
             building_employment_laborers_add = 100
         }
+        unscaled = {
+            building_government_shares_add = 1
+        }
     }
+
+    ai_value = 400
 }
 
 # Doubled Distribution Center Production Methods
@@ -320,20 +301,16 @@ milstock_pm_dist_iron = {
 milstock_pm_dist_small_arms_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 1400
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_small_arms_add = 80
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
@@ -341,20 +318,16 @@ milstock_pm_dist_small_arms_double = {
 milstock_pm_dist_grain_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 700
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_grain_add = 120
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
@@ -362,20 +335,17 @@ milstock_pm_dist_grain_double = {
 milstock_pm_dist_liquor_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 600
-        }
-    }
 
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_liquor_add = 40
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
@@ -383,20 +353,16 @@ milstock_pm_dist_liquor_double = {
 milstock_pm_dist_sugar_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 400
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_sugar_add = 40
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
@@ -404,20 +370,16 @@ milstock_pm_dist_sugar_double = {
 milstock_pm_dist_opium_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 600
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_opium_add = 40
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
@@ -425,20 +387,16 @@ milstock_pm_dist_opium_double = {
 milstock_pm_dist_tobacco_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 500
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_tobacco_add = 40
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
@@ -446,20 +404,16 @@ milstock_pm_dist_tobacco_double = {
 milstock_pm_dist_fabric_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 200
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_fabric_add = 40
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
@@ -467,20 +421,16 @@ milstock_pm_dist_fabric_double = {
 milstock_pm_dist_groceries_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 400
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_groceries_add = 40
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
@@ -488,20 +438,16 @@ milstock_pm_dist_groceries_double = {
 milstock_pm_dist_ammunition_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 1200
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_ammunition_add = 80
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
@@ -509,20 +455,16 @@ milstock_pm_dist_ammunition_double = {
 milstock_pm_dist_artillery_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 1300
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_artillery_add = 60
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
@@ -530,20 +472,16 @@ milstock_pm_dist_artillery_double = {
 milstock_pm_dist_radios_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 1000
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_radios_add = 40
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
@@ -551,20 +489,16 @@ milstock_pm_dist_radios_double = {
 milstock_pm_dist_tanks_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 1400
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_tanks_add = 60
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
@@ -572,20 +506,16 @@ milstock_pm_dist_tanks_double = {
 milstock_pm_dist_oil_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 700
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_oil_add = 60
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
@@ -593,20 +523,16 @@ milstock_pm_dist_oil_double = {
 milstock_pm_dist_iron_double = {
     texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
 
-    country_modifiers = {
-        workforce_scaled = {
-            country_minting_add = 500
-        }
-    }
-
     building_modifiers = {
         workforce_scaled = {
             # Output goods only - this is a distribution center
             goods_output_iron_add = 40
         }
-
         level_scaled = {
-            building_employment_laborers_add = 100
+            building_employment_laborers_add = 200
+        }
+        unscaled = {
+            building_government_shares_add = 1
         }
     }
 }
