@@ -1705,9 +1705,10 @@ check_state_ownership = {
         # Now, if the state's current owner is not the same as the last owner
         if = {
             limit = {
+                has_variable = milstock_state_last_owned_by
                 NOT = {
-                    this.owner = milstock_state_last_owned_by
-                } 
+                    this.owner = var:milstock_state_last_owned_by
+                }
             }
 
             # then, we wipe out 75% of the stockpiled amounts

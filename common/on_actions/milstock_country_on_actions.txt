@@ -388,7 +388,7 @@ fix_stockpile_ownership_on_formation = {
                 has_variable = milstock_state_last_owned_by
             }
             
-            var:milstock_state_last_owned_by = this
+            set_variable = { name = milstock_state_last_owned_by value = this.owner }
         }
     }
 }
@@ -413,7 +413,8 @@ fix_stockpile_ownership_on_release = {
                     has_variable = milstock_state_last_owned_by
                 }
 
-                var:milstock_state_last_owned_by = this
+                
+                set_variable = { name = milstock_state_last_owned_by value = this.owner }
             }
         }
     }
