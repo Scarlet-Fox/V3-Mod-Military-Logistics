@@ -6,6 +6,7 @@ on_monthly_pulse_state = {
     on_actions = {
         milstock_increase_stockpiles
         milstock_drain_stockpiles
+        check_state_ownership
     }
 }
 
@@ -1677,6 +1678,57 @@ milstock_drain_stockpiles = {
                 name = logistics_center_max_stockpile
                 value = milstock_sv_max
             }
+        }
+    }
+}
+
+# Check State Ownership
+# ---------------------------------------------------------
+
+check_state_ownership = {
+    effect = {
+        # Housekeeping - Set the last owner of this state if it isn't set and the state 
+        # has a logistics center.
+        if = {
+            limit = {
+                has_building = milstock_building_logistics_center
+                NOT = {
+                    has_variable = milstock_state_last_owned_by
+                }
+            }
+            set_variable = {
+                name = milstock_state_last_owned_by
+                value = this.owner
+            }
+        }
+
+        # Now, if the state's current owner is not the same as the last owner
+        if = {
+            limit = {
+                NOT = {
+                    this.owner = milstock_state_last_owned_by
+                } 
+            }
+
+            # then, we wipe out 75% of the stockpiled amounts
+            change_variable = { name = milstock_state_grain_stockpile_var multiply = 0.25 }
+            change_variable = { name = milstock_state_small_arms_stockpile_var multiply = 0.25 }
+            change_variable = { name = milstock_state_liquor_stockpile_var multiply = 0.25 }
+            change_variable = { name = milstock_state_sugar_stockpile_var multiply = 0.25 }
+            change_variable = { name = milstock_state_opium_stockpile_var multiply = 0.25 }
+            change_variable = { name = milstock_state_tobacco_stockpile_var multiply = 0.25 }
+            change_variable = { name = milstock_state_fabric_stockpile_var multiply = 0.25 }
+            change_variable = { name = milstock_state_groceries_stockpile_var multiply = 0.25 }
+            change_variable = { name = milstock_state_ammunition_stockpile_var multiply = 0.25 }
+            change_variable = { name = milstock_state_artillery_stockpile_var multiply = 0.25 }
+            change_variable = { name = milstock_state_radios_stockpile_var multiply = 0.25 }
+            change_variable = { name = milstock_state_tanks_stockpile_var multiply = 0.25 }
+            change_variable = { name = milstock_state_oil_stockpile_var multiply = 0.25 }
+            change_variable = { name = milstock_state_iron_stockpile_var multiply = 0.25 }
+            set_variable = { name = milstock_state_last_owned_by value = this.owner }
+
+            # Note - see the country on actions for the housekeeping code that ensures we 
+            # don't wipe stockpiles when a country is released or formed.
         }
     }
 }

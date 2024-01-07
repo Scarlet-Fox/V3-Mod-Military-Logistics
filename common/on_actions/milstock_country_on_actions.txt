@@ -370,3 +370,52 @@ close_distribution_centers = {
         }
     }
 }
+
+#####################################
+##### On Formation of a Country #####
+#####################################
+
+on_country_formed = {
+    on_actions = {
+        fix_stockpile_ownership_on_formation
+    }
+}
+
+fix_stockpile_ownership_on_formation = {
+    effect = {
+        every_scope_state = {
+            limit = {
+                has_variable = milstock_state_last_owned_by
+            }
+            
+            var:milstock_state_last_owned_by = this
+        }
+    }
+}
+
+###################################
+##### On Release of a Country #####
+###################################
+
+# Root = Releasing Country
+# scope:target = Released Country
+on_country_released_as_independent = {
+    on_actions = {
+        fix_stockpile_ownership_on_release
+    }
+}
+
+fix_stockpile_ownership_on_release = {
+    effect = {
+        scope:target = {
+            every_scope_state = {
+                limit = {
+                    has_variable = milstock_state_last_owned_by
+                }
+
+                var:milstock_state_last_owned_by = this
+            }
+        }
+    }
+}
+
