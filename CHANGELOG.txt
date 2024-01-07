@@ -1,5 +1,5 @@
 V3 Mod - Military Logistics 1.1.0 UNRELEASED, 2023-01-03
----------------------------------------------
+----------------------------------------------------------
 - Use government shares to make it basically free to pull things from stockpile (you already paid).
 - Remove minting as it's redundant with government shares.
 - Added AI Value to single-speed production methods, boosting AI preference a bit.
@@ -7,18 +7,19 @@ V3 Mod - Military Logistics 1.1.0 UNRELEASED, 2023-01-03
 	- This also prevents the AI from mindlessly emptying out their stockpile because "money is good".
 - Doubled the number of laborers required for the double production method.
 - Raised the construction cost of the logistics center to be more in line with other government buildings.
-- TODO: Add input goods (paper, tools) to logistics center production methods (represent maintenance needs).
-- TODO: Add stockpile deterioration over time (need a percentage, which should increase as stockpile gets closer to capacity).
-- TODO: Investigate using real goods amounts from logistics center and distribution center buildings.
+- Taking a state with a logistics center will now provide 25% of the stockpile to you (some materials is lost during the occupation).
+- Raised limit on the size of the stockpile (from 3,000 per level to 5,000 per Logistics Center level).
+- Lowered the basic paper cost to run a Logistics Center (from 10 to 5 for basic; from 20 to 10 for academic)
+- Add input goods (paper, tools) to logistics center production methods (represent maintenance needs of stockpile).
 
 
 V3 Mod - Military Logistics 1.0.1, 2023-01-03
----------------------------------------------
+----------------------------------------------------------
 - Prevent player country autonomous investment from building Logistics Centers.
 
 
 V3 Mod - Military Logistics 1.0.0, 2023-01-02
----------------------------------------------
+----------------------------------------------------------
 - Initial release version.
 - All core features are in.
 - Released on Steam Workshop.
