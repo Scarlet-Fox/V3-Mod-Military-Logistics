@@ -299,7 +299,7 @@ milstock_pm_dist_iron = {
 # --------------------------------------------------------------------------
 
 milstock_pm_dist_small_arms_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
     building_modifiers = {
         workforce_scaled = {
@@ -316,7 +316,7 @@ milstock_pm_dist_small_arms_double = {
 }
 
 milstock_pm_dist_grain_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
     building_modifiers = {
         workforce_scaled = {
@@ -333,7 +333,7 @@ milstock_pm_dist_grain_double = {
 }
 
 milstock_pm_dist_liquor_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
 
     building_modifiers = {
@@ -351,7 +351,7 @@ milstock_pm_dist_liquor_double = {
 }
 
 milstock_pm_dist_sugar_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
     building_modifiers = {
         workforce_scaled = {
@@ -368,7 +368,7 @@ milstock_pm_dist_sugar_double = {
 }
 
 milstock_pm_dist_opium_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
     building_modifiers = {
         workforce_scaled = {
@@ -385,7 +385,7 @@ milstock_pm_dist_opium_double = {
 }
 
 milstock_pm_dist_tobacco_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
     building_modifiers = {
         workforce_scaled = {
@@ -402,7 +402,7 @@ milstock_pm_dist_tobacco_double = {
 }
 
 milstock_pm_dist_fabric_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
     building_modifiers = {
         workforce_scaled = {
@@ -419,7 +419,7 @@ milstock_pm_dist_fabric_double = {
 }
 
 milstock_pm_dist_groceries_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
     building_modifiers = {
         workforce_scaled = {
@@ -436,7 +436,7 @@ milstock_pm_dist_groceries_double = {
 }
 
 milstock_pm_dist_ammunition_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
     building_modifiers = {
         workforce_scaled = {
@@ -453,7 +453,7 @@ milstock_pm_dist_ammunition_double = {
 }
 
 milstock_pm_dist_artillery_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
     building_modifiers = {
         workforce_scaled = {
@@ -470,7 +470,7 @@ milstock_pm_dist_artillery_double = {
 }
 
 milstock_pm_dist_radios_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
     building_modifiers = {
         workforce_scaled = {
@@ -487,7 +487,7 @@ milstock_pm_dist_radios_double = {
 }
 
 milstock_pm_dist_tanks_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
     building_modifiers = {
         workforce_scaled = {
@@ -504,7 +504,7 @@ milstock_pm_dist_tanks_double = {
 }
 
 milstock_pm_dist_oil_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
     building_modifiers = {
         workforce_scaled = {
@@ -521,7 +521,7 @@ milstock_pm_dist_oil_double = {
 }
 
 milstock_pm_dist_iron_double = {
-    texture = "gfx/interface/icons/production_method_icons/unused/military_priority.dds"
+    texture = "gfx/interface/icons/milstock/military_priority_double.dds"
 
     building_modifiers = {
         workforce_scaled = {
