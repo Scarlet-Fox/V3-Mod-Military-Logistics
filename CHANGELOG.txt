@@ -11,6 +11,7 @@ V3 Mod - Military Logistics 1.1.0 UNRELEASED, 2023-01-03
 - Raised limit on the size of the stockpile (from 3,000 per level to 4,000 per Logistics Center level).
 - Lowered the basic paper cost to run a Logistics Center (from 10 to 5 for basic; from 20 to 10 for academic).
 - Add input goods (paper, tools) to logistics center production methods (represent maintenance needs of stockpile).
+- Fixed a rare bug that prevented stockpiles from being created and resulted in a lot of error messages.
 - Known Issue: The AI has more wars due to not being broke. It slows the game down. I can't do anything about this.
 
 
