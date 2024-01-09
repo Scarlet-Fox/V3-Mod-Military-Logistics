@@ -32,7 +32,8 @@
         }
     }
 
-    required_construction = construction_cost_medium
+    ai_value = 800 # Let's make this slightly less valuable than other government buildings to the AI.
+    required_construction = construction_cost_low
 }
 
 

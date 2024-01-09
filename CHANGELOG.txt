@@ -8,9 +8,10 @@ V3 Mod - Military Logistics 1.1.0 UNRELEASED, 2023-01-03
 - Doubled the number of laborers required for the double production method.
 - Raised the construction cost of the logistics center to be more in line with other government buildings.
 - Taking a state with a logistics center will now provide 25% of the stockpile to you (some materials is lost during the occupation).
-- Raised limit on the size of the stockpile (from 3,000 per level to 5,000 per Logistics Center level).
-- Lowered the basic paper cost to run a Logistics Center (from 10 to 5 for basic; from 20 to 10 for academic)
+- Raised limit on the size of the stockpile (from 3,000 per level to 4,000 per Logistics Center level).
+- Lowered the basic paper cost to run a Logistics Center (from 10 to 5 for basic; from 20 to 10 for academic).
 - Add input goods (paper, tools) to logistics center production methods (represent maintenance needs of stockpile).
+- Known Issue: The AI has more wars due to not being broke. It slows the game down. I can't do anything about this.
 
 
 V3 Mod - Military Logistics 1.0.1, 2023-01-03
