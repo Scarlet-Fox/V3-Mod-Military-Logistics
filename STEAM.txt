@@ -2,23 +2,15 @@
 
 This mod adds features to the game for stockpiling and distributing strategic goods for your military. This allows you (and the AI) to improve economic stability during warfare, and plan your wars with a more strategic lens.
 
-[h2]Overview (this is the TLDR)[/h2]
+[h2]How it works?[/h2]
 
 Build a [b]military logistics center[/b] in a state to start gathering goods for your local strategic reserve. When war starts, [b]distribution centers[/b] will open in states with a logistics center. These will distribute your reserve into the local market. When war ends, the distribution centers close.
-
-In addition to stockpiling goods, logistics centers will provide your country with additional bureaucracy points and, when they're setup as military academies, they provide some amount of innovation and improved qualifications (training) for your pops.
-
-AI players will build logistics centers, and the centers improve the AI effectiveness. Great powers build logistics centers most frequently, but I've seen smaller nations build them sometimes as well.
-
-This is a lightweight mod that does not dramatically change game performance. It should also be compatible with any mods that don't make dramatic changes to the type of goods used by military units. (Yes, it works with VTM!)
-
-Keep reading for more details, or you can scroll down to the bottom for information on compatibility, known issues, and other mods that I recommend.
 
 [h2]Why Stockpiles?[/h2]
 
 The base game does not have a stockpiling mechanic. However, the storage of military goods was extremely (and increasingly) important during this time in history. The game's economic model is incomplete without this mod.
 
-As I played Victoria 3 more and more, I realized that something seemed wrong. The autonomous construction queue never seemed to favor building military buildings during peacetime, but wartime was far too late to start building up military industrial buildings. I had to build it myself and subsidize it or it didn't exist.
+As I played Victoria 3, I realized that something seemed wrong. The autonomous construction queue never seemed to favor building military buildings during peacetime, but wartime was far too late to start building up military industrial buildings. I had to build it myself and subsidize it or it didn't exist.
 
 Additionally, AI players, especially great powers, would have the same issue. Since I can't help them with building up their army, it made beating them in warfare fairly trivial. I would just need to stall for time and they typically go bankrupt due to not being able to scale up military industry fast enough to make military goods cheaper.
 
@@ -26,15 +18,50 @@ This is not realistic. It bothered me. For one thing, subsidizing my military in
 
 I made this mod because the lack of stockpiles really bothered me, and it's bothering you too, even if you don't realize it. With this mod, there is peacetime demand for military goods; the economic impact of war is more controlled; and the AI tends to go bankrupt a bit less when fielding large armies.
 
+[h2]Give me the details![/h2]
+
+[b]Logistics Centers[/b] are unlocked when you research Napoleonic Warfare. The pops in this building are responsible for managing your stockpiles. For each level of a Logistics Center, you can store 4,000 goods. Most military goods can be stored in your stockpile, the full list of stockpile goods is here:
+
+* Small Arms
+* Artillery
+* Ammunition
+* Grain
+* Liquor
+* Fabric
+* Sugar
+* Tobacco
+* Opium
+* Groceries
+* Radios 
+* Tanks 
+* Oil 
+* Iron
+
+You can change the production methods to adjust which goods are being stockpiled. I based those methods on the units that you can select for your military.
+
+A good rule of thumb is to build one logistics center level per every 30 units. Build the logistics centers in states that have a barracks. For added effectiveness, build your military industry buildings in the same location as well.
+
+The production methods that you select should have the same inputs that your units require. If your infantry are mechanized, then you want to select the mechanized version. If you have basic infantry, then select that option.
+
+Logistics Centers provide bureaucracy, qualifications, and innovation (as long as you have the right technologies).
+
+[b]Distribution Centers[/b] automatically get created a few weeks after you go to war. They open up in every state that you have a logistics center. Each distribution center focuses on distributing a single good.
+
+You can adjust the speed of the distribution by clicking into a distribution center and changing the production method. You can disable distribution (which stops draining the stockpile). You can also double the amount distributed by selecting the "High Volume" production method.
+
+[h2]Tips and Tricks[/h2]
+
+Disable specific stockpiles if your stockpiles are full or you just want to save some funds. If you want to avoid micromanagement, then you can toggle all of your stockpiles pretty easily from the buildings panel.
+
+If you have a strong economy, there's nothing wrong with stockpiling a little bit extra. There's no penalty for sitting on a large stockpile.
+
+You can always supplement your income during war by "dumping" your stockpiled goods out into the market. Just use the "high volume" production method. This is useful if you ever need to bail yourself out of a tight financial situation and you have no other options.
+
+If you capture a state with an existing stockpile, the stockpile buildings are destroyed. However, you can still get a portion of the stockpile by building a logistics center in that state.
+
 [h2]Is It Balanced?[/h2]
 
-Stockpiles are capped in size. Stockpiling military goods isn't free (and isn't too expensive). It seems to work quite nicely when I played the game with it. Give it a try, let me know your thoughts.
-
-[h2]Why is there minting?[/h2]
-
-Well, I'm working on this. I understand now that I can use government shares. However, the shares didn't always balance out with the purchase cost - resulting in excessive revenue generation through government dividends. I tried adding a paper and tools cost to balance this out but this nuked the AI players ability to use the mod.
-
-The minting is strange, and I'm unhappy with it, but it will take me some more work to find another method. In the meantime, it does a decent enough job at balancing the AI reality and the player experience while imposing a cost for stockpiling (you gain less in minting than you would by selling the goods at full price).
+Yes, absolutely. You can trust me, I'm an impartial observer.
 
 [h2]Lore[/h2]
 
@@ -55,11 +82,9 @@ I don't have any friends to play Victoria 3 multiplayer with, and I'm not even s
 
 [h2]Mod Compatibility[/h2]
 
-I wanted as many players to be able to use this mod as possible, so this mod has been made to avoid conflicts with other mods. Most mods should work with this one just fine. 
+Most mods should work with this one just fine!
 
-[h3]Compatibility Details[/h3]
-
-The only file from the base game that is modified is the "building_details_panel.gui" file, which is where the stockpile display has been added to the logistics center. If that file is overridden by another mod, then you can't see stockpile levels, which is not that big of a deal to be honest. So, even if there is a conflict, load other mods over this one and the conflict will be resolved.
+The only file from the base game that is modified is the "building_details_panel.gui" file. If a conflict occurs, just override this mod with the other one, and things should work out alright.
 
 [h2]Potential Future Additions[/h2]
 
