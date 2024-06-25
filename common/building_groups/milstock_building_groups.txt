@@ -16,6 +16,5 @@ milstock_bg_distribution_centers = {
     inheritable_construction = no
 
     infrastructure_usage_per_level = 0 # Leaving this at zero for now
-    lens = government
     urbanization = 0
 }
