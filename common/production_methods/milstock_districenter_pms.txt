@@ -18,9 +18,6 @@ milstock_pm_dist_small_arms = {
         level_scaled = {
             building_employment_laborers_add = 100
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 
     # Value = 2x Base, which should mean that the AI
@@ -47,9 +44,6 @@ milstock_pm_dist_grain = {
         level_scaled = {
             building_employment_laborers_add = 100
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 
     ai_value = 200
@@ -66,9 +60,6 @@ milstock_pm_dist_liquor = {
         }
         level_scaled = {
             building_employment_laborers_add = 100
-        }
-        unscaled = {
-            building_government_shares_add = 1
         }
     }
 
@@ -87,9 +78,6 @@ milstock_pm_dist_sugar = {
         level_scaled = {
             building_employment_laborers_add = 100
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 
     ai_value = 300
@@ -106,9 +94,6 @@ milstock_pm_dist_opium = {
         }
         level_scaled = {
             building_employment_laborers_add = 100
-        }
-        unscaled = {
-            building_government_shares_add = 1
         }
     }
 
@@ -127,9 +112,6 @@ milstock_pm_dist_tobacco = {
         level_scaled = {
             building_employment_laborers_add = 100
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 
     ai_value = 400
@@ -146,9 +128,6 @@ milstock_pm_dist_fabric = {
         }
         level_scaled = {
             building_employment_laborers_add = 100
-        }
-        unscaled = {
-            building_government_shares_add = 1
         }
     }
 
@@ -167,9 +146,6 @@ milstock_pm_dist_groceries = {
         level_scaled = {
             building_employment_laborers_add = 100
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 
     ai_value = 300
@@ -186,9 +162,6 @@ milstock_pm_dist_ammunition = {
         }
         level_scaled = {
             building_employment_laborers_add = 100
-        }
-        unscaled = {
-            building_government_shares_add = 1
         }
     }
 
@@ -207,9 +180,6 @@ milstock_pm_dist_artillery = {
         level_scaled = {
             building_employment_laborers_add = 100
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 
     ai_value = 700
@@ -226,9 +196,6 @@ milstock_pm_dist_radios = {
         }
         level_scaled = {
             building_employment_laborers_add = 100
-        }
-        unscaled = {
-            building_government_shares_add = 1
         }
     }
 
@@ -247,9 +214,6 @@ milstock_pm_dist_tanks = {
         level_scaled = {
             building_employment_laborers_add = 100
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 
     ai_value = 800
@@ -267,9 +231,6 @@ milstock_pm_dist_oil = {
         level_scaled = {
             building_employment_laborers_add = 100
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 
     ai_value = 400
@@ -286,9 +247,6 @@ milstock_pm_dist_iron = {
         }
         level_scaled = {
             building_employment_laborers_add = 100
-        }
-        unscaled = {
-            building_government_shares_add = 1
         }
     }
 
@@ -309,9 +267,6 @@ milstock_pm_dist_small_arms_double = {
         level_scaled = {
             building_employment_laborers_add = 200
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 }
 
@@ -325,9 +280,6 @@ milstock_pm_dist_grain_double = {
         }
         level_scaled = {
             building_employment_laborers_add = 200
-        }
-        unscaled = {
-            building_government_shares_add = 1
         }
     }
 }
@@ -344,9 +296,6 @@ milstock_pm_dist_liquor_double = {
         level_scaled = {
             building_employment_laborers_add = 200
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 }
 
@@ -360,9 +309,6 @@ milstock_pm_dist_sugar_double = {
         }
         level_scaled = {
             building_employment_laborers_add = 200
-        }
-        unscaled = {
-            building_government_shares_add = 1
         }
     }
 }
@@ -378,9 +324,6 @@ milstock_pm_dist_opium_double = {
         level_scaled = {
             building_employment_laborers_add = 200
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 }
 
@@ -394,9 +337,6 @@ milstock_pm_dist_tobacco_double = {
         }
         level_scaled = {
             building_employment_laborers_add = 200
-        }
-        unscaled = {
-            building_government_shares_add = 1
         }
     }
 }
@@ -412,9 +352,6 @@ milstock_pm_dist_fabric_double = {
         level_scaled = {
             building_employment_laborers_add = 200
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 }
 
@@ -428,9 +365,6 @@ milstock_pm_dist_groceries_double = {
         }
         level_scaled = {
             building_employment_laborers_add = 200
-        }
-        unscaled = {
-            building_government_shares_add = 1
         }
     }
 }
@@ -446,9 +380,6 @@ milstock_pm_dist_ammunition_double = {
         level_scaled = {
             building_employment_laborers_add = 200
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 }
 
@@ -462,9 +393,6 @@ milstock_pm_dist_artillery_double = {
         }
         level_scaled = {
             building_employment_laborers_add = 200
-        }
-        unscaled = {
-            building_government_shares_add = 1
         }
     }
 }
@@ -480,9 +408,6 @@ milstock_pm_dist_radios_double = {
         level_scaled = {
             building_employment_laborers_add = 200
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 }
 
@@ -496,9 +421,6 @@ milstock_pm_dist_tanks_double = {
         }
         level_scaled = {
             building_employment_laborers_add = 200
-        }
-        unscaled = {
-            building_government_shares_add = 1
         }
     }
 }
@@ -514,9 +436,6 @@ milstock_pm_dist_oil_double = {
         level_scaled = {
             building_employment_laborers_add = 200
         }
-        unscaled = {
-            building_government_shares_add = 1
-        }
     }
 }
 
@@ -530,9 +449,6 @@ milstock_pm_dist_iron_double = {
         }
         level_scaled = {
             building_employment_laborers_add = 200
-        }
-        unscaled = {
-            building_government_shares_add = 1
         }
     }
 }
