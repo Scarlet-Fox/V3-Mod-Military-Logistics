@@ -48,6 +48,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_grain
                         METHOD = milstock_pm_dist_grain
+                        COUNTRY = this.owner
                     }
                 }
 
@@ -63,6 +64,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_small_arms
                         METHOD = milstock_pm_dist_small_arms
+                        COUNTRY = this.owner
                     }
                 }
 
@@ -78,6 +80,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_liquor
                         METHOD = milstock_pm_dist_liquor
+                        COUNTRY = this.owner
                     }
                 }
 
@@ -93,6 +96,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_sugar
                         METHOD = milstock_pm_dist_sugar
+                        COUNTRY = this.owner
                     }
                 }
 
@@ -108,6 +112,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_opium
                         METHOD = milstock_pm_dist_opium
+                        COUNTRY = this.owner
                     }
                 }
 
@@ -123,6 +128,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_tobacco
                         METHOD = milstock_pm_dist_tobacco
+                        COUNTRY = this.owner
                     }
                 }
 
@@ -138,6 +144,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_fabric
                         METHOD = milstock_pm_dist_fabric
+                        COUNTRY = this.owner
                     }
                 }
 
@@ -153,6 +160,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_groceries
                         METHOD = milstock_pm_dist_groceries
+                        COUNTRY = this.owner
                     }
                 }
 
@@ -168,6 +176,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_ammunition
                         METHOD = milstock_pm_dist_ammunition
+                        COUNTRY = this.owner
                     }
                 }
 
@@ -183,6 +192,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_artillery
                         METHOD = milstock_pm_dist_artillery
+                        COUNTRY = this.owner
                     }
                 }
 
@@ -198,6 +208,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_radios
                         METHOD = milstock_pm_dist_radios
+                        COUNTRY = this.owner
                     }
                 }
 
@@ -213,6 +224,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_tanks
                         METHOD = milstock_pm_dist_tanks
+                        COUNTRY = this.owner
                     }
                 }
 
@@ -229,6 +241,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_oil
                         METHOD = milstock_pm_dist_oil
+                        COUNTRY = this.owner
                     }
                 }
 
@@ -245,6 +258,7 @@ open_distribution_centers = {
                     create_distribution_center = {
                         BUILDING = milstock_building_distribution_iron
                         METHOD = milstock_pm_dist_iron
+                        COUNTRY = this.owner
                     }
                 }
             }
