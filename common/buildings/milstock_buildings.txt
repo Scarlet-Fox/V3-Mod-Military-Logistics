@@ -1,6 +1,7 @@
 ﻿milstock_building_logistics_center = {
     building_group = milstock_bg_logistics_centers
     texture = "gfx/interface/icons/milstock/military_logistics.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = yes
@@ -21,16 +22,21 @@
 
     # We don't want player private investment pools to build this building
     # However, it should be fine for AI to build this building
+
     can_build_private = {
-        error_check = {
-            severity = fail
-            this = {
-                owner = {
-                    is_ai = yes
-                }
-            }
-        }
+        always = no
     }
+    
+    #can_build_private = {
+    #    error_check = {
+    #        severity = fail
+    #        this = {
+    #            owner = {
+    #                is_ai = yes
+    #            }
+    #        }
+    #    }
+    #}
 
     ai_value = 800 # Let's make this slightly less valuable than other government buildings to the AI.
     required_construction = construction_cost_low
@@ -58,6 +64,7 @@
 milstock_building_distribution_small_arms = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_small_arms.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
@@ -75,6 +82,7 @@ milstock_building_distribution_small_arms = {
 milstock_building_distribution_grain = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_grain.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
@@ -92,6 +100,7 @@ milstock_building_distribution_grain = {
 milstock_building_distribution_liquor = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_liquor.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
@@ -109,6 +118,7 @@ milstock_building_distribution_liquor = {
 milstock_building_distribution_sugar = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_sugar.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
@@ -126,6 +136,7 @@ milstock_building_distribution_sugar = {
 milstock_building_distribution_opium = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_opium.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
@@ -143,6 +154,7 @@ milstock_building_distribution_opium = {
 milstock_building_distribution_tobacco = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_tobacco.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
@@ -160,6 +172,7 @@ milstock_building_distribution_tobacco = {
 milstock_building_distribution_fabric = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_fabric.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
@@ -177,6 +190,7 @@ milstock_building_distribution_fabric = {
 milstock_building_distribution_groceries = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_groceries.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
@@ -194,6 +208,7 @@ milstock_building_distribution_groceries = {
 milstock_building_distribution_ammunition = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_ammunition.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
@@ -211,6 +226,7 @@ milstock_building_distribution_ammunition = {
 milstock_building_distribution_artillery = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_artillery.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
@@ -228,6 +244,7 @@ milstock_building_distribution_artillery = {
 milstock_building_distribution_radios = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_radios.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
@@ -245,6 +262,7 @@ milstock_building_distribution_radios = {
 milstock_building_distribution_tanks = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_tanks.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
@@ -262,6 +280,7 @@ milstock_building_distribution_tanks = {
 milstock_building_distribution_oil = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_oil.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
@@ -279,6 +298,7 @@ milstock_building_distribution_oil = {
 milstock_building_distribution_iron = {
     building_group = milstock_bg_distribution_centers
     texture = "gfx/interface/icons/milstock/warehouse_iron.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
     buildable = no
