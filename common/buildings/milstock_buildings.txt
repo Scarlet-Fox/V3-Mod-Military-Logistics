@@ -75,6 +75,7 @@ milstock_building_distribution_small_arms = {
         milstock_pmg_dist_small_arms
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
 
@@ -93,6 +94,7 @@ milstock_building_distribution_grain = {
         milstock_pmg_dist_grain
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
 
@@ -111,6 +113,7 @@ milstock_building_distribution_liquor = {
         milstock_pmg_dist_liquor
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
 
@@ -129,6 +132,7 @@ milstock_building_distribution_sugar = {
         milstock_pmg_dist_sugar
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
 
@@ -147,6 +151,7 @@ milstock_building_distribution_opium = {
         milstock_pmg_dist_opium
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
 
@@ -165,6 +170,7 @@ milstock_building_distribution_tobacco = {
         milstock_pmg_dist_tobacco
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
 
@@ -183,6 +189,7 @@ milstock_building_distribution_fabric = {
         milstock_pmg_dist_fabric
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
 
@@ -201,6 +208,7 @@ milstock_building_distribution_groceries = {
         milstock_pmg_dist_groceries
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
 
@@ -219,6 +227,7 @@ milstock_building_distribution_ammunition = {
         milstock_pmg_dist_ammunition
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
 
@@ -237,6 +246,7 @@ milstock_building_distribution_artillery = {
         milstock_pmg_dist_artillery
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
 
@@ -255,6 +265,7 @@ milstock_building_distribution_radios = {
         milstock_pmg_dist_radios
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
 
@@ -273,6 +284,7 @@ milstock_building_distribution_tanks = {
         milstock_pmg_dist_tanks
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
 
@@ -291,6 +303,7 @@ milstock_building_distribution_oil = {
         milstock_pmg_dist_oil
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
 
@@ -309,5 +322,6 @@ milstock_building_distribution_iron = {
         milstock_pmg_dist_iron
     }
 
+    ownership_type = self
     required_construction = construction_cost_very_low
 }
