@@ -38,7 +38,7 @@
     #    }
     #}
 
-    ai_value = 800 # Let's make this slightly less valuable than other government buildings to the AI.
+    ai_value = 200 # Made it significantly less valuable. AI was building these in a way that made no sense.
     required_construction = construction_cost_low
 }
 
