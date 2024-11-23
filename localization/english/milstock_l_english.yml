@@ -108,6 +108,22 @@
   milstock_pm_dist_iron_double: "High Volume Distribution"
 
   # Distribution Center Production Methods
+  milstock_pm_dist_small_arms_half: "Low Volume Distribution"
+  milstock_pm_dist_grain_half: "Low Volume Distribution"
+  milstock_pm_dist_liquor_half: "Low Volume Distribution"
+  milstock_pm_dist_sugar_half: "Low Volume Distribution"
+  milstock_pm_dist_opium_half: "Low Volume Distribution"
+  milstock_pm_dist_tobacco_half: "Low Volume Distribution"
+  milstock_pm_dist_fabric_half: "Low Volume Distribution"
+  milstock_pm_dist_groceries_half: "Low Volume Distribution"
+  milstock_pm_dist_ammunition_half: "Low Volume Distribution"
+  milstock_pm_dist_artillery_half: "Low Volume Distribution"
+  milstock_pm_dist_radios_half: "Low Volume Distribution"
+  milstock_pm_dist_tanks_half: "Low Volume Distribution"
+  milstock_pm_dist_oil_half: "Low Volume Distribution"
+  milstock_pm_dist_iron_half: "Low Volume Distribution"
+
+  # Distribution Center Production Methods
   milstock_pm_dist_small_arms_disable: "Disable Distribution"
   milstock_pm_dist_grain_disable: "Disable Distribution"
   milstock_pm_dist_liquor_disable: "Disable Distribution"
