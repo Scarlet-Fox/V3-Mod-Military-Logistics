@@ -1,6 +1,6 @@
 ﻿milstock_building_logistics_center = {
     building_group = milstock_bg_logistics_centers
-    texture = "gfx/interface/icons/milstock/military_logistics.dds"
+    icon = "gfx/interface/icons/milstock/military_logistics.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -63,7 +63,7 @@
 # Distribution Center :: Small Arms
 milstock_building_distribution_small_arms = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_small_arms.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_small_arms.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -82,7 +82,7 @@ milstock_building_distribution_small_arms = {
 # Distribution Center :: Grain
 milstock_building_distribution_grain = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_grain.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_grain.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -101,7 +101,7 @@ milstock_building_distribution_grain = {
 # Distribution Center :: Liquor
 milstock_building_distribution_liquor = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_liquor.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_liquor.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -120,7 +120,7 @@ milstock_building_distribution_liquor = {
 # Distribution Center :: Sugar
 milstock_building_distribution_sugar = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_sugar.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_sugar.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -139,7 +139,7 @@ milstock_building_distribution_sugar = {
 # Distribution Center :: Opium
 milstock_building_distribution_opium = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_opium.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_opium.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -158,7 +158,7 @@ milstock_building_distribution_opium = {
 # Distribution Center :: Tobacco
 milstock_building_distribution_tobacco = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_tobacco.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_tobacco.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -177,7 +177,7 @@ milstock_building_distribution_tobacco = {
 # Distribution Center :: Fabric
 milstock_building_distribution_fabric = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_fabric.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_fabric.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -196,7 +196,7 @@ milstock_building_distribution_fabric = {
 # Distribution Center :: Groceries
 milstock_building_distribution_groceries = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_groceries.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_groceries.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -215,7 +215,7 @@ milstock_building_distribution_groceries = {
 # Distribution Center :: Ammunition
 milstock_building_distribution_ammunition = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_ammunition.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_ammunition.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -234,7 +234,7 @@ milstock_building_distribution_ammunition = {
 # Distribution Center :: Artillery
 milstock_building_distribution_artillery = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_artillery.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_artillery.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -253,7 +253,7 @@ milstock_building_distribution_artillery = {
 # Distribution Center :: Radios
 milstock_building_distribution_radios = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_radios.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_radios.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -272,7 +272,7 @@ milstock_building_distribution_radios = {
 # Distribution Center :: Tanks
 milstock_building_distribution_tanks = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_tanks.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_tanks.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -291,7 +291,7 @@ milstock_building_distribution_tanks = {
 # Distribution Center :: Oil
 milstock_building_distribution_oil = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_oil.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_oil.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no
@@ -310,7 +310,7 @@ milstock_building_distribution_oil = {
 # Distribution Center :: Iron
 milstock_building_distribution_iron = {
     building_group = milstock_bg_distribution_centers
-    texture = "gfx/interface/icons/milstock/warehouse_iron.dds"
+    icon = "gfx/interface/icons/milstock/warehouse_iron.dds"
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
     has_max_level = no

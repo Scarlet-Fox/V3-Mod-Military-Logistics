@@ -1,4 +1,13 @@
-V3 Mod - Military Logistics 1.1.0, 2023-01-09
+V3 Mod - Military Logistics 1.2.1, PENDING RELEASE
+----------------------------------------------------------
+- Updated building details panel override for 1.7.x and 1.8.x
+- Reduced ai_value to prevent AI overbuilding
+- Fixed building ownership issues, for 1.7.x compatibility
+- Removed distribution centers from government lens to reduce clutter
+- Included korean translation from https://github.com/dungsil
+
+
+V3 Mod - Military Logistics 1.1.0, 2024-01-09
 ----------------------------------------------------------
 - Use government shares to make it basically free to pull things from stockpile (you already paid).
 - Remove minting as it's redundant with government shares.
@@ -15,12 +24,12 @@ V3 Mod - Military Logistics 1.1.0, 2023-01-09
 - Known Issue: The AI has more wars due to not being broke. Wars slow the game down. I can't do anything about this.
 
 
-V3 Mod - Military Logistics 1.0.1, 2023-01-03
+V3 Mod - Military Logistics 1.0.1, 2024-01-03
 ----------------------------------------------------------
 - Prevent player country autonomous investment from building Logistics Centers.
 
 
-V3 Mod - Military Logistics 1.0.0, 2023-01-02
+V3 Mod - Military Logistics 1.0.0, 2024-01-02
 ----------------------------------------------------------
 - Initial release version.
 - All core features are in.

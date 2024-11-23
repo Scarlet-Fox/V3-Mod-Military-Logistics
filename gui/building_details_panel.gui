@@ -137,7 +137,7 @@ types building_panels
 		}
 		
 		blockoverride "pin_visibility" {
-			visible = "[ObjectsEqual(Building.GetState.GetOwner, GetPlayer.Self)]"
+			visible = "[Building.IsValid]"
 		}
 
 		blockoverride "pin_properties" {
@@ -196,7 +196,7 @@ types building_panels
 
 					icon = {
 						alpha = "[TransparentIfFalse(Building.IsActive)]"
-						texture = "[Building.GetTexture]"
+						texture = "[Building.GetIcon]"
 						size = { 100% 100% }
 
 						icon = {
@@ -324,10 +324,11 @@ types building_panels
 			button = {
 				using = default_button
 				onclick = "[InformationPanelBar.OpenMarketPanel(Building.AccessState.AccessMarket)]"
+				datacontext = "[Building.GetState.GetMarket]"
 
 				textbox = {
 					resizeparent = yes
-					text = "[Building.GetState.GetMarket.GetName]"
+					text = "[Market.GetNameNoFormatting]"
 					align = center|nobaseline
 					autoresize = yes
 					maximumsize = { @panel_width -1 }
@@ -335,6 +336,10 @@ types building_panels
 					margin = { 10 10 }
 					multiline = yes
 					parentanchor = center
+				}
+
+				tooltipwidget = {
+					FancyTooltip_Market = {}
 				}
 			}
 		}
@@ -347,7 +352,7 @@ types building_panels
 			margin = { 7 0 }
 			margin_top = 0
 			
-			blockoverride "state_name" {}
+			blockoverride "state_name_button" {}
 
 			blockoverride "productivity" {}
 
@@ -355,6 +360,8 @@ types building_panels
 			blockoverride "animated_building_controls_trigger" {}
 
 			blockoverride "background" {}
+
+			blockoverride "action_status_icons" {}
 
 			blockoverride "divider" {
 				widget = { size = { 5 5 }}
@@ -435,17 +442,18 @@ types building_panels
 					container = {
 						background = {
 							using = fade_right_entry_header_colored
-							color = "[BuildingOwnership.GetOwnedBuilding.GetState.GetOwner.GetMapColor]"
+							color = "[Select_CVector4f( BuildingOwnership.GetOwnedBuilding.IsValid, BuildingOwnership.GetOwnedBuilding.GetState.GetOwner.GetMapColor, Building.GetOwner.GetMapColor )]"
 							margin_top = 4
 							margin_left = 5
 						}
 
 						flowcontainer = {
+							visible = "[BuildingOwnership.GetOwnedBuilding.IsValid]"
 							tooltip = "PROPERTY_SHARE_CHART_TOOLTIP"
 							margin_bottom = 4
 							icon = {
 								size = { 30 30 }
-								texture = "[BuildingOwnership.GetOwnedBuilding.GetTexture]"
+								texture = "[BuildingOwnership.GetOwnedBuilding.GetIcon]"
 							}
 							flowcontainer = {
 								spacing = 5
@@ -495,6 +503,23 @@ types building_panels
 								default_format = "#v"
 							}
 						}
+						
+						flowcontainer = {
+							visible = "[Not(BuildingOwnership.GetOwnedBuilding.IsValid)]"
+							tooltip = "PROPERTY_SHARE_CHART_TOOLTIP"
+							margin_bottom = 4
+							minimumsize = { 250 30 }
+							
+							textbox = {
+								size = { 120 30 }
+								text = "BUILDING_OWNERSHIP_INVALID_ENTRY"
+								align = right|nobaseline
+								margin_right = 5
+								fontsize_min = 12
+								elide = right
+							}
+						}
+						
 						divider_clean = {
 							parentanchor = bottom|hcenter
 							size = { 100% 1 }
@@ -578,6 +603,7 @@ types building_panels
 							align = left|nobaseline
 							using = fontsize_large
 						}
+
 						textbox = {
 							visible = "[Building.IsGovernmentFunded]"
 							text = "GOVERNMENTAL_EXPENSES"
@@ -943,6 +969,21 @@ types building_panels
 						}
 					}
 
+					### Subsistence output
+					building_process_entry = {
+						tooltip = "[Building.GetSubsistenceOutputDesc]"
+
+						blockoverride "visible" {
+							visible = "[GreaterThan_CFixedPoint(Building.GetSubsistenceOutput, '(CFixedPoint)0')]"
+						}
+						blockoverride "text" {
+							text = "[concept_subsistence_output]"
+						}
+						blockoverride "text_right" {
+							raw_text = "@money![Building.GetSubsistenceOutput|Dv]"
+						}
+					}
+
 					### trade revenue
 					building_process_entry = {
 						blockoverride "visible" {
@@ -1065,86 +1106,132 @@ types building_panels
 						align = left|nobaseline
 					}
 				}
+
 				flowcontainer = {
+					parentanchor = hcenter
 					direction = vertical
 					datamodel = "[Building.GetMilitaryFormations]"
 
 					item = {
 						flowcontainer = {
-							margin = { 5 5 }
-							spacing = 10
+							direction = vertical
+							spacing = 5
+
 							background = {
-								using = entry_bg_simple
+								using = dropdown_background
+								margin = { 0 -2 }
 							}
 
-							tooltipwidget = {
-								FancyTooltip_MilitaryFormation = {}
-							}
-
-							icon = {
-								size = { 40 40 }
-								texture = "[MilitaryFormation.GetFlag]"
-								color = "[MilitaryFormation.GetFlagColor]"
-							}
-							flowcontainer = {
-								spacing = 10
-								maximumsize = { 190 -1 }
-								minimumsize = { 190 -1 }
-								parentanchor = vcenter
-								textbox = {
-									autoresize = yes
-									text = "[MilitaryFormation.GetNameNoFormatting]"
-									parentanchor = vcenter
-									align = nobaseline
-									maximumsize = { 155 -1 }
-									elide = right
-									fontsize_min = 12
+							section_header_button = {
+								blockoverride "layout" {
+									parentanchor = hcenter
+									size = { @panel_width_minus_10 38 }
 								}
-								button_icon_goto = {
-									parentanchor = vcenter
-									size = { 25 25 }
-										onclick = "[InformationPanelBar.OpenMilitaryFormationPanelTab( MilitaryFormation.AccessSelf, 'mobilization' )]"
-									tooltip = "GO_TO_BUTTON_MILITARY_FORMATION"
-									block "goto_visibility" {}
-								}
-							}
-							textbox = {
-								autoresize = yes
-								maximumsize = { 60 -1 }
-								minimumsize = { 60 -1 }
-								text = "UNITS_PROVIDED_FROM_BUILDING"
-								tooltip = "UNITS_PROVIDED_FROM_BUILDING_TOOLTIP"
-								parentanchor = vcenter
-								align = right|nobaseline
-							}
 
-							textbox = {
-								autoresize = yes
-								maximumsize = { 60 -1 }
-								minimumsize = { 60 -1 }
-								text = "[MilitaryFormation.GetSupply]"
-								parentanchor = vcenter
-								align = right|nobaseline
-							}
-
-							overlappingitembox = {
-								size = { 140 25 }
-								alpha = "[TransparentIfFalse(MilitaryFormation.IsMobilized)]"
-
-								parentanchor = vcenter 
-
-								datamodel = "[MilitaryFormation.GetMobilizationOptions]"
-
-								item = {
-									icon = {
-										size = { 25 25 }
-										texture = "[MobilizationOption.GetTexture]"
-										visible = "[MobilizationOption.IsActivated(MilitaryFormation.AccessSelf)]"
+								blockoverride "left_textbox" {
+									hbox = {
+										layoutpolicy_horizontal = expanding
+										layoutpolicy_vertical = expanding
+										spacing = 5
+										margin_left = 30
 
 										tooltipwidget = {
-											FancyTooltip_MobilizationOption = {}
+											FancyTooltip_MilitaryFormation = {}
 										}
 
+										widget = {
+											size = { 195 38 }
+
+											icon = {
+												parentanchor = vcenter
+												size = { 32 32 }
+												texture = "[MilitaryFormation.GetFlag]"
+												color = "[MilitaryFormation.GetFlagColor]"
+											}
+
+											textbox = {
+												parentanchor = vcenter
+												position = { 35 0 }
+												autoresize = yes
+												align = nobaseline
+												max_width = 120
+												elide = right
+												fontsize_min = 12
+												text = "[MilitaryFormation.GetNameNoFormatting]"
+											}
+
+											button_icon_goto = {
+												block "goto_visibility" {}
+												parentanchor = right|vcenter
+												size = { 25 25 }
+												tooltip = "GO_TO_BUTTON_MILITARY_FORMATION"
+												onclick = "[InformationPanelBar.OpenMilitaryFormationPanelTab( MilitaryFormation.AccessSelf, 'mobilization' )]"
+											}
+										}
+
+										textbox = {
+											maximumsize = { 65 38 }
+											minimumsize = { 65 38 }
+											align = right|nobaseline
+											text = "UNITS_PROVIDED_FROM_BUILDING"
+											tooltip = "UNITS_PROVIDED_FROM_BUILDING_TOOLTIP"
+										}
+
+										textbox = {
+											maximumsize = { 60 38 }
+											minimumsize = { 60 38 }
+											align = right|nobaseline
+											text = "[MilitaryFormation.GetSupply]"
+										}
+
+										overlappingitembox = {
+											size = { 140 25 }
+											alpha = "[TransparentIfFalse(MilitaryFormation.IsMobilized)]"
+											datamodel = "[MilitaryFormation.GetMobilizationOptions]"
+
+											item = {
+												icon = {
+													size = { 25 25 }
+													texture = "[MobilizationOption.GetTexture]"
+													visible = "[MobilizationOption.IsActivated(MilitaryFormation.AccessSelf)]"
+
+													tooltipwidget = {
+														FancyTooltip_MobilizationOption = {}
+													}
+
+												}
+											}
+										}
+									}
+								}
+
+								blockoverride "onclick" {
+									onclick = "[GetVariableSystem.Toggle( Concatenate('show_units_', MilitaryFormation.GetIDString) )]"
+								}
+
+								blockoverride "onclick_showmore" {
+									visible = "[Not(GetVariableSystem.Exists( Concatenate('show_units_', MilitaryFormation.GetIDString) ))]"
+								}
+
+								blockoverride "onclick_showless" {
+									visible = "[GetVariableSystem.Exists( Concatenate('show_units_', MilitaryFormation.GetIDString) )]"
+								}
+							}
+
+							flowcontainer = {
+								visible = "[GetVariableSystem.Exists( Concatenate('show_units_', MilitaryFormation.GetIDString) )]"
+								parentanchor = hcenter
+								direction = vertical
+								margin_bottom = 5
+
+								combat_units_list = {
+									parentanchor = hcenter
+									datacontext = "[Building.GetOwner]"
+									datamodel = "[Building.GetCombatUnitsInFormation(MilitaryFormation.Self)]"
+
+									blockoverride "combat_unit_goto_button" {}
+									blockoverride "combat_unit_name_maximumsize" {
+										maximumsize = { 205 -1 }
 									}
 								}
 							}
@@ -1152,25 +1239,8 @@ types building_panels
 					}
 				}
 			}
-
-			flowcontainer = {
-				margin_top = 10 
-				direction = vertical
-				parentanchor = hcenter
-
-				combat_units_list = {
-					visible = "[InDebugMode]"
-					datacontext = "[Building.GetOwner]"
-					datamodel = "[Building.GetCombatUnits]"
-
-					blockoverride "combat_unit_goto_button" {}
-					blockoverride "combat_unit_name_maximumsize" {
-						maximumsize = { 205 -1 }
-					}
-				}
-			}
 		}
-
+		
 		# <---- START MILSTOCK ADDITIONS ---->
 		### Milstock Header
 		default_header_2texts = {
@@ -1639,7 +1709,7 @@ types building_panels
 		flowcontainer = {
 			datacontext = "[Building.AccessPopsList]"
 			datacontext = "[Building]"
-			datamodel = "[PopList.AccessPopList]"
+			datamodel = "[PopList.GetItems]"
 			direction = vertical
 			using = default_list_position
 			spacing = 10
@@ -1954,21 +2024,25 @@ types building_panels
 
 	type military_building_combat_unit_summary_list_item = flowcontainer {
 		direction = vertical
+
 		icon = {
-			modify_texture = {
-				using = simple_frame_mask
-			}
-			icon = {
-				using = simple_frame
-				size = { 100% 100% }
-			}
-			block "icon_size" {
-				size = { 75 75 }
-			}
 			texture = "[CombatUnitType.GetTextureForCulture(Culture.Self)]"
 
 			tooltipwidget = {
 				FancyTooltip_CombatUnitTypeWithCulture = {}
+			}
+
+			modify_texture = {
+				using = simple_frame_mask
+			}
+
+			icon = {
+				using = simple_frame
+				size = { 100% 100% }
+			}
+
+			block "icon_size" {
+				size = { 75 75 }
 			}
 
 			textbox = {
@@ -2056,18 +2130,13 @@ types building_panels
 		parentanchor = hcenter
 		datacontext = "[Building.AccessState]"
 
-		block "animated_building_controls_trigger" {
-			onmousehierarchyenter = "[PdxGuiWidget.FindChild('building_goto').InterruptThenTriggerAnimation('hide_building_goto','show_building_goto')]"
-			onmousehierarchyleave = "[PdxGuiWidget.FindChild('building_goto').InterruptThenTriggerAnimation('show_building_goto','hide_building_goto')]"
-			onmousehierarchyenter = "[PdxGuiWidget.FindChild('building_controls').InterruptThenTriggerAnimation('hide_building_controls','show_building_controls')]"
-			onmousehierarchyleave = "[PdxGuiWidget.FindChild('building_controls').InterruptThenTriggerAnimation('show_building_controls','hide_building_controls')]"
-		}
+		block "animated_building_controls_trigger" {}
 
 		alwaystransparent = no
 
 		### EXPAND / SUBSIDIZE ETC
-		container = {
-			minimumsize = { @panel_width -1 }
+		widget = {
+			size = { @panel_width 40 }
 
 			block "background" {
 				background = {
@@ -2075,13 +2144,12 @@ types building_panels
 				}
 			}
 
-			flowcontainer = {
-				margin = { 4 4 }
-				flowcontainer = {
-					direction = vertical
-					spacing = 8
-					parentanchor = top
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				spacing = 5
 
+				vbox = {
 					### DOWNSIZE / EXPAND
 					building_level_controls = {
 						blockoverride "controller_size" {
@@ -2090,10 +2158,8 @@ types building_panels
 					}
 
 					### BUILD PROGRESS
-					flowcontainer = {
+					hbox = {
 						visible = "[Building.HasConstructionQueued]"
-						margin_bottom = 4
-						using = default_list_position
 
 						default_progressbar_horizontal = {
 							tooltip = "BUILDING_PROGRESS_TOOLTIP"
@@ -2108,183 +2174,122 @@ types building_panels
 					}
 				}
 
-				flowcontainer = {
-					parentanchor = top
-					margin_left = 5
-					margin_right = 7
-					margin_top = 7
-					spacing = 5
-
-					block "state_name" {
-						textbox = {
-							text = "[Building.GetState.GetName]"
-							autoresize = yes
-							parentanchor = vcenter
-							align = nobaseline
-							max_width = 90
-							elide =  right
-						}
-					}	
-
-					button_icon_goto = {
-						parentanchor = vcenter
-						alpha = 0
-						name = building_goto
-
-						state = {
-							name = show_building_goto
-							delay = 0.15
-							alpha = 1
-							duration = 0.15
-							using = Animation_Curve_Default
-						}
-						state = {
-							name = hide_building_goto
-							alpha = 0
-							duration = 0
-							using = Animation_Curve_Default
-						}
-
-						size = { 28 28 }
+				### STATE NAME AND BUTTON
+				block "state_name_button" {
+					button = {
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+						using = default_button
 						onclick = "[InformationPanelBar.OpenBuildingDetailsPanel(Building.AccessSelf)]"
 						tooltip = "GO_TO_BUTTON_BUILDING"
+						using = tooltip_ne
+						maximumsize = { 170 -1 }
+
+						textbox = {
+							size = { 100% 100% }
+							margin = { 10 0 }
+							datacontext = "[Building.GetState]"
+							text = "STATE_NAME_WITH_FOREIGN_FLAG"
+							parentanchor = vcenter
+							align = nobaseline
+							elide =  right
+						}
 					}
 				}
-			}
 
-
-			### ACTION BUTTONS
-			flowcontainer = {
-				parentanchor = right|top
-				spacing = 10
-				margin = { 4 4 }
-
-				flowcontainer = {
-
-					block "animated_building_controls" {
-						alpha = 0
-						name = building_controls
-
-						state = {
-							name = show_building_controls
-							delay = 0.15
-							alpha = 1
-							duration = 0.15
-							using = Animation_Curve_Default
-						}
-						state = {
-							name = hide_building_controls
-							alpha = 0
-							duration = 0
-							using = Animation_Curve_Default
-						}
+				block "action_status_icons" {
+					building_auto_expand_icon = {
+						visible = "[Building.IsAutoExpanding]"
 					}
 
-					### NATIONALIZE
-					building_nationalize_button = {}
+					building_subsidized_icon = {
+						visible = "[Building.IsSubsidized]"
+					}
 
-					widget = { size = { 5 5 }}
+					building_privatize_icon = {
+						visible = "[Building.CanBePrivatized]"
+					}
+				}
 
-					vertical_divider = {}
+				expand = {}
 
-					widget = { size = { 5 5 }}
+				block "action_buttons" {
+					building_auto_expand_toggle = {}
 
-					### PRIVATIZE
+					building_subsidize_toggle = {}
+
 					building_privatize_toggle = {}
 
-					### SUBSIDIZE
-					widget = {
-						visible = "[Building.GetBuildingType.CanBeSubsidized]"
-						size = { 35 35 }
-						icon = {
-							using = rotate_glow_blue
-							size = { 130% 130% }
-							visible = "[And(Building.GetBuildingType.CanBeSubsidized,Building.IsSubsidized)]"
-							alwaystransparent = yes
-							parentanchor = center
-							using = default_fade_in_out
-						}
-						button_icon_round_action = {
-							size = { 100% 100% }
-							visible = "[And(Building.GetBuildingType.CanBeSubsidized,Building.IsSubsidized)]"
-							enabled = "[IsValid( Building.ToggleSubsidies )]"
-							onclick = "[Execute( Building.ToggleSubsidies )]"
-							tooltip = SUBSIDIZED_YES
-							using = icon_toggle_single_off_sound
+					building_nationalize_button = {}
+				}
 
-							blockoverride "icon" {
-								texture = "gfx/interface/production_methods/subsidized.dds"
-							}
-							blockoverride "icon_size" {
-								size = { 80% 80% }
-							}
-						}
+				hbox = {
+					layoutpolicy_horizontal = preferred
+					layoutpolicy_vertical = expanding
+					spacing = 10
+					margin_right = 2
 
-						button_icon_round_action = {
-							size = { 100% 100% }
-							visible = "[And(Building.GetBuildingType.CanBeSubsidized,Not(Building.IsSubsidized))]"
-							enabled = "[IsValid( Building.ToggleSubsidies )]"
-							onclick = "[Execute( Building.ToggleSubsidies )]"
-							tooltip = SUBSIDIZED_NO
-							using = icon_toggle_single_on_sound
+					expand = {}
 
-							blockoverride "icon" {
-								texture = "gfx/interface/production_methods/subsidized_not.dds"
-							}
-							blockoverride "icon_size" {
-								size = { 80% 80% }
+					### STATE TRAITS
+					hbox = {
+						visible = "[Not(IsDataModelEmpty(State.AccessStateRegion.AccessTraits))]"
+						datamodel = "[State.AccessStateRegion.AccessTraits]"
+
+						item = {
+							icon = {
+								size = { 35 35 }
+								tooltip = "TOOLTIP_STATE_TRAIT"
+								using = tooltip_ne
+								onmousehierarchyenter = "[AccessHighlightManager.HighlightStateTrait(StateTrait.Self)]"
+								onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+								alwaystransparent = no
+								texture = "[StateTrait.GetTexture]"
 							}
 						}
 					}
 
-					### AUTOEXPAND
-					building_auto_expand = {}
-				}
+					### TIMED MODIFIERS
+					hbox = {
+						visible = "[Not(IsDataModelEmpty(Building.GetTimedModifiers))]"
+						margin = { 5 0 }
+						datamodel = "[Building.GetTimedModifiers]"
+						spacing = 5
 
-				flowcontainer = {
-					visible = "[Not(IsDataModelEmpty(State.AccessStateRegion.AccessTraits))]"
-					datamodel = "[State.AccessStateRegion.AccessTraits]"
-					parentanchor = vcenter
-
-					item = {
-						icon = {
-							size = { 35 35 }
-							tooltip = TOOLTIP_STATE_TRAIT
-							onmousehierarchyenter = "[AccessHighlightManager.HighlightStateTrait(StateTrait.Self)]"
-							onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
-							alwaystransparent = no
-							texture = "[StateTrait.GetTexture]"
+						item = {
+							icon = {
+								tooltip = "[TimedModifier.GetTooltip]"
+								texture = "[TimedModifier.GetIcon]"
+								size = { 30 30 }
+							}
 						}
 					}
-				}
 
-				### TIMED MODIFIERS
-				flowcontainer = {
-					parentanchor = vcenter
-					margin = { 5 0 }
-					visible = "[Not(IsDataModelEmpty(Building.GetTimedModifiers))]"
-
-					datamodel = "[Building.GetTimedModifiers]"
-					spacing = 5
-
-					item = {
-						icon = {
-							tooltip = "[TimedModifier.GetTooltip]"
-							texture = "[TimedModifier.GetIcon]"
-							size = { 30 30 }
+					block "productivity" {
+						textbox = {
+							visible = "[And(Not(Building.IsGovernmentFunded), Not(Building.IsSubsistenceBuilding))]"
+							using = productivity_tooltip_with_graph
+							using = tooltip_ne
+							raw_text = "@money![Building.GetAverageAnnualEarningsPerEmployeeFormatted|+]"
+							align = hcenter|nobaseline
+							autoresize = yes
 						}
 					}
-				}
 
-				block "productivity" {
-					textbox = {
-						visible = "[And(Not(Building.IsGovernmentFunded), Not(Building.IsSubsistenceBuilding))]"
-						using = productivity_tooltip_with_graph
-						raw_text = "@money![Building.GetAverageAnnualEarningsPerEmployeeFormatted|+]"
-						align = hcenter|nobaseline
-						autoresize = yes
-						parentanchor = vcenter
-						margin_right = 10
+					button_icon_round = {
+						size = { 36 36 }
+						onclick = "[RightClickMenuManager.ToggleBuildingActions(Building.AccessSelf, PdxGuiWidget.AccessSelf)]"
+						enabled = "[ObjectsEqual(Building.GetState.GetOwner.Self, GetPlayer.Self)]"
+						tooltip = "SHOW_BUILDING_ACTIONS"
+						using = tooltip_ne
+
+						blockoverride "icon" {
+							texture = "gfx/interface/buttons/button_icons/menu.dds"
+						}
+
+						blockoverride "icon_size" {
+							size = { 80% 80% }
+						}
 					}
 				}
 			}
@@ -2319,24 +2324,45 @@ types building_panels
 				block "extra_items_in_production_methods_list" {}
 			}
 
-			building_progressbars = {
-				position = { -5 0 }
-				parentanchor = right|vcenter
+			block "building_progressbars" {
+				building_progressbars = {
+					position = { -5 0 }
+					parentanchor = right|vcenter
 
-				blockoverride "progressbar_size" {
-					size = { 170 26 } # Slid this over to make room for five production methods
+					blockoverride "progressbar_size" {
+						size = { 170 26 }
+					}
 				}
 			}
 		}
 	}
 
-	type building_nationalize_button = button_icon_round_action {
-		visible = "[Building.GetBuildingType.CanSwitchOwner]"
+	type building_type_nationalize_button = building_nationalize_button_base {
+		blockoverride "nationalize" {
+			visible = "[BuildingBrowserBuildingTypeItem.GetBuildingType.CanSwitchOwner]"
+			enabled = "[BuildingBrowserBuildingTypeItem.CanShowNationalizeBuildingsWindow]"
+			onclick = "[BuildingBrowserBuildingTypeItem.ShowNationalizeBuildingsWindow]"
+			tooltip = "[BuildingBrowserBuildingTypeItem.GetNationalizeBuildingsButtonTooltip]"
+			using = tooltip_se
+		}
+	}
 
+	type building_nationalize_button = building_nationalize_button_base {
+		blockoverride "nationalize" {
+			visible = "[Building.GetBuildingType.CanSwitchOwner]"
+			enabled = "[IsValid( Building.NationalizeBuildingLevels( '(int32)1' ) )]"
+			onclick = "[PopupManager.ShowNationalizeBuildingWindow(Building.Self)]"
+			tooltip = "BUILDING_NATIONALIZE_TOOLTIP"
+			using = tooltip_se
+		}
+	}
+	
+	type building_nationalize_button_base = button_icon_round {
 		size = { 35 35 }
-		enabled = "[IsValid( Building.NationalizeBuildingLevels( '(int32)1' ) )]"
-		onclick = "[PopupManager.ShowNationalizeBuildingConfirmation(Building.Self)]"
-		tooltip = "BUILDING_NATIONALIZE_TOOLTIP"
+		
+		block "nationalize" {
+		}
+		
 		using = confirm_button_sound
 		
 
@@ -2346,15 +2372,250 @@ types building_panels
 		blockoverride "icon_size" {
 			size = { 80% 80% }
 		}
-
 	}
 
+	### autoexpand
+	type building_auto_expand_toggle = widget {
+		visible = "[IsPotential( Building.ToggleAutoExpand )]"
+		size = { 35 35 }
+		
+		icon = {
+			using = rotate_glow_blue
+			size = { 130% 130% }
+			visible = "[Building.IsAutoExpanding]"
+			alwaystransparent = yes
+			parentanchor = center
+			using = default_fade_in_out
+		}
+		
+		button_icon_round_action = {
+			size = { 100% 100% }
+			visible = "[Building.IsAutoExpanding]"
+			enabled = "[IsValid( Building.ToggleAutoExpand )]"
+			onclick = "[Execute( Building.ToggleAutoExpand )]" 
+			tooltip = "[Building.GetAutoExpandTooltip]"
+			using = tooltip_se
+			using = icon_toggle_single_off_sound
+			
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/auto_expand.dds"
+			}
+
+			blockoverride "icon_size" {
+							size = { 77% 77% }
+			}	
+		}
+
+		button_icon_round_action = {
+			size = { 100% 100% }
+			visible = "[Not(Building.IsAutoExpanding)]"
+			enabled = "[IsValid( Building.ToggleAutoExpand )]"
+			onclick = "[Execute( Building.ToggleAutoExpand )]" 
+			tooltip = "[Building.GetAutoExpandTooltip]"
+			using = tooltip_se
+			using = icon_toggle_single_on_sound
+			
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/auto_expand_not.dds"
+			}
+
+			blockoverride "icon_size" {
+							size = { 77% 77% }
+			}
+		}
+	}
+
+	### subsidize
+	type building_subsidize_toggle = widget {
+		visible = "[IsPotential( Building.ToggleSubsidies )]"
+		size = { 35 35 }
+		
+		icon = {
+			visible = "[Building.IsSubsidized]"
+			using = rotate_glow_blue
+			size = { 130% 130% }
+			alwaystransparent = yes
+			parentanchor = center
+			using = default_fade_in_out
+		}
+		
+		button_icon_round_action = {
+			visible = "[Building.IsSubsidized]"
+			size = { 100% 100% }
+			enabled = "[IsValid( Building.ToggleSubsidies)]"
+			onclick = "[Execute( Building.ToggleSubsidies )]" 
+			tooltip = "[Building.GetSubsidizeTooltip]"
+			using = tooltip_se
+			using = icon_toggle_single_off_sound
+			
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/subsidized.dds"
+			}
+
+			blockoverride "icon_size" {
+							size = { 77% 77% }
+			}	
+		}
+
+		button_icon_round_action = {
+			visible = "[Not(Building.IsSubsidized)]"
+			size = { 100% 100% }
+			enabled = "[IsValid( Building.ToggleSubsidies )]"
+			onclick = "[Execute( Building.ToggleSubsidies )]" 
+			tooltip = "[Building.GetSubsidizeTooltip]"
+			using = tooltip_se
+			using = icon_toggle_single_on_sound
+			
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/subsidized_not.dds"
+			}
+
+			blockoverride "icon_size" {
+							size = { 77% 77% }
+			}
+		}
+	}
+
+	### subsidize building type
+	type building_type_subsidize_toggle = widget {
+		visible = "[BuildingType.CanBeSubsidized]"
+		size = { 35 35 }
+
+		icon = {
+			using = rotate_glow_blue
+			size = { 130% 130% }
+			visible = "[BuildingBrowserBuildingTypeItem.HasAllSubsidies]"
+			alwaystransparent = yes
+			parentanchor = center
+			using = default_fade_in_out
+		}
+
+		button_icon_round_action = {
+			size = { 100% 100% }
+			visible = "[BuildingBrowserBuildingTypeItem.HasAllSubsidies]"
+			enabled = "[IsValid( BuildingBrowserBuildingTypeItem.ToggleAllSubsidies )]"
+			onclick = "[Execute( BuildingBrowserBuildingTypeItem.ToggleAllSubsidies )]"
+			tooltip = "SUBSIDIZED_ALL_YES"
+			using = tooltip_se
+			using = icon_toggle_all_off_sound
+
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/subsidized.dds"
+			}
+			blockoverride "icon_size" {
+				size = { 70% 70% }
+			}
+		}
+
+		button_icon_round_action = {
+			size = { 100% 100% }
+			visible = "[BuildingBrowserBuildingTypeItem.HasAllNoSubsidies]"
+			enabled = "[IsValid( BuildingBrowserBuildingTypeItem.ToggleAllSubsidies )]"
+			onclick = "[Execute( BuildingBrowserBuildingTypeItem.ToggleAllSubsidies )]"
+			tooltip = "SUBSIDIZED_ALL_NO"
+			using = tooltip_se
+			using = icon_toggle_all_on_sound
+
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/subsidized_not.dds"
+			}
+			blockoverride "icon_size" {
+				size = { 70% 70% }
+			}
+		}
+
+		button_icon_round_action = {
+			size = { 100% 100% }
+			visible = "[BuildingBrowserBuildingTypeItem.HasMixedSubsidies]"
+			enabled = "[IsValid( BuildingBrowserBuildingTypeItem.ToggleAllSubsidies )]"
+			onclick = "[Execute( BuildingBrowserBuildingTypeItem.ToggleAllSubsidies )]"
+			tooltip = "SUBSIDIZED_ALL_MIXED"
+			using = tooltip_se
+			using = icon_toggle_all_on_sound
+
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/subsidized_mixed.dds"
+			}
+			blockoverride "icon_size" {
+				size = { 70% 70% }
+			}
+		}
+	}
+
+	### auto expand building type
+	type building_type_auto_expand_toggle = widget {
+		visible = "[BuildingType.CanBeAutoExpanded]"
+		size = { 35 35 }
+
+		icon = {
+			using = rotate_glow_blue
+			size = { 130% 130% }
+			visible = "[And(BuildingBrowserBuildingTypeItem.HasAllAutoExpand, BuildingBrowserBuildingTypeItem.GetBuildingType.CanBeAutoExpanded)]"
+			alwaystransparent = yes
+			parentanchor = center
+			using = default_fade_in_out
+		}
+
+		button_icon_round_action = {
+			size = { 100% 100% }
+			visible = "[And(BuildingBrowserBuildingTypeItem.HasAllAutoExpand, BuildingBrowserBuildingTypeItem.GetBuildingType.CanBeAutoExpanded)]"
+			enabled = "[IsValid( BuildingBrowserBuildingTypeItem.ToggleAllAutoExpand )]"
+			onclick = "[Execute( BuildingBrowserBuildingTypeItem.ToggleAllAutoExpand )]"
+			tooltip = "AUTO_EXPAND_ALL_YES"
+			using = tooltip_se
+			using = icon_toggle_all_off_sound
+
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/auto_expand.dds"
+			}
+			blockoverride "icon_size" {
+				size = { 70% 70% }
+			}
+		}
+
+		button_icon_round_action = {
+			size = { 100% 100% }
+			visible = "[And(BuildingBrowserBuildingTypeItem.HasAllNoAutoExpand, BuildingBrowserBuildingTypeItem.GetBuildingType.CanBeAutoExpanded)]"
+			enabled = "[IsValid( BuildingBrowserBuildingTypeItem.ToggleAllAutoExpand )]"
+			onclick = "[Execute( BuildingBrowserBuildingTypeItem.ToggleAllAutoExpand )]"
+			tooltip = "AUTO_EXPAND_ALL_NO"
+			using = tooltip_se
+			using = icon_toggle_all_on_sound
+
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/auto_expand_not.dds"
+			}
+			blockoverride "icon_size" {
+				size = { 70% 70% }
+			}
+		}
+
+		button_icon_round_action = {
+			size = { 100% 100% }
+			visible = "[BuildingBrowserBuildingTypeItem.HasMixedAutoExpand]"
+			enabled = "[IsValid( BuildingBrowserBuildingTypeItem.ToggleAllAutoExpand )]"
+			onclick = "[Execute( BuildingBrowserBuildingTypeItem.ToggleAllAutoExpand )]"
+			tooltip = "AUTO_EXPAND_ALL_MIXED"
+			using = tooltip_se
+			using = icon_toggle_all_on_sound
+
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/subsidized_mixed.dds"
+			}
+			blockoverride "icon_size" {
+				size = { 70% 70% }
+			}
+		}
+	}
+
+	### privatize
 	type building_privatize_toggle = building_privatize_toggle_base {
 
 		blockoverride "toggle_privatize"
 		{
-			tooltip = "[Building.GetTogglePrivatizationToolTip]"
-			visible = "[IsValid( Building.TogglePrivatization )]"
+			tooltip = "[Building.GetTogglePrivatizationTooltip]"
+			using = tooltip_se
+			visible = "[Or( IsPotential( Building.TogglePrivatization ), Building.CanBePrivatized)]"
 		}
 
 		blockoverride "toggle_privatize_on_glow"
@@ -2374,10 +2635,10 @@ types building_panels
 			enabled = "[IsValid( Building.TogglePrivatization )]"
 			onclick = "[Execute( Building.TogglePrivatization )]"
 		}
-
 	}
 
-	type building_privatize_bulk_toggle = building_privatize_toggle_base {
+	### privatize building type
+	type building_type_privatize_toggle = building_privatize_toggle_base {
 
 		blockoverride "toggle_privatize"
 		{
@@ -2393,11 +2654,12 @@ types building_panels
 		{
 			visible = "[Not(IsValid( BuildingBrowserBuildingTypeItem.ToggleAllPrivatization))]"
 			tooltip = "PRIVATIZATION_ALL_INVALID"
+			using = tooltip_se
 		}
 		
 		blockoverride "toggle_privatize_on_glow"
 		{
-			visible = "[BuildingBrowserBuildingTypeItem.HasAllPrivatization]"
+			visible = "[Not(BuildingBrowserBuildingTypeItem.HasAllNoPrivatization)]"
 		}
 
 		blockoverride "toggle_privatize_on"
@@ -2405,6 +2667,8 @@ types building_panels
 			visible = "[BuildingBrowserBuildingTypeItem.HasAllPrivatization]"
 			onclick = "[Execute( BuildingBrowserBuildingTypeItem.ToggleAllPrivatization )]"
 			tooltip = "PRIVATIZATION_ALL_YES"
+			using = tooltip_se
+			using = icon_toggle_all_off_sound
 		}
 
 		blockoverride "toggle_privatize_off"
@@ -2412,6 +2676,8 @@ types building_panels
 			visible = "[BuildingBrowserBuildingTypeItem.HasAllNoPrivatization]"
 			onclick = "[Execute( BuildingBrowserBuildingTypeItem.ToggleAllPrivatization )]"
 			tooltip = "PRIVATIZATION_ALL_NO"
+			using = tooltip_se
+			using = icon_toggle_all_on_sound
 		}
 
 		blockoverride "toggle_privatize_mixed"
@@ -2419,6 +2685,7 @@ types building_panels
 			visible = "[BuildingBrowserBuildingTypeItem.HasMixedPrivatization]"
 			onclick = "[Execute( BuildingBrowserBuildingTypeItem.ToggleAllPrivatization )]"
 			tooltip = "PRIVATIZATION_ALL_MIXED"
+			using = tooltip_se
 		}
 	}
 
@@ -2522,7 +2789,65 @@ types building_panels
 		}
 	}
 
+	### autoexpand, only the icon
+	type building_auto_expand_icon = widget {
+		size = { 30 30 }
+		
+		icon = {
+			using = rotate_glow_blue
+			size = { 100% 100% }
+			alwaystransparent = yes
+			parentanchor = center
+			alpha = 0.3
+		}
+		
+		icon = {
+			size = { 100% 100% }
+			tooltip = "AUTOEXPAND_BUILDING_ICON_TOOLTIP"
+			using = tooltip_ne
+			texture = "gfx/interface/production_methods/auto_expand.dds"
+		}
+	}
 
+	### privatizing, only the icon
+	type building_privatize_icon = widget {
+		size = { 30 30 }
+		
+		icon = {
+			using = rotate_glow_blue
+			size = { 100% 100% }
+			alwaystransparent = yes
+			parentanchor = center
+			alpha = 0.3
+		}
+		
+		icon = {
+			size = { 100% 100% }
+			tooltip = "[Building.GetPrivatizationTooltip]"
+			using = tooltip_ne
+			texture = "gfx/interface/production_methods/privatize.dds"
+		}
+	}
+
+	### subsidized, only the icon
+	type building_subsidized_icon = widget {
+		size = { 30 30 }
+		
+		icon = {
+			using = rotate_glow_blue
+			size = { 100% 100% }
+			alwaystransparent = yes
+			parentanchor = center
+			alpha = 0.3
+		}
+		
+		icon = {
+			size = { 100% 100% }
+			tooltip = "SUBSIDIZED_YES"
+			using = tooltip_ne
+			texture = "gfx/interface/production_methods/subsidized.dds"
+		}
+	}
 
 	type condensed_building_information_pms = fixedgridbox {
 		name = "tutorial_highlight_condensed_production_methods"
@@ -2548,7 +2873,7 @@ types building_panels
 				datacontext = "[ProductionMethod]"
 				datacontext = "[Building]"
 				datacontext = "[ProductionMethodGroup]"
-				using = tooltip_above
+				using = tooltip_ne
 				tooltip = "CHANGE_FROM_CURRENT_PRODUCTION_METHOD_TOOLTIP"
 
 				button = {
@@ -2693,7 +3018,7 @@ types building_panels
 	type building_size_with_ownership = flowcontainer {
 		direction = vertical
 
-		alpha = "[TransparentIfFalse( Or( GreaterThan_int32(Building.GetExpansionLevel, '(int32)0'), Building.HasConstructionQueued ))]"
+		using = building_size_choose_alpha
 
 		### LEVEL
 
@@ -3622,12 +3947,17 @@ types building_panels
 		}
 
 		blockoverride "barchart_item_color" {
-			color = "[BuildingOwnership.GetOwnedBuilding.GetState.GetOwner.GetMapColor]"
+			color = "[Select_CVector4f( BuildingOwnership.GetOwnedBuilding.IsValid, BuildingOwnership.GetOwnedBuilding.GetState.GetOwner.GetMapColor, Building.GetOwner.GetMapColor )]"
 		}
 
 		blockoverride "barchart_item_icon_properties" {
-			size = { 30 30 }
-			texture = "[BuildingOwnership.GetOwnedBuilding.GetTexture]"
+			block "barchart_item_icon_size" {
+				size = { 30 30 }
+			}
+			
+			visible = "[BuildingOwnership.GetOwnedBuilding.IsValid]"
+			
+			texture = "[BuildingOwnership.GetOwnedBuilding.GetIcon]"
 
 			textbox = {
 				autoresize = yes
@@ -3732,7 +4062,7 @@ types building_panels
 			icon = {
 				visible = "[ObjectsEqual(BuildingOwnership.GetOwnedBuilding.Self, BuildingOwnership.GetOwnerBuilding.Self)]"
 				datacontext_from_model = {
-					datamodel = "[BuildingOwnership.GetOwnedBuilding.AccessPopsList.AccessPopList]"
+					datamodel = "[BuildingOwnership.GetOwnedBuilding.AccessPopsList.GetItems]"
 					index = 0
 				}
 
@@ -3745,7 +4075,7 @@ types building_panels
 			icon = {
 				visible = "[Not(ObjectsEqual(BuildingOwnership.GetOwnedBuilding.Self, BuildingOwnership.GetOwnerBuilding.Self))]"
 				size = { 100% 100% }
-				texture = "[BuildingOwnership.GetOwnerBuilding.GetTexture]"
+				texture = "[BuildingOwnership.GetOwnerBuilding.GetIcon]"
 			}
 		}
 	}
@@ -3783,8 +4113,14 @@ template visible_if_ownership_can_be_split
 
 template visible_if_ownership_always_workforce
 {
-	# Urban Center
-	# Trade Center (HasTradeRouteRevenue)
-	# Manor House or Financial District (Not(IsDataModelEmpty(Building.GetBuildingAssets)))
-	visible = "[Or( Not(IsDataModelEmpty(Building.GetBuildingAssets)), Or( Building.IsUrbanCenter, Building.HasTradeRouteRevenue))]" #Urban Center or Trade Center
+	visible = "[Building.GetBuildingType.IsAlwaysSelfOwning]"
+}
+
+template building_size_choose_alpha
+{
+	# show building size label without any transparency if either:
+	# - it is built,
+	# - construction is queued
+	# - it has "interesting" max level, i.e. uses arable land or a resource cap
+	alpha = "[TransparentIfFalse( Or( Building.GetBuildingType.IsCappedBuilding, Or( GreaterThan_int32(Building.GetExpansionLevel, '(int32)0'), Building.HasConstructionQueued )))]"
 }
