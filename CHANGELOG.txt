@@ -1,6 +1,6 @@
-V3 Mod - Military Logistics 1.2.1, PENDING RELEASE
+V3 Mod - Military Logistics 1.2.1, 2024-11-23
 ----------------------------------------------------------
-- Made stockpile maximums different for each good
+- Improved stockpile maximums, they are now scaled to accumulation/usage
 - Added "Low Volume Distribution" method to distribution centers
 - Updated building details panel override for 1.7.x and 1.8.x
 - Reduced ai_value to prevent AI overbuilding
