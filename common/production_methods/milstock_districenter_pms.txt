@@ -596,3 +596,188 @@ milstock_pm_dist_iron_disable = {
         }
     }
 }
+
+# Halved Distribution Center Production Methods
+# --------------------------------------------------------------------------
+
+milstock_pm_dist_small_arms_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_small_arms_add = 20
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
+
+milstock_pm_dist_grain_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_grain_add = 30
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
+
+milstock_pm_dist_liquor_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_liquor_add = 10
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
+
+milstock_pm_dist_sugar_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_sugar_add = 10
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
+
+milstock_pm_dist_opium_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_opium_add = 10
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
+
+milstock_pm_dist_tobacco_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_tobacco_add = 10
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
+
+milstock_pm_dist_fabric_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_fabric_add = 10
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
+
+milstock_pm_dist_groceries_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_groceries_add = 10
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
+
+milstock_pm_dist_ammunition_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_ammunition_add = 20
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
+
+milstock_pm_dist_artillery_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_artillery_add = 15
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
+
+milstock_pm_dist_radios_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_radios_add = 10
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
+
+milstock_pm_dist_tanks_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_tanks_add = 15
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
+
+milstock_pm_dist_oil_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_oil_add = 15
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
+
+milstock_pm_dist_iron_half = {
+    texture = "gfx/interface/icons/milstock/military_priority_half.dds"
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_iron_add = 10
+        }
+        level_scaled = {
+            building_employment_laborers_add = 50
+        }
+    }
+}
