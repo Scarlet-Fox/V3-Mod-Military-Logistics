@@ -88,11 +88,27 @@ milstock_sv_staff_purchasing_ratio = {
     max = 1 # Never buy more than 100% of the possible goods
 }
 
-# Clerk Purchasing Ratio - used to scale goods stockpile additions.
+# Max/Min stockpile sizes - used to determine the max stockpile given 
+# a logistics center level.
 # --------------------------------------------------------------------
+
+milstock_sv_max_half = {
+    value = 2000
+    multiply = scope:logistics_center.level
+}
 
 milstock_sv_max = {
     value = 4000
+    multiply = scope:logistics_center.level
+}
+
+milstock_sv_max_double = {
+    value = 8000
+    multiply = scope:logistics_center.level
+}
+
+milstock_sv_max_triple = {
+    value = 12000
     multiply = scope:logistics_center.level
 }
 

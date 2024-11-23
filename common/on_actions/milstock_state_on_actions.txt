@@ -100,6 +100,18 @@ milstock_check_variables = {
                 value = 4000
             }
             set_variable = {
+                name = logistics_center_max_stockpile_double
+                value = 8000
+            }
+            set_variable = {
+                name = logistics_center_max_stockpile_triple
+                value = 12000
+            }
+            set_variable = {
+                name = logistics_center_max_stockpile_half
+                value = 2000
+            }
+            set_variable = {
                 name = logistics_center_current_stockpile
                 value = 0
             }
@@ -941,20 +953,20 @@ milstock_increase_stockpiles = {
 
             # Clamp all stockpile variables to maximum limit to prevent excessive silliness
             # --------------------------------------------------------------------------------
-            clamp_variable = { name = milstock_state_grain_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_small_arms_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_liquor_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_sugar_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_opium_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_tobacco_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_fabric_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_groceries_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_ammunition_stockpile_var min = milstock_sv_min max = milstock_sv_max }
+            clamp_variable = { name = milstock_state_grain_stockpile_var min = milstock_sv_min max = milstock_sv_max_triple }
+            clamp_variable = { name = milstock_state_small_arms_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_liquor_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_sugar_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_opium_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_tobacco_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_fabric_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_groceries_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_ammunition_stockpile_var min = milstock_sv_min max = milstock_sv_max_triple }
             clamp_variable = { name = milstock_state_artillery_stockpile_var min = milstock_sv_min max = milstock_sv_max }
             clamp_variable = { name = milstock_state_radios_stockpile_var min = milstock_sv_min max = milstock_sv_max }
             clamp_variable = { name = milstock_state_tanks_stockpile_var min = milstock_sv_min max = milstock_sv_max }
             clamp_variable = { name = milstock_state_oil_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_iron_stockpile_var min = milstock_sv_min max = milstock_sv_max }
+            clamp_variable = { name = milstock_state_iron_stockpile_var min = milstock_sv_min max = milstock_sv_max_half }
             
             # Setup the total of all stockpile values for goods in this state
             # --------------------------------------------------------------------------------
@@ -983,6 +995,21 @@ milstock_increase_stockpiles = {
             set_variable = {
                 name = logistics_center_max_stockpile
                 value = milstock_sv_max
+            }
+
+            set_variable = {
+                name = logistics_center_max_stockpile_double
+                value = milstock_sv_max_double
+            }
+
+            set_variable = {
+                name = logistics_center_max_stockpile_triple
+                value = milstock_sv_max_triple
+            }
+
+            set_variable = {
+                name = logistics_center_max_stockpile_half
+                value = milstock_sv_max_half
             }
         }
     }
@@ -1736,20 +1763,20 @@ milstock_drain_stockpiles = {
 
             # Clamp all stockpile variables to zero for neatness purposes
             # ------------------------------------------------------
-            clamp_variable = { name = milstock_state_grain_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_small_arms_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_liquor_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_sugar_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_opium_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_tobacco_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_fabric_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_groceries_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_ammunition_stockpile_var min = milstock_sv_min max = milstock_sv_max }
+            clamp_variable = { name = milstock_state_grain_stockpile_var min = milstock_sv_min max = milstock_sv_max_triple }
+            clamp_variable = { name = milstock_state_small_arms_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_liquor_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_sugar_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_opium_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_tobacco_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_fabric_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_groceries_stockpile_var min = milstock_sv_min max = milstock_sv_max_double }
+            clamp_variable = { name = milstock_state_ammunition_stockpile_var min = milstock_sv_min max = milstock_sv_max_triple }
             clamp_variable = { name = milstock_state_artillery_stockpile_var min = milstock_sv_min max = milstock_sv_max }
             clamp_variable = { name = milstock_state_radios_stockpile_var min = milstock_sv_min max = milstock_sv_max }
             clamp_variable = { name = milstock_state_tanks_stockpile_var min = milstock_sv_min max = milstock_sv_max }
             clamp_variable = { name = milstock_state_oil_stockpile_var min = milstock_sv_min max = milstock_sv_max }
-            clamp_variable = { name = milstock_state_iron_stockpile_var min = milstock_sv_min max = milstock_sv_max }
+            clamp_variable = { name = milstock_state_iron_stockpile_var min = milstock_sv_min max = milstock_sv_max_half }
             
             # Setup the total of all stockpile values for goods in this state
             # --------------------------------------------------------------------------------
@@ -1778,6 +1805,21 @@ milstock_drain_stockpiles = {
             set_variable = {
                 name = logistics_center_max_stockpile
                 value = milstock_sv_max
+            }
+
+            set_variable = {
+                name = logistics_center_max_stockpile_double
+                value = milstock_sv_max_double
+            }
+
+            set_variable = {
+                name = logistics_center_max_stockpile_triple
+                value = milstock_sv_max_triple
+            }
+
+            set_variable = {
+                name = logistics_center_max_stockpile_half
+                value = milstock_sv_max_half
             }
         }
     }
