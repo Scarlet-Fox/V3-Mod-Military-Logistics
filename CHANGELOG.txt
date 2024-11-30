@@ -1,3 +1,8 @@
+V3 Mod - Military Logistics 1.2.2, 2024-11-30
+----------------------------------------------------------
+- Balance Change: Made it more likely for the AI to build logistics centers
+
+
 V3 Mod - Military Logistics 1.2.1, 2024-11-23
 ----------------------------------------------------------
 - Improved stockpile maximums, they are now scaled to accumulation/usage
