@@ -2746,10 +2746,12 @@ types building_panels
 		block "divider" {}
 
 		### PMS / EMPLOYMENT / CASH RESERVES
-		container = {
+		flowcontainer = { # For MLPM compatibility, changed this from container to flowcontainer
 			minimumsize = { @panel_width 80 }
+			direction = vertical # CREDIT TO MULTI-LINE PRODUCTION METHODS BY john1230 ("MLPM below")
 			container = {
-				parentanchor = vcenter
+				# parentanchor = vcenter For MLPM compatibility, commented this out
+				minimumsize = { @panel_width 80 } # For MLPM compatibility
 
 				flowcontainer = {
 					parentanchor = vcenter
@@ -2770,18 +2772,49 @@ types building_panels
 				}
 
 				block "extra_items_in_production_methods_list" {}
-			}
 
-			block "building_progressbars" {
-				building_progressbars = {
-					position = { -5 0 }
-					parentanchor = right|vcenter
+				 # For MLPM compatibility, moved progress bars from below to here
+				 block "building_progressbars" {
+					building_progressbars = {
+						position = { -5 0 }
+						parentanchor = right|vcenter
 
-					blockoverride "progressbar_size" {
-						size = { 230 26 }
+						blockoverride "progressbar_size" {
+							size = { 230 26 }
+						}
 					}
 				}
 			}
+
+			# For MLPM compatibility, this is where the progress bars used to be
+
+			# For MLPM compatibility, here is where the additional production methods go
+			container = { # MPM
+                visible = "[GreaterThan_int32(GetDataModelSize(Building.AccessProductionMethodGroups), '(int32)4')]"
+                
+                flowcontainer = {
+                    parentanchor = vcenter
+                    margin_left = 2
+                    
+                    MPM_condensed_building_information_pms_row_2 = {
+                        blockoverride "pms_slot_sizes" {
+							addcolumn = 72
+							addrow = 75
+						}
+						blockoverride "pms_minimumsize" {
+							minimumsize = { 208 -1 }
+						}
+						blockoverride "pms_item_size" {
+							size = { 70 70 }
+						}
+                    }
+                }
+            }
+
+            # For MLPM compatibility, a spacer!
+            widget = {
+                minimumsize = { 100% 5 }
+            }
 		}
 	}
 
@@ -3390,7 +3423,7 @@ types building_panels
 	type condensed_building_information_pms = container {
 		fixedgridbox = {
 			name = "tutorial_highlight_condensed_production_methods"
-			datamodel = "[Building.AccessProductionMethodGroups]"
+			datamodel = "[DataModelFirst(Building.AccessProductionMethodGroups, '(int32)4')]" # for MLPM, limit to the first 4
 			flipdirection = yes
 
 			block "pms_slot_sizes" {
@@ -3531,6 +3564,86 @@ types building_panels
 				}
 			}
 		}
+	}
+
+	# Below type is for MLPM
+	type MPM_condensed_building_information_pms_row_2 = container {
+        fixedgridbox = {
+            name = "tutorial_highlight_condensed_production_methods"
+            datamodel = "[DataModelSkipFirst(Building.AccessProductionMethodGroups, '(int32)4')]" # MPM - Skip first 4
+            flipdirection = yes
+            
+            block "pm_wrap" {
+                datamodel_wrap = 7 # MPM
+            }
+
+            block "pms_slot_sizes" {
+                addcolumn = 52
+                addrow = 50
+            }
+            parentanchor = vcenter
+
+            block "pms_minimumsize" {
+                minimumsize = { 208 -1 }
+            }
+
+            item = {
+                widget = {
+                    block "pms_item_size" {
+                        size = { 50 50 }
+                    }
+                    datacontext = "[Building.AccessProductionMethod(ProductionMethodGroup.Self)]"
+                    datacontext = "[ProductionMethod]"
+                    datacontext = "[Building]"
+                    datacontext = "[ProductionMethodGroup]"
+                    using = tooltip_ne
+                    tooltip = "CHANGE_FROM_CURRENT_PRODUCTION_METHOD_TOOLTIP"
+
+                    button = {
+                        visible = "[NotEqualTo_int32( GetDataModelSize( ProductionMethodGroup.AccessBuildingProductionMethods( Building.Self ) ), '(int32)1' )]"
+                        onclick = "[RightClickMenuManager.ToggleSwitchProductionMethodMenu(Building.AccessSelf, ProductionMethodGroup.AccessSelf, PdxGuiWidget.AccessSelf)]"
+                        using = expand_button_bg_dropdown
+                        size = { 100% 100% }
+                    }
+
+                    icon = {
+                        texture = "[ProductionMethod.GetTexture]"
+                        size = { 80% 80% }
+                        parentanchor = center
+                    }
+
+                    ### new pm
+                    has_new_pm_icon = {
+                        position = { -2 2 }
+                        parentanchor = bottom|left
+                        blockoverride "visible" {
+                            visible = "[And(Building.IsOwner( GetPlayer.Self ), GetPlayer.HasNewProductionMethodInSameGroup( Building.GetBuildingType.Self, ProductionMethod.Self ))]"
+                        }
+                    }
+
+                    ### nr available
+                    textbox = {
+                        raw_text = "#P #bold [ProductionMethodGroup.GetNumAvailableOptions(Building.AccessSelf)]#!#!"
+                        parentanchor = top|right
+                        position = { -5 0 }
+                        autoresize = yes
+                        align = right|nobaseline
+                        block "pms_number_visibility" {
+                            visible = "[NotEqualTo_int32( ProductionMethodGroup.GetNumAvailableOptions(Building.AccessSelf), '(int32)1')]"
+                        }
+                        tooltip = "PRODUCTION_METHOD_OPTIONS"
+                        using = tooltip_above
+                        using = fontsize_small
+
+                        background = {
+                            using = default_background
+                            margin = { 8 4 }
+
+                        }
+                    }
+                }
+            }
+        }
 	}
 
 	type building_level_controls = container {
