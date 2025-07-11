@@ -38,7 +38,7 @@
     #    }
     #}
 
-    ai_value = 800
+    ai_value = 400
     required_construction = construction_cost_low
 }
 
