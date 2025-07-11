@@ -91,6 +91,11 @@ Language translations are always welcome!
 
 Finally, there is an open source repository that you can interact with if you would like to contribute.
 
+## Special Thanks!
+
+* This mod uses code from the [multi-line production methods framework](https://github.com/1230james/vic3-multi-line-pms-framework), which was created by [1230james](https://github.com/1230james). Thank you 1230james!
+* The korean language translation was provided by [dungsil](https://github.com/dungsil). Thank you dungsil!
+
 ## Other Mods I Use
 
 * [Victoria Tweaks Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=2935989855)
