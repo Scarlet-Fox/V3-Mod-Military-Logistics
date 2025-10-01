@@ -14,7 +14,10 @@ open_distribution_centers = {
         # If the country is at war, then we want to get the distribution centers open.
         if = {
             limit = {
-                is_at_war = yes
+                OR = {
+                    is_at_war = yes
+                    is_diplomatic_play_committed_participant = yes
+                }
                 has_building = milstock_building_logistics_center
             }
 
@@ -308,20 +311,128 @@ close_distribution_centers = {
                         has_building = milstock_building_distribution_iron
                     }
                 }
-                if = { limit = { has_building = milstock_building_distribution_small_arms } remove_building = milstock_building_distribution_small_arms }
-                if = { limit = { has_building = milstock_building_distribution_grain } remove_building = milstock_building_distribution_grain }
-                if = { limit = { has_building = milstock_building_distribution_liquor } remove_building = milstock_building_distribution_liquor }
-                if = { limit = { has_building = milstock_building_distribution_sugar } remove_building = milstock_building_distribution_sugar }
-                if = { limit = { has_building = milstock_building_distribution_opium } remove_building = milstock_building_distribution_opium }
-                if = { limit = { has_building = milstock_building_distribution_tobacco } remove_building = milstock_building_distribution_tobacco }
-                if = { limit = { has_building = milstock_building_distribution_fabric } remove_building = milstock_building_distribution_fabric }
-                if = { limit = { has_building = milstock_building_distribution_groceries } remove_building = milstock_building_distribution_groceries }
-                if = { limit = { has_building = milstock_building_distribution_ammunition } remove_building = milstock_building_distribution_ammunition }
-                if = { limit = { has_building = milstock_building_distribution_artillery } remove_building = milstock_building_distribution_artillery }
-                if = { limit = { has_building = milstock_building_distribution_radios } remove_building = milstock_building_distribution_radios }
-                if = { limit = { has_building = milstock_building_distribution_tanks } remove_building = milstock_building_distribution_tanks }
-                if = { limit = { has_building = milstock_building_distribution_oil } remove_building = milstock_building_distribution_oil }
-                if = { limit = { has_building = milstock_building_distribution_iron } remove_building = milstock_building_distribution_iron }
+
+                # Close small arms distribution centers and remember the production method
+                if = { 
+                    limit = { has_building = milstock_building_distribution_small_arms }
+
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_small_arms
+                                production_method = milstock_pm_dist_small_arms_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_small_arms_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_small_arms
+                                production_method = milstock_pm_dist_small_arms_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_small_arms_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_small_arms
+                                production_method = milstock_pm_dist_small_arms
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_small_arms_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_small_arms
+                                production_method = milstock_pm_dist_small_arms_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_small_arms_pm_var value = 3 }
+                    }
+                    
+                    remove_building = milstock_building_distribution_small_arms 
+                }
+
+                # Close grain distribution centers and remember the production method
+                if = { 
+                    limit = { has_building = milstock_building_distribution_grain } 
+                    remove_building = milstock_building_distribution_grain 
+                }
+
+                # Close liquor distribution centers and remember the production method
+                if = { 
+                    limit = { has_building = milstock_building_distribution_liquor } 
+                    remove_building = milstock_building_distribution_liquor 
+                }
+
+                # Close sugar distribution centers and remember the production method
+                if = { 
+                    limit = { has_building = milstock_building_distribution_sugar } 
+                    remove_building = milstock_building_distribution_sugar 
+                }
+
+                # Close opium distribution centers and remember the production method
+                if = { 
+                    limit = { has_building = milstock_building_distribution_opium } 
+                    remove_building = milstock_building_distribution_opium 
+                }
+
+                # Close tobacco distribution centers and remember the production method
+                if = { 
+                    limit = { has_building = milstock_building_distribution_tobacco } 
+                    remove_building = milstock_building_distribution_tobacco 
+                }
+
+                # Close fabric distribution centers and remember the production method
+                if = { 
+                    limit = { has_building = milstock_building_distribution_fabric } 
+                    remove_building = milstock_building_distribution_fabric 
+                }
+
+                # Close groceries distribution centers and remember the production method
+                if = { 
+                    limit = { has_building = milstock_building_distribution_groceries } 
+                    remove_building = milstock_building_distribution_groceries 
+                }
+
+                # Close ammunition distribution centers and remember the production method
+                if = { 
+                    limit = { has_building = milstock_building_distribution_ammunition } 
+                    remove_building = milstock_building_distribution_ammunition 
+                }
+
+                # Close artillery distribution centers and remember the production method
+                if = {
+                    limit = { has_building = milstock_building_distribution_artillery }
+                    remove_building = milstock_building_distribution_artillery 
+                }
+
+                # Close radios distribution centers and remember the production method
+                if = {
+                    limit = { has_building = milstock_building_distribution_radios } 
+                    remove_building = milstock_building_distribution_radios 
+                }
+
+                # Close tanks distribution centers and remember the production method
+                if = {
+                    limit = { has_building = milstock_building_distribution_tanks } 
+                    remove_building = milstock_building_distribution_tanks 
+                }
+
+                # Close oil distribution centers and remember the production method
+                if = {
+                    limit = { has_building = milstock_building_distribution_oil } 
+                    remove_building = milstock_building_distribution_oil 
+                }
+
+                # Close iron distribution centers and remember the production method
+                if = {
+                    limit = { has_building = milstock_building_distribution_iron } 
+                    remove_building = milstock_building_distribution_iron 
+                }
             }
         }
 

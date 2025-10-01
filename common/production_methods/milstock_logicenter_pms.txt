@@ -663,7 +663,7 @@ milstock_logicenter_admin_pm_basic = {
 
     country_modifiers = {
         workforce_scaled = {
-            country_bureaucracy_add = 10
+            country_bureaucracy_add = 20
             country_convoys_capacity_add = 100
         }
     }
@@ -700,7 +700,7 @@ milstock_logicenter_admin_pm_academic = {
         workforce_scaled = {
             country_bureaucracy_add = 30
             country_weekly_innovation_add = 1
-            country_convoys_capacity_add = 100
+            country_convoys_capacity_add = 200
         }
     }
     

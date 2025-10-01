@@ -38,7 +38,104 @@
     #    }
     #}
 
-    ai_value = 400
+    ai_value = {
+        value = -1000 # AI players with very small armies should probably not build this.
+
+        if = {
+            limit = {
+                owner = {
+                    army_size >= 20
+                }
+            }
+            add = 1100 # Will be 100 for AI players with reasonable army sizes.
+        }
+
+        if = {
+            limit = {
+                owner = {
+                    army_size >= 60
+                }
+            }
+            add = 100 # Will be 200 for AI players with larger army sizes.
+        }
+
+        if = {
+            limit = {
+                owner = {
+                    army_size >= 100
+                }
+            }
+            add = 100 # Will be 300 for AI players with a fairly big army. This was the old value.
+        }
+
+        if = {
+            limit = {
+                owner = {
+                    has_law_or_variant = law_type:law_national_militia
+                }
+            }
+            add = 100 # Bonus to value at any size army for national militia.
+        }
+
+        if = {
+            limit = {
+                owner = {
+                    has_law_or_variant = law_type:law_mass_conscription
+                }
+            }
+            add = 200 # Larger bonus to value at any size army for mass conscription.
+        }
+
+        if = {
+            limit = {
+                owner = {
+                    AND = {
+                        country_has_building_type_levels = {
+                            target = bt:milstock_building_logistics_center
+                            value >= 20
+                        }
+                        NOT = {
+                            OR = {
+                                owner = { has_law_or_variant = law_type:law_mass_conscription }
+                                owner = { has_law_or_variant = law_type:law_national_militia }
+                            }
+                        }
+                    }
+                }
+            }
+            subtract = 5000 # Vastly decrease the likelihood of non conscript using AI building more than 10 levels of logistics centers.
+        }
+
+        if = {
+            limit = {
+                owner = {
+                    AND = {
+                        country_has_building_type_levels = {
+                            target = bt:milstock_building_logistics_center
+                            value >= 30
+                        }
+                        owner = { has_law_or_variant = law_type:law_national_militia }
+                    }
+                }
+            }
+            subtract = 5000 # AI that are using national militia may end up with up to 30 max logistics centers before the penalty applies.
+        }
+
+        if = {
+            limit = {
+                owner = {
+                    AND = {
+                        country_has_building_type_levels = {
+                            target = bt:milstock_building_logistics_center
+                            value >= 40
+                        }
+                        owner = { has_law_or_variant = law_type:law_mass_conscription }
+                    }
+                }
+            }
+            subtract = 5000 # AI that are using national militia may end up with up to 40 max logistics centers before the penalty applies.
+        }
+    }
     required_construction = construction_cost_low
 }
 
