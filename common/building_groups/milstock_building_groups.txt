@@ -2,7 +2,7 @@
     category = development
     always_possible = yes
     is_government_funded = yes
-    inheritable_construction = no # Logistics centers are scuttled if the territory is captured
+    inheritable_construction = yes # Change to true - otherwise it's difficult for a player that "captures" a stockpile to know where it is
 
     lens = government
     urbanization = 20
