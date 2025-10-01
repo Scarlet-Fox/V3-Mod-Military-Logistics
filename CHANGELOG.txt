@@ -8,6 +8,9 @@ V3 Mod - Military Logistics 1.4.0, UNRELEASED
 	- Small nations should no longer bankrupt themselves with logistics.
 	- Larger nations that use conscription will be more inclined to build logistics centers.
 	- The formula will be improved over time with testing and feedback.
+- Distribution centers will now remember the last distribution setting.
+- Logistics centers will now remain after a state gets a new owner.
+	- Makes capturing stockpiles easier to notice, but some stockpile will still be lost.
 
 
 V3 Mod - Military Logistics 1.3.0, 2024-11-30

@@ -39,7 +39,7 @@ open_distribution_centers = {
                     this.state = { set_variable = { name = logistics_center_level value = PREV.level } }
                 }
 
-                # Create grain distribution center if eligible
+                # Create grain distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_grain_stockpile_var > 100
@@ -48,14 +48,52 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_grain
                         }
                     }
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_grain
-                        METHOD = milstock_pm_dist_grain
-                        COUNTRY = this.owner
+
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_grain_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_grain_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_grain
+                                METHOD = milstock_pm_dist_grain_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_grain_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_grain
+                                METHOD = milstock_pm_dist_grain_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_grain_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_grain
+                                METHOD = milstock_pm_dist_grain
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_grain_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_grain
+                                METHOD = milstock_pm_dist_grain_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_grain
+                            METHOD = milstock_pm_dist_grain
+                            COUNTRY = this.owner
+                        }
                     }
                 }
 
-                # Create small arms distribution center if eligible
+# Create small arms distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_small_arms_stockpile_var > 100
@@ -64,14 +102,50 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_small_arms
                         }
                     }
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_small_arms
-                        METHOD = milstock_pm_dist_small_arms
-                        COUNTRY = this.owner
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_small_arms_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_small_arms_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_small_arms
+                                METHOD = milstock_pm_dist_small_arms_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_small_arms_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_small_arms
+                                METHOD = milstock_pm_dist_small_arms_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_small_arms_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_small_arms
+                                METHOD = milstock_pm_dist_small_arms
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_small_arms_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_small_arms
+                                METHOD = milstock_pm_dist_small_arms_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_small_arms
+                            METHOD = milstock_pm_dist_small_arms
+                            COUNTRY = this.owner
+                        }
                     }
                 }
-
-                # Create liquor distribution center if eligible
+                # Create liquor distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_liquor_stockpile_var > 100
@@ -80,14 +154,50 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_liquor
                         }
                     }
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_liquor
-                        METHOD = milstock_pm_dist_liquor
-                        COUNTRY = this.owner
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_liquor_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_liquor_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_liquor
+                                METHOD = milstock_pm_dist_liquor_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_liquor_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_liquor
+                                METHOD = milstock_pm_dist_liquor_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_liquor_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_liquor
+                                METHOD = milstock_pm_dist_liquor
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_liquor_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_liquor
+                                METHOD = milstock_pm_dist_liquor_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_liquor
+                            METHOD = milstock_pm_dist_liquor
+                            COUNTRY = this.owner
+                        }
                     }
                 }
-
-                # Create sugar distribution center if eligible
+                # Create sugar distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_sugar_stockpile_var > 100
@@ -96,14 +206,50 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_sugar
                         }
                     }
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_sugar
-                        METHOD = milstock_pm_dist_sugar
-                        COUNTRY = this.owner
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_sugar_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_sugar_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_sugar
+                                METHOD = milstock_pm_dist_sugar_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_sugar_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_sugar
+                                METHOD = milstock_pm_dist_sugar_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_sugar_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_sugar
+                                METHOD = milstock_pm_dist_sugar
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_sugar_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_sugar
+                                METHOD = milstock_pm_dist_sugar_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_sugar
+                            METHOD = milstock_pm_dist_sugar
+                            COUNTRY = this.owner
+                        }
                     }
                 }
-
-                # Create opium distribution center if eligible
+                # Create opium distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_opium_stockpile_var > 100
@@ -112,14 +258,50 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_opium
                         }
                     }
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_opium
-                        METHOD = milstock_pm_dist_opium
-                        COUNTRY = this.owner
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_opium_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_opium_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_opium
+                                METHOD = milstock_pm_dist_opium_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_opium_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_opium
+                                METHOD = milstock_pm_dist_opium_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_opium_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_opium
+                                METHOD = milstock_pm_dist_opium
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_opium_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_opium
+                                METHOD = milstock_pm_dist_opium_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_opium
+                            METHOD = milstock_pm_dist_opium
+                            COUNTRY = this.owner
+                        }
                     }
                 }
-
-                # Create tobacco distribution center if eligible
+                # Create tobacco distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_tobacco_stockpile_var > 100
@@ -128,14 +310,50 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_tobacco
                         }
                     }
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_tobacco
-                        METHOD = milstock_pm_dist_tobacco
-                        COUNTRY = this.owner
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_tobacco_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_tobacco_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_tobacco
+                                METHOD = milstock_pm_dist_tobacco_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_tobacco_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_tobacco
+                                METHOD = milstock_pm_dist_tobacco_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_tobacco_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_tobacco
+                                METHOD = milstock_pm_dist_tobacco
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_tobacco_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_tobacco
+                                METHOD = milstock_pm_dist_tobacco_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_tobacco
+                            METHOD = milstock_pm_dist_tobacco
+                            COUNTRY = this.owner
+                        }
                     }
                 }
-
-                # Create fabric distribution center if eligible
+                # Create fabric distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_fabric_stockpile_var > 100
@@ -144,14 +362,50 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_fabric
                         }
                     }
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_fabric
-                        METHOD = milstock_pm_dist_fabric
-                        COUNTRY = this.owner
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_fabric_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_fabric_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_fabric
+                                METHOD = milstock_pm_dist_fabric_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_fabric_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_fabric
+                                METHOD = milstock_pm_dist_fabric_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_fabric_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_fabric
+                                METHOD = milstock_pm_dist_fabric
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_fabric_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_fabric
+                                METHOD = milstock_pm_dist_fabric_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_fabric
+                            METHOD = milstock_pm_dist_fabric
+                            COUNTRY = this.owner
+                        }
                     }
                 }
-
-                # Create groceries distribution center if eligible
+                # Create groceries distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_groceries_stockpile_var > 100
@@ -160,14 +414,50 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_groceries
                         }
                     }
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_groceries
-                        METHOD = milstock_pm_dist_groceries
-                        COUNTRY = this.owner
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_groceries_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_groceries_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_groceries
+                                METHOD = milstock_pm_dist_groceries_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_groceries_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_groceries
+                                METHOD = milstock_pm_dist_groceries_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_groceries_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_groceries
+                                METHOD = milstock_pm_dist_groceries
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_groceries_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_groceries
+                                METHOD = milstock_pm_dist_groceries_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_groceries
+                            METHOD = milstock_pm_dist_groceries
+                            COUNTRY = this.owner
+                        }
                     }
                 }
-
-                # Create ammunition distribution center if eligible
+                # Create ammunition distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_ammunition_stockpile_var > 100
@@ -176,14 +466,50 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_ammunition
                         }
                     }
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_ammunition
-                        METHOD = milstock_pm_dist_ammunition
-                        COUNTRY = this.owner
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_ammunition_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_ammunition_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_ammunition
+                                METHOD = milstock_pm_dist_ammunition_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_ammunition_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_ammunition
+                                METHOD = milstock_pm_dist_ammunition_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_ammunition_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_ammunition
+                                METHOD = milstock_pm_dist_ammunition
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_ammunition_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_ammunition
+                                METHOD = milstock_pm_dist_ammunition_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_ammunition
+                            METHOD = milstock_pm_dist_ammunition
+                            COUNTRY = this.owner
+                        }
                     }
                 }
-
-                # Create artillery distribution center if eligible
+                # Create artillery distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_artillery_stockpile_var > 100
@@ -192,14 +518,50 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_artillery
                         }
                     }
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_artillery
-                        METHOD = milstock_pm_dist_artillery
-                        COUNTRY = this.owner
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_artillery_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_artillery_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_artillery
+                                METHOD = milstock_pm_dist_artillery_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_artillery_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_artillery
+                                METHOD = milstock_pm_dist_artillery_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_artillery_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_artillery
+                                METHOD = milstock_pm_dist_artillery
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_artillery_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_artillery
+                                METHOD = milstock_pm_dist_artillery_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_artillery
+                            METHOD = milstock_pm_dist_artillery
+                            COUNTRY = this.owner
+                        }
                     }
                 }
-
-                # Create radios distribution center if eligible
+                # Create radios distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_radios_stockpile_var > 50
@@ -208,14 +570,50 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_radios
                         }
                     }
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_radios
-                        METHOD = milstock_pm_dist_radios
-                        COUNTRY = this.owner
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_radios_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_radios_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_radios
+                                METHOD = milstock_pm_dist_radios_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_radios_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_radios
+                                METHOD = milstock_pm_dist_radios_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_radios_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_radios
+                                METHOD = milstock_pm_dist_radios
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_radios_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_radios
+                                METHOD = milstock_pm_dist_radios_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_radios
+                            METHOD = milstock_pm_dist_radios
+                            COUNTRY = this.owner
+                        }
                     }
                 }
-
-                # Create tanks distribution center if eligible
+                # Create tanks distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_tanks_stockpile_var > 50
@@ -224,14 +622,50 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_tanks
                         }
                     }
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_tanks
-                        METHOD = milstock_pm_dist_tanks
-                        COUNTRY = this.owner
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_tanks_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_tanks_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_tanks
+                                METHOD = milstock_pm_dist_tanks_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_tanks_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_tanks
+                                METHOD = milstock_pm_dist_tanks_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_tanks_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_tanks
+                                METHOD = milstock_pm_dist_tanks
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_tanks_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_tanks
+                                METHOD = milstock_pm_dist_tanks_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_tanks
+                            METHOD = milstock_pm_dist_tanks
+                            COUNTRY = this.owner
+                        }
                     }
                 }
-
-                # Create oil distribution center if eligible
+                # Create oil distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_oil_stockpile_var > 100
@@ -240,15 +674,50 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_oil
                         }
                     }
-                    debug_log = "Conditions have been met to open a distribution center."
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_oil
-                        METHOD = milstock_pm_dist_oil
-                        COUNTRY = this.owner
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_oil_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_oil_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_oil
+                                METHOD = milstock_pm_dist_oil_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_oil_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_oil
+                                METHOD = milstock_pm_dist_oil_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_oil_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_oil
+                                METHOD = milstock_pm_dist_oil
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_oil_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_oil
+                                METHOD = milstock_pm_dist_oil_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_oil
+                            METHOD = milstock_pm_dist_oil
+                            COUNTRY = this.owner
+                        }
                     }
                 }
-
-                # Create iron distribution center if eligible
+                # Create iron distribution center if eligible and use saved prod method if any
                 if = {
                     limit = {
                         var:milstock_state_iron_stockpile_var > 50
@@ -257,11 +726,47 @@ open_distribution_centers = {
                             has_building = milstock_building_distribution_iron
                         }
                     }
-                    debug_log = "Conditions have been met to open a distribution center."
-                    create_distribution_center = {
-                        BUILDING = milstock_building_distribution_iron
-                        METHOD = milstock_pm_dist_iron
-                        COUNTRY = this.owner
+                    if = {
+                        limit = { has_variable = milstock_building_distribution_iron_pm_var }
+                        if = {
+                            limit = { var:milstock_building_distribution_iron_pm_var = 0 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_iron
+                                METHOD = milstock_pm_dist_iron_disable
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_iron_pm_var = 1 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_iron
+                                METHOD = milstock_pm_dist_iron_half
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_iron_pm_var = 2 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_iron
+                                METHOD = milstock_pm_dist_iron
+                                COUNTRY = this.owner
+                            }
+                        }
+                        else_if = {
+                            limit = { var:milstock_building_distribution_iron_pm_var = 3 }
+                            create_distribution_center = {
+                                BUILDING = milstock_building_distribution_iron
+                                METHOD = milstock_pm_dist_iron_double
+                                COUNTRY = this.owner
+                            }
+                        }
+                    }
+                    else = {
+                        create_distribution_center = {
+                            BUILDING = milstock_building_distribution_iron
+                            METHOD = milstock_pm_dist_iron
+                            COUNTRY = this.owner
+                        }
                     }
                 }
             }
@@ -357,81 +862,549 @@ close_distribution_centers = {
                 }
 
                 # Close grain distribution centers and remember the production method
-                if = { 
-                    limit = { has_building = milstock_building_distribution_grain } 
-                    remove_building = milstock_building_distribution_grain 
+                if = {
+                    limit = { has_building = milstock_building_distribution_grain }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_grain
+                                production_method = milstock_pm_dist_grain_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_grain_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_grain
+                                production_method = milstock_pm_dist_grain_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_grain_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_grain
+                                production_method = milstock_pm_dist_grain
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_grain_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_grain
+                                production_method = milstock_pm_dist_grain_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_grain_pm_var value = 3 }
+                    }
+                    remove_building = milstock_building_distribution_grain
                 }
 
                 # Close liquor distribution centers and remember the production method
-                if = { 
-                    limit = { has_building = milstock_building_distribution_liquor } 
-                    remove_building = milstock_building_distribution_liquor 
+                if = {
+                    limit = { has_building = milstock_building_distribution_liquor }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_liquor
+                                production_method = milstock_pm_dist_liquor_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_liquor_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_liquor
+                                production_method = milstock_pm_dist_liquor_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_liquor_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_liquor
+                                production_method = milstock_pm_dist_liquor
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_liquor_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_liquor
+                                production_method = milstock_pm_dist_liquor_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_liquor_pm_var value = 3 }
+                    }
+                    remove_building = milstock_building_distribution_liquor
                 }
 
                 # Close sugar distribution centers and remember the production method
-                if = { 
-                    limit = { has_building = milstock_building_distribution_sugar } 
-                    remove_building = milstock_building_distribution_sugar 
+                if = {
+                    limit = { has_building = milstock_building_distribution_sugar }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_sugar
+                                production_method = milstock_pm_dist_sugar_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_sugar_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_sugar
+                                production_method = milstock_pm_dist_sugar_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_sugar_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_sugar
+                                production_method = milstock_pm_dist_sugar
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_sugar_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_sugar
+                                production_method = milstock_pm_dist_sugar_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_sugar_pm_var value = 3 }
+                    }
+                    remove_building = milstock_building_distribution_sugar
                 }
 
                 # Close opium distribution centers and remember the production method
-                if = { 
-                    limit = { has_building = milstock_building_distribution_opium } 
-                    remove_building = milstock_building_distribution_opium 
+                if = {
+                    limit = { has_building = milstock_building_distribution_opium }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_opium
+                                production_method = milstock_pm_dist_opium_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_opium_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_opium
+                                production_method = milstock_pm_dist_opium_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_opium_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_opium
+                                production_method = milstock_pm_dist_opium
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_opium_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_opium
+                                production_method = milstock_pm_dist_opium_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_opium_pm_var value = 3 }
+                    }
+                    remove_building = milstock_building_distribution_opium
                 }
 
                 # Close tobacco distribution centers and remember the production method
-                if = { 
-                    limit = { has_building = milstock_building_distribution_tobacco } 
-                    remove_building = milstock_building_distribution_tobacco 
+                if = {
+                    limit = { has_building = milstock_building_distribution_tobacco }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_tobacco
+                                production_method = milstock_pm_dist_tobacco_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_tobacco_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_tobacco
+                                production_method = milstock_pm_dist_tobacco_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_tobacco_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_tobacco
+                                production_method = milstock_pm_dist_tobacco
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_tobacco_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_tobacco
+                                production_method = milstock_pm_dist_tobacco_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_tobacco_pm_var value = 3 }
+                    }
+                    remove_building = milstock_building_distribution_tobacco
                 }
 
                 # Close fabric distribution centers and remember the production method
-                if = { 
-                    limit = { has_building = milstock_building_distribution_fabric } 
-                    remove_building = milstock_building_distribution_fabric 
+                if = {
+                    limit = { has_building = milstock_building_distribution_fabric }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_fabric
+                                production_method = milstock_pm_dist_fabric_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_fabric_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_fabric
+                                production_method = milstock_pm_dist_fabric_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_fabric_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_fabric
+                                production_method = milstock_pm_dist_fabric
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_fabric_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_fabric
+                                production_method = milstock_pm_dist_fabric_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_fabric_pm_var value = 3 }
+                    }
+                    remove_building = milstock_building_distribution_fabric
                 }
 
                 # Close groceries distribution centers and remember the production method
-                if = { 
-                    limit = { has_building = milstock_building_distribution_groceries } 
-                    remove_building = milstock_building_distribution_groceries 
+                if = {
+                    limit = { has_building = milstock_building_distribution_groceries }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_groceries
+                                production_method = milstock_pm_dist_groceries_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_groceries_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_groceries
+                                production_method = milstock_pm_dist_groceries_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_groceries_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_groceries
+                                production_method = milstock_pm_dist_groceries
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_groceries_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_groceries
+                                production_method = milstock_pm_dist_groceries_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_groceries_pm_var value = 3 }
+                    }
+                    remove_building = milstock_building_distribution_groceries
                 }
 
                 # Close ammunition distribution centers and remember the production method
-                if = { 
-                    limit = { has_building = milstock_building_distribution_ammunition } 
-                    remove_building = milstock_building_distribution_ammunition 
+                if = {
+                    limit = { has_building = milstock_building_distribution_ammunition }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_ammunition
+                                production_method = milstock_pm_dist_ammunition_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_ammunition_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_ammunition
+                                production_method = milstock_pm_dist_ammunition_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_ammunition_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_ammunition
+                                production_method = milstock_pm_dist_ammunition
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_ammunition_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_ammunition
+                                production_method = milstock_pm_dist_ammunition_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_ammunition_pm_var value = 3 }
+                    }
+                    remove_building = milstock_building_distribution_ammunition
                 }
 
                 # Close artillery distribution centers and remember the production method
                 if = {
                     limit = { has_building = milstock_building_distribution_artillery }
-                    remove_building = milstock_building_distribution_artillery 
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_artillery
+                                production_method = milstock_pm_dist_artillery_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_artillery_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_artillery
+                                production_method = milstock_pm_dist_artillery_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_artillery_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_artillery
+                                production_method = milstock_pm_dist_artillery
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_artillery_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_artillery
+                                production_method = milstock_pm_dist_artillery_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_artillery_pm_var value = 3 }
+                    }
+                    remove_building = milstock_building_distribution_artillery
                 }
 
                 # Close radios distribution centers and remember the production method
                 if = {
-                    limit = { has_building = milstock_building_distribution_radios } 
-                    remove_building = milstock_building_distribution_radios 
+                    limit = { has_building = milstock_building_distribution_radios }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_radios
+                                production_method = milstock_pm_dist_radios_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_radios_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_radios
+                                production_method = milstock_pm_dist_radios_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_radios_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_radios
+                                production_method = milstock_pm_dist_radios
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_radios_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_radios
+                                production_method = milstock_pm_dist_radios_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_radios_pm_var value = 3 }
+                    }
+                    remove_building = milstock_building_distribution_radios
                 }
 
                 # Close tanks distribution centers and remember the production method
                 if = {
-                    limit = { has_building = milstock_building_distribution_tanks } 
-                    remove_building = milstock_building_distribution_tanks 
+                    limit = { has_building = milstock_building_distribution_tanks }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_tanks
+                                production_method = milstock_pm_dist_tanks_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_tanks_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_tanks
+                                production_method = milstock_pm_dist_tanks_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_tanks_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_tanks
+                                production_method = milstock_pm_dist_tanks
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_tanks_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_tanks
+                                production_method = milstock_pm_dist_tanks_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_tanks_pm_var value = 3 }
+                    }
+                    remove_building = milstock_building_distribution_tanks
                 }
 
                 # Close oil distribution centers and remember the production method
                 if = {
-                    limit = { has_building = milstock_building_distribution_oil } 
-                    remove_building = milstock_building_distribution_oil 
+                    limit = { has_building = milstock_building_distribution_oil }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_oil
+                                production_method = milstock_pm_dist_oil_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_oil_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_oil
+                                production_method = milstock_pm_dist_oil_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_oil_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_oil
+                                production_method = milstock_pm_dist_oil
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_oil_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_oil
+                                production_method = milstock_pm_dist_oil_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_oil_pm_var value = 3 }
+                    }
+                    remove_building = milstock_building_distribution_oil
                 }
 
                 # Close iron distribution centers and remember the production method
                 if = {
-                    limit = { has_building = milstock_building_distribution_iron } 
-                    remove_building = milstock_building_distribution_iron 
+                    limit = { has_building = milstock_building_distribution_iron }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_iron
+                                production_method = milstock_pm_dist_iron_disable
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_iron_pm_var value = 0 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_iron
+                                production_method = milstock_pm_dist_iron_half
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_iron_pm_var value = 1 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_iron
+                                production_method = milstock_pm_dist_iron
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_iron_pm_var value = 2 }
+                    }
+                    if = {
+                        limit = {
+                            is_production_method_active = {
+                                building_type = milstock_building_distribution_iron
+                                production_method = milstock_pm_dist_iron_double
+                            }
+                        }
+                        set_variable = { name = milstock_building_distribution_iron_pm_var value = 3 }
+                    }
+                    remove_building = milstock_building_distribution_iron
                 }
             }
         }
