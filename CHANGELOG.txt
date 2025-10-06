@@ -1,7 +1,7 @@
-V3 Mod - Military Logistics 1.4.0, UNRELEASED
+V3 Mod - Military Logistics 1.4.0, 2025-10-06
 ----------------------------------------------------------
 - Updated for 1.10.x compatibility.
-- Distribution centers now open if a country is either at war or in a committed diplomatic play.
+- Distribution centers now start to open when a country is a committed participant in a diplomatic play.
 - Slightly buffed logistics center convoys additions to address convoy requirement for troops.
 - Slightly buffed logistics center bureaucracy additions.
 - Added logic for logistics center ai_value.
