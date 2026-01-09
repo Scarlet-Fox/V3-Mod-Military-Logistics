@@ -1,0 +1,7 @@
+﻿# Testing some changes designed to limit the ability to send armies across the world
+
+
+#NMilitary = {
+#	Increasing this value by 20% -> from 10 to 12
+#	BASE_BATTALION_CONVOY_COST = 12				# Cost in convoys per Battalion for shipping lanes
+#}
