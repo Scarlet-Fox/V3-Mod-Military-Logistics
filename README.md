@@ -1,3 +1,5 @@
+This mod has been made very obsolete by the 1.13 patch that releases on April 28, 2026. If you have not heard, Victoria 3 is getting its own official Logistics Centers and a real supply system. I may make a small mod to add improved stockpiles to logistics centers, but I need time to analyze how the new system works.
+
 # Military Logistics and Stockpiles (Victoria 3 Mod)
 
 This mod adds features to the game for stockpiling and distributing strategic goods for your military. This allows you (and the AI) to improve economic stability during warfare, and plan your wars with a more strategic lens.
